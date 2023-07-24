@@ -1,0 +1,31 @@
+@import './../../../../../assets/scss/abstract/headquarters';
+.contentContainer {
+  box-shadow: 0 1px 2px 0 #dbe4f9;
+  border: solid 0.5px #eaeef3;
+  border-radius: $border_radius * 4;
+  margin-bottom: 2rem;
+  .mainTitle {
+    padding: 2rem;
+    cursor: pointer;
+    p {
+      font-size: 1.5rem;
+    }
+    .icon {
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+  .mainContent {
+    padding: 2rem;
+    p {
+      font-size: 1.5rem;
+    }
+    &.closed {
+      display: none;
+    }
+    &.opened {
+      display: flex;
+    }
+  }
+}

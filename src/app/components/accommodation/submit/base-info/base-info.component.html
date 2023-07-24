@@ -1,0 +1,18 @@
+<div class="row setHeight">
+  <div class="col-md-8 col-xs-16 column-xs start-xs middle-xs column-md middle-md center-md">
+    <div class="title">
+      <p>{{ formTitle }}</p>
+    </div>
+    <div class="inputContainer">
+      <ng-container *ngFor="let item of selectBoxContent">
+        <app-select-box [title]="item.title" [items]="item.content"></app-select-box>
+      </ng-container>
+    </div>
+    <div class="flex-col end-md links">
+      <app-buttons (click)="incProgress()" [btnTitle]="nextBtnTitle" [customClass]="nextBtnCustomClass"></app-buttons>
+    </div>
+  </div>
+  <div class="col-md-8 middle-md center-md base-info-card">
+    <app-info-card [title]="info[0].infoTitle" [content]="info[0].infoContent" class="col-md-8" *ngIf="info"></app-info-card>
+  </div>
+</div>

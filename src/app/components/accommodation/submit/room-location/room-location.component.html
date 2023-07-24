@@ -1,0 +1,49 @@
+<div class="row setHeight">
+  <div class="col-md-8 column-md middle-md center-md">
+    <div class="title">
+      <p>{{ formTitle }}</p>
+    </div>
+    <div class="inputContainer">
+      <ng-container *ngFor="let item of selectBoxContent">
+        <app-select-box
+          [title]="item.title"
+          [items]="item.content"
+        ></app-select-box>
+      </ng-container>
+      <app-textarea
+        [title]="textareaTitle"
+        [value]="textareaVal"
+        [placeholderValue]="textareaPlaceholder"
+        [customClass]="textareaClass"
+      ></app-textarea>
+      <app-inputs
+        [type]="inputType"
+        [value]="inputVal"
+        [placeholderValue]="inputPlaceholder"
+        [customClass]="inputClass"
+        [icon]="inputIcon"
+      ></app-inputs>
+    </div>
+    <div class="flex-col between-md links">
+      <app-buttons
+        (click)="decProgress()"
+        [btnTitle]="prevBtnTitle"
+        [customClass]="prevBtnCustomClass"
+        [icon]="iconValue"
+      ></app-buttons>
+      <app-buttons
+        (click)="incProgress()"
+        [btnTitle]="nextBtnTitle"
+        [customClass]="nextBtnCustomClass"
+      ></app-buttons>
+    </div>
+  </div>
+  <div class="col-md-8 middle-md center-md">
+    <app-info-card
+      [title]="info[0].infoTitle"
+      [content]="info[0].infoContent"
+      class="col-md-8"
+      *ngIf="info"
+    ></app-info-card>
+  </div>
+</div>

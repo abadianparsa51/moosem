@@ -1,0 +1,15 @@
+<div class="container">
+  <app-header></app-header>
+  <div
+    [ngClass]="{ hidden: !loading }" class="flex-col center-md middle-md loader">
+    <div class="flex-col center-md middle-md load">
+      <span class="icon-logo"></span>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  <ng-container *ngIf="!loading">
+    <ng-container *ngIf="footerVal">
+      <app-footer></app-footer>
+    </ng-container>
+  </ng-container>
+</div>

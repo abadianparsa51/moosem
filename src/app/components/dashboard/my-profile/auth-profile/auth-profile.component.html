@@ -1,0 +1,78 @@
+<div class="flex-col column-md editprofileContainer">
+    <div class="flex-col middle-md editprofileHeader">
+      <div class="col-md-16">
+        <div class="flex-col column-md">
+          <h6>
+              اطلاعات احراز هویت
+          </h6>
+          <p>
+              در این قسمت می‌توانید شماره شبا، شماره کارت و شماره حساب بانکی خود را مشاهده و تغییر دهید.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="flex-col middle-md center-md editprofileContent">
+      <!-- <div class="col-md-10 mainInputs">
+        <div class="col-md-8"><app-inputs></app-inputs></div>
+        <div class="col-md-8"><app-inputs></app-inputs></div>
+        <div class="col-md-8"><app-inputs></app-inputs></div>
+        <div class="col-md-8"><app-inputs></app-inputs></div>
+        <div class="col-md-16"><app-inputs></app-inputs></div>
+         <div class="col-md-6 middle-md  center-md">
+        <app-upload></app-upload>
+      </div>
+      <div class="col-md-16">
+        <app-textarea></app-textarea>
+      </div>
+      </div> -->
+  
+      <div class="col-md-10 mainInputs">
+        <div class="col-md-10 inputContainer">
+          <div class="inputContainer">
+            <label>
+                شماره شبا
+            </label>
+            <input class="input" />
+          </div>
+        </div>
+        
+        <div class="col-md-10 inputContainer ">
+          <div class="inputContainer">
+            <label>
+                شماره کارت بانکی
+            </label>
+            <input class="input" />
+          </div>
+        </div>
+
+        <div class="col-md-10 inputContainer">
+          <div class="inputContainer">
+            <label>
+                شماره حساب
+            </label>
+            <input class="input" />
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-md-6 middle-md  center-md">
+          <div class="flex-col between-sm between-xs uploadImageContainer">    
+              <label for="image" class="item"> 
+                <div class="nci">
+                  <label for="">
+                      تصویر کارت ملی
+                  </label>
+                </div>
+                  <div class="image pointer" >
+                    <img src="../../../../assets/img/SVGs/add_photo.svg" />
+                  </div>
+                  <input type="file"  name="image" (change)="handleFileInput($event.target.files)"formControlName="image" />
+                </label>
+                </div>
+      </div>
+
+      <button class="button" type="submit">ذخیره تغییرات</button>
+    </div>
+  </div>
+  

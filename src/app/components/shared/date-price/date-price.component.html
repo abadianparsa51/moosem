@@ -1,0 +1,121 @@
+  <!-- <div class="flex-col center-md middle-md column-md desktop">
+    <div class="seasonName">
+      <span>خرداد</span>
+    </div>
+    <div class="table">
+      <div class="table-head">
+        <div class="item"> شنبه</div>
+        <div class="item">یکشنبه</div>
+        <div class="item">دوشنبه</div>
+        <div class="item">سه شنبه</div>
+        <div class="item">4 شنبه</div>
+        <div class="item">5 شنبه</div>
+        <div class="item">جمعه</div>
+      </div>
+      <div class="table-row">
+        <div class="item">1 <span>35,000</span></div>
+        <div class="item disabled">2<span>35,000</span></div>
+        <div class="item">3<span>35,000</span></div>
+        <div class="item">4<span>35,000</span></div>
+        <div class="item">5 <span>35,000</span></div>
+        <div class="item">6 <span>35,000</span></div>
+        <div class="item">7 <span>35,000</span></div>
+        <div class="item disabled ">8 <span>35,000</span></div>
+        <div class="item">9 <span>35,000</span></div>
+        <div class="item">10 <span>35,000</span></div>
+        <div class="item">11 <span>35,000</span></div>
+        <div class="item">12 <span>35,000</span></div>
+        <div class="item">13 <span>35,000</span></div>
+        <div class="item disabled ">14 <span>35,000</span></div>
+        <div class="item disabled ">15 <span>35,000</span></div>
+        <div class="item disabled ">16 <span>35,000</span></div>
+        <div class="item disabled ">17 <span>35,000</span></div>
+        <div class="item disabled ">18 <span>35,000</span></div>
+        <div class="item">19 <span>35,000</span></div>
+        <div class="item">20 <span>35,000</span></div>
+        <div class="item">21 <span>35,000</span></div>
+        <div class="item">22 <span>35,000</span></div>
+        <div class="item">23 <span>35,000</span></div>
+        <div class="item disabled ">24 <span>35,000</span></div>
+        <div class="item disabled ">25 <span>35,000</span></div>
+        <div class="item disabled ">26 <span>35,000</span></div>
+        <div class="item disabled ">27 <span>35,000</span></div>
+        <div class="item disabled ">28 <span>35,000</span></div>
+        <div class="item disabled ">29 <span>35,000</span></div>
+        <div class="item disabled ">30 <span>35,000</span></div>
+        <div class="item">31 <span>35,000</span></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"> </div>
+      </div>
+    </div>
+  </div>
+
+<div class="flex-col center-xs middle-xs column-xs mobile">
+  <div class="seasonName">
+    <span>خرداد</span>
+  </div>
+  <div class="table">
+    <div class="table-head">
+      <div class="item"> شنبه</div>
+      <div class="item">یکشنبه</div>
+      <div class="item">دوشنبه</div>
+      <div class="item">سه شنبه</div>
+      <div class="item">4 شنبه</div>
+      <div class="item">5 شنبه</div>
+      <div class="item">جمعه</div>
+    </div>
+    <div class="table-row">
+      <div class="item">1 <span>350</span></div>
+      <div class="item disabled">2<span>350</span></div>
+      <div class="item">3<span>350</span></div>
+      <div class="item">4<span>350</span></div>
+      <div class="item">5 <span>350</span></div>
+      <div class="item">6 <span>350</span></div>
+      <div class="item">7 <span>350</span></div>
+      <div class="item disabled ">8 <span>350</span></div>
+      <div class="item">9 <span>350</span></div>
+      <div class="item">10 <span>350</span></div>
+      <div class="item">11 <span>350</span></div>
+      <div class="item">12 <span>350</span></div>
+      <div class="item">13 <span>350</span></div>
+      <div class="item disabled ">14 <span>350</span></div>
+      <div class="item disabled ">15 <span>350</span></div>
+      <div class="item disabled ">16 <span>350</span></div>
+      <div class="item disabled ">17 <span>350</span></div>
+      <div class="item disabled ">18 <span>350</span></div>
+      <div class="item">19 <span>350</span></div>
+      <div class="item">20 <span>350</span></div>
+      <div class="item">21 <span>350</span></div>
+      <div class="item">22 <span>350</span></div>
+      <div class="item">23 <span>350</span></div>
+      <div class="item disabled ">24 <span>350</span></div>
+      <div class="item disabled ">25 <span>350</span></div>
+      <div class="item disabled ">26 <span>350</span></div>
+      <div class="item disabled ">27 <span>350</span></div>
+      <div class="item disabled ">28 <span>350</span></div>
+      <div class="item disabled ">29 <span>350</span></div>
+      <div class="item disabled ">30 <span>350</span></div>
+      <div class="item">31 <span>350</span></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"> </div>
+    </div>
+  </div>
+      <div class="date-desc">
+        مبلغ ها به هزار تومان میباشد
+      </div>
+</div> -->
+
+  <ngb-datepicker id="date-price" #dp [(ngModel)]="model" [firstDayOfWeek]="6" (select)="onDateSelection($event)"
+    [displayMonths]="1" [dayTemplate]="d" outsideDays="collapsed"></ngb-datepicker>
+  <ng-template #d let-date let-focused="focused">
+    <span class="custom-day" [ngClass] = "{disabled : disable}" [class.focused]="focused" [class.range]="isRange(date)"
+      [class.faded]="isHovered(date) || isInside(date)" (mouseenter)="hoveredDate = date"
+      (mouseleave)="hoveredDate = null">
+      <div class="date">{{ date.day }}</div>
+      <div class="price"> {{ Price }} </div>
+    </span>
+  </ng-template>

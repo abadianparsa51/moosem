@@ -1,0 +1,248 @@
+@import './../../../../assets/scss/abstract/headquarters';
+
+::ng-deep {
+  ngb-datepicker.dropdown-menu.show {
+    position: absolute;
+    width: 41rem;
+    top: 0px;
+    left: 0px;
+    will-change: transform;
+    transform: translate(-10px, 74px);
+    z-index: 100;
+    background-color: white;
+    border-radius: 2.5rem;
+    padding: 2rem;
+    box-shadow: 1px 3px 10px $blue_boxShadow;
+  }
+
+  .ngb-dp-header{
+    
+  }
+  .ngb-dp-arrow {
+    justify-content: center;
+    align-items: center;
+
+    .ngb-dp-navigation-chevron {
+      transform: rotate(45deg);
+    }
+
+    &.right {
+      justify-content: center;
+
+      .ngb-dp-navigation-chevron {
+        transform: rotate(-135deg);
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .ngb-dp-arrow.right{
+    justify-content: center;
+  }
+
+  ngb-datepicker {
+    border: none !important;
+
+    &-navigation {
+      &.ng-star-inserted {
+        flex-direction: row;
+      }
+    }
+  }
+
+  .ngb-dp-months {
+    width: 100%;
+  }
+
+  .ngb-dp-month {
+    width: 100%;
+  }
+
+  .ngb-dp-weekdays {
+    border-bottom: none !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .ngb-dp-weekday {
+    flex: 1 1 9rem;
+  }
+
+  .ngb-dp-header {
+    width: 100%;
+  }
+
+  .ngb-dp-day {
+    &.ng-star-inserted {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    margin: 0 auto;
+    flex: none;
+    text-align: center;
+    justify-content: center;
+    outline: none;
+    transition: 0.5s;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: $white;
+
+    .btn-light {
+      &.ng-star-inserted {
+        font-size: 1.5rem;
+      }
+    }
+
+
+    &:hover {
+      background-color: $blue;
+      color: $white;
+      border-radius: 50%;
+
+      .btn-light {
+        &.ng-star-inserted {
+          color: $white;
+        }
+      }
+    }
+  }
+
+
+  .btn-light {
+    &.ng-star-inserted {
+      width: 100%;
+      height: 100%;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ngb-datepicker-navigation {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+
+    ngb-datepicker-navigation-select>.custom-select {
+      font-size: 1.7rem;
+      height: 5rem;
+    }
+
+  }
+
+  ngb-datepicker-navigation-select {
+    justify-content: center;
+
+    select {
+      appearance: none;
+      -webkit-appearance: none;
+      border: none;
+      background-color: $white;
+      outline: none;
+      margin: 0 0.5rem;
+      text-align: center;
+    }
+  }
+
+  .custom-select {
+    font-size: 1.5rem;
+    height: 3rem;
+  }
+}
+
+ngb-datepicker {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.date {
+  &-item {
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:before {
+      content: '';
+      width: 4rem;
+      height: 4rem;
+      transition: all 0.3s;
+
+      background: transparent;
+      position: absolute;
+      z-index: -1;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &.active {
+      color: $white;
+
+      &:before {
+        background: $blue;
+      }
+    }
+
+    &:hover {
+      color: $white;
+
+      &:before {
+        background: $blue;
+      }
+    }
+  }
+}
+
+.custom-day {
+  padding: 0.185rem 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.custom-day.focused {
+  background-color: $white;
+}
+
+.custom-day.range,
+.custom-day:hover {
+  background-color: $blue;
+  color: $white;
+}
+
+.custom-day.faded {
+  background-color: rgba($color: $blue, $alpha: 0.5);
+}
+
+// .form-group.hidden {
+//   width: 0;
+//   margin: 0;
+//   border: none;
+//   padding: 0;
+// }
+// .custom-day {
+//   text-align: center;
+//   padding: 0.185rem 0.25rem;
+//   display: inline-block;
+//   height: 2rem;
+//   width: 2rem;
+// }
+// .custom-day.focused {
+//   background-color: #e6e6e6;
+// }
+// .custom-day.range, .custom-day:hover {
+//   background-color: rgb(2, 117, 216);
+//   color: white;
+// }
+// .custom-day.faded {
+//   background-color: rgba(2, 117, 216, 0.5);
+// }

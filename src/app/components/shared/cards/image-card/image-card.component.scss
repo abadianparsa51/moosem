@@ -1,0 +1,36 @@
+@import "./../../../../../assets/scss/abstract/headquarters";
+
+.cardCont {
+  padding: 0.5rem;
+  margin: 0 1rem;
+  border-radius: $border_radius;
+  box-shadow: 0 0 5px 0px $blue_boxShadow;
+
+  .sliderCont {
+    border-top-left-radius: $border_radius;
+    border-top-right-radius: $border_radius;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15rem;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .titleCont {
+    padding: 2rem 1rem;
+    // border-bottom: 0.1rem solid $gray_border;
+
+    .mainTitle {
+      margin: 0.5rem 0;
+    }
+
+    .subTitle {
+      color: $sec_font_color;
+    }
+  }
+
+  .descriptionCont {
+    padding: 2rem 1rem;
+  }
+}

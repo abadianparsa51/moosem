@@ -1,0 +1,194 @@
+<header class="flx-col header" [class.absoluteHeader]="navStyle">
+  <div class="row">
+    <div class="col-md-2 middle-md logo">
+      <a [routerLink]="['']"><img src="assets/img/SVGs/logo.svg" /></a>
+    </div>
+    <div class="col-md-7">
+      <nav class="flx-col middle-md menu">
+        <ul class="flx-col middle-md center-md menuItems">
+          <ng-container *ngIf="!searchOrTel">
+            <li class="menuItem">
+              <a class="flx-col middle-md" [routerLink]="['']">صفحه اصلی</a>
+            </li>
+            <li class="menuItem">
+              <a class="flx-col middle-md" [routerLink]="['suggest']">پشتیبانی</a>
+            </li>
+            <li class="menuItem">
+              <a class="flx-col middle-md" [routerLink]="['suggest']">بلاگ</a>
+            </li>
+            <li class="menuItem">
+              <a class="flx-col middle-md" [routerLink]="['suggest']">تماس با‌ما</a>
+            </li>
+          </ng-container>
+          <ng-container *ngIf="searchOrTel">
+            <li class="menuItem">
+              <a class="flx-col middle-md" [routerLink]="['app-landing']"><span class="icon-mobile"></span>دانلود
+                اپلیکیشن</a>
+            </li>
+            <li class="menuItem">
+              <a class="flx-col middle-md" [routerLink]="['suggest']"><span class="icon-invit"></span>دعوت از دوستان</a>
+            </li>
+          </ng-container>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-md-3 middle-md end-md">
+      <ng-container *ngIf="!searchOrTel">
+        <div class="search">
+          <input type="text" placeholder="کجا می‌خوای بری؟" />
+          <span class="icon-search"></span>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="searchOrTel">
+        <div class="searchAndTel">
+          <p>95111559 - 021</p>
+        </div>
+      </ng-container>
+    </div>
+    <div class="col-md-4">
+      <div class="flex-col middle-md around-md loginAndSignup">
+        <app-buttons [btnTitle]="loginTitleBtnName" [btnURL]="loginURLLink" [icon]="btnIcon"
+          [customClass]="loginCustomClass"></app-buttons>
+        <app-buttons [class.btn_blue_bordered]="navStyle" [btnTitle]="hostTitleBtnName" [btnURL]="hostURlLink"
+          [icon]="btnIcon" [customClass]="
+            navStyle === true ? hostCustomClass : 'btn btn_blue_bordered'
+          "></app-buttons>
+      </div>
+    </div>
+  </div>
+</header>
+  <ng-container *ngIf="!checklogin() && !checksignup() && !checkrecover()">
+    <header class=" middle-md middle-sm flex-col mobileHeader" [class.absoluteHeader]="navStyle">
+      <div class="flex-col between-sm  row">
+        <div class="col-sm-2" (click)="openMenu()">
+          <div class="burgermenu">
+            <img [class.dark]="darken" src="assets/img/berger-menu.svg" alt="">
+          </div>
+          <div class="overlay">
+            <div class="menuContainer">
+              <a href="">خانه</a>
+              <a href="">دعوت از دوستان</a>
+              <a href="">دانلود اپلیکیشن</a>
+              <a href="">تماس با ما</a>
+            </div>
+          </div>
+        </div>
+        <div class=" col-sm-4 middle-md middle-sm logo">
+          <a [routerLink]="['']"><img src="assets/img/mosem-logo.svg" /></a>
+        </div>
+        <div class="flex-col end-sm middle-sm between-sm col-sm-9">
+          <div class="flex-col middle-md around-md around-sm end-sm loginAndSignup">
+            <app-buttons [btnTitle]="loginTitleBtnName" [btnURL]="loginURLLink" [icon]="btnIcon"
+              [customClass]="loginCustomClass"></app-buttons>
+            <app-buttons [class.btn_blue_bordered]="navStyle" [btnTitle]="hostTitleBtnName" [btnURL]="hostURlLink"
+              [icon]="btnIcon" [customClass]="
+                navStyle === true ? hostCustomClass : 'btn btn_blue_bordered'
+              "></app-buttons>
+          </div>
+        </div>
+      </div>
+    </header>
+  
+    <div class="menuContainer" [ngClass]="{open: menuFlag}">
+      <div class="overlay" (click)="closeMenu()"></div>
+      <div class="flex-col column-sm column-xs menu" [ngClass]="{open: menuFlag}">
+        <div class="flex-col column-sm column-xs menuHeader">
+          <img src="assets/img/SVGs/logo.svg" />
+        </div>
+        <div class="col-sm column-sm col-xs column-xs menuList">
+          <ul class="flex-col column-sm middle-md">
+            <li class="col column-sm" style="margin-left:0;margin-right:0;">
+              <div class="col middle-md middle-sm center-md link" (click)=" profileDropdown = !profileDropdown">
+                <span class="icon-profile"></span>
+                <p>پروفایل من</p>
+                <span class="dropDownIcon"></span>
+              </div>
+              <div [className]="profileDropdown ? 'col column-sm top-sm sublink': 'hidden' ">
+                <a>
+                  <p>ویرایش حساب کاربری</p>
+                </a>
+                <a>
+                  <p>اطلاعات احراز هویت</p>
+                </a>
+                <a>
+                  <p>تغیر رمز عبور</p>
+                </a>
+              </div>
+            </li>
+            <li class="col column-sm" style="margin-left:0;margin-right:0;">
+              <div class="col middle-md middle-sm center-md link" (click)=" reserveDropdown = !reserveDropdown">
+                <span class="icon-invoice"></span>
+                <p>رزرو‌های من</p>
+                <span class="dropDownIcon"></span>
+              </div>
+              <div [className]="reserveDropdown ? 'col column-sm top-sm sublink': 'hidden' ">
+                <a>
+                  <p>ویرایش حساب کاربری</p>
+                </a>
+                <a>
+                  <p>اطلاعات احراز هویت</p>
+                </a>
+                <a>
+                  <p>تغیر رمز عبور</p>
+                </a>
+              </div>
+            </li>
+            <li class="col column-sm" style="margin-left:0;margin-right:0;">
+              <div class="col middle-md middle-sm center-md link" (click)=" managementDropdown = !managementDropdown">
+                <span class="icon-house-outline"></span>
+                <p>مدیریت اقامتگاه</p>
+                <span class="dropDownIcon"></span>
+              </div>
+              <div [className]="managementDropdown ? 'col column-sm top-sm sublink': 'hidden' ">
+                <a>
+                  <p>ویرایش حساب کاربری</p>
+                </a>
+                <a>
+                  <p>اطلاعات احراز هویت</p>
+                </a>
+                <a>
+                  <p>تغیر رمز عبور</p>
+                </a>
+              </div>
+            </li>
+            <li class="col column-sm" style="margin-left:0;margin-right:0;">
+              <div class="col middle-md middle-sm center-md link">
+                <span class="icon-rate_strocke"></span>
+                <p>علاقه مندی های من</p>
+              </div>
+            </li>
+            <li class="col column-sm" style="margin-left:0;margin-right:0;">
+              <div class="col middle-md middle-sm center-md link" (click)=" creditDropdown = !creditDropdown">
+                <span class="icon-wallet"></span>
+                <p>اعتبار من</p>
+                <span class="dropDownIcon"></span>
+              </div>
+              <div [className]="creditDropdown ? 'col column-sm top-sm sublink': 'hidden' ">
+                <a>
+                  <p>ویرایش حساب کاربری</p>
+                </a>
+                <a>
+                  <p>اطلاعات احراز هویت</p>
+                </a>
+                <a>
+                  <p>تغیر رمز عبور</p>
+                </a>
+              </div>
+            </li>
+            <li class="col column-sm" style="margin-left:0;margin-right:0;">
+              <div class="col middle-md middle-sm center-md link">
+                <span class="icon-message"></span>
+                <p>صندوق پیام ها</p>
+              </div>
+            </li>
+            <li class="col column-sm" style="margin-left:0;margin-right:0;">
+              <div class="col middle-md middle-sm center-md link" [routerLink]="['/']">
+                <span class="icon-exit"></span>
+                <p>خروج</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </ng-container>

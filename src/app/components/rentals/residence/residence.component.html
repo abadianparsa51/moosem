@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="flex-col center-md column-md residenceContainer">
+    <div class="flex-col middle-md between-md title">
+      <h3>اقامتگاه</h3>
+      <app-buttons
+        [btnTitle]="seeMoreTitleBtnName"
+        [btnURL]="seeMoreURLLink"
+        [customClass]="seeMoreCustomClass"
+      ></app-buttons>
+    </div>
+    <div class="flex-col content">
+      <ng-container *ngFor="let data of cardDatas">
+        <app-main-card class="notSlider" [cardData]="data"></app-main-card>
+      </ng-container>
+    </div>
+  </div>
+</div>

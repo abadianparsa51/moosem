@@ -1,0 +1,8 @@
+<div class="flex-col between-sm between-xs uploadImageContainer">    
+  <label for="image" class="item">          
+      <div class="image pointer" >
+        <img src="../../../../assets/img/SVGs/add_photo.svg" />
+      </div>
+      <input type="file"  name="image" (change)="handleFileInput($event.target.files)" formControlName="image" />
+    </label>
+    </div>

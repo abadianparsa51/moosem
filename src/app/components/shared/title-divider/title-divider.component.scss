@@ -1,0 +1,48 @@
+@import './../../../../assets/scss/abstract/headquarters';
+
+.titleDividerCont {
+  position: relative;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  width: 100%;
+  
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    background-color: $gray_border;
+    transform: translate(0, -50%);
+  }
+
+  .deviderTitle {
+    padding: 1rem 7rem;
+    border: 0.1rem solid $gray_border;
+    border-radius: $border_radius * 3;
+    background-color: $white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    @include responsive(xs){
+      padding: 1rem 2rem;
+    }
+  }
+
+  .deviderLink {
+    position: absolute;
+    padding: 0.5rem 1rem;
+    background-color: $white;
+    color: $blue;
+    left: 0;
+    z-index: 2;
+    @include responsive(xs){
+      display: none;
+    }
+  }
+}

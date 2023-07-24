@@ -1,0 +1,932 @@
+<div class="desktop">
+  <div class="col-md-16 middle-md between-md">
+    <app-bread-crumb></app-bread-crumb>
+    <div class="col-md-7 between-md buttons">
+      <app-buttons [btnTitle]="ShareTitleBtnName" [btnURL]="ShareURlLink" [customClass]="ShareCustomClass"
+        [icon]="SharebtnIcon"></app-buttons>
+      <app-buttons [btnTitle]="CallTitleBtnName" [btnURL]="CallURlLink" [customClass]="CallCustomClass"
+        [icon]="CallbtnIcon"></app-buttons>
+    </div>
+  </div>
+  <div class="col-md-16 column-md">
+    <div class="col-md-16 between-md header">
+      <div class="col-md-11 column-md between-md center-md titles">
+        <div class="flex-col middle-md main-title">
+          <h5>{{ roomDetails['data'][0]['title'] }}</h5>
+          <!-- <app-rating [stars]="roomHollowStars" [fillStars]="roomRate" [ratingScore]="roomScore"></app-rating> -->
+        </div>
+        <div class="flex-col middle-md location">
+          <div class="icon-pin_location"></div>
+          <div class="description">
+            <p>{{ roomDetails['data']['province_name'] }} , {{ roomDetails['data']['city_name'] }}</p>
+          </div>
+        </div>
+        <div class="flex-col content">
+          <div class="flex-col item">
+            <div class="title">
+              <p>کد اقامتگاه :</p>
+            </div>
+            <div class="description">
+              <p>MSM-{{ roomDetails['data'][0]['id'] }}</p>
+            </div>
+          </div>
+          <div class="flex-col item">
+            <div class="title">
+              <p>میانگین زمان پاسخگویی میزبان :</p>
+            </div>
+            <div class="description">
+              <p>۲ ساعت</p>
+            </div>
+          </div>
+          <div class="flex-col item">
+            <div class="title">
+              <p>آدرس اقامتگاه :</p>
+            </div>
+            <div class="description">
+              <p>{{ roomDetails['data'][0]['address'] }}</p>
+            </div>
+          </div>
+          <div class="flex-col item">
+            <div class="title">
+              <p>ساعت ورود :</p>
+            </div>
+            <div class="description">
+              <p>{{ roomDetails['data'][0]['check_in_time'] }}</p>
+            </div>
+          </div>
+          <div class="flex-col item">
+            <div class="title">
+              <p>متراژ کلی :</p>
+            </div>
+            <div class="description">
+              <p>{{ roomDetails['data'][0]['metraj'] }} متر</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 middle-md center-md">
+        <div class="flex-col column-md middle-md center-md avatar">
+          <div class="image">
+            <img [src]='basePath + userDetails["avatar"]' alt="" />
+            <div class="icon-accepted">
+              <span class="path1"></span>
+              <span class="path2"></span>
+              <span class="path3"></span>
+              <span class="path4"></span>
+            </div>
+          </div>
+          <div class="caption">
+            <p>میزبان: <span class="name"> {{ userDetails["proifle"]["display_name"] }}</span></p>
+            <app-buttons [btnTitle]="ChatTitleBtnName" [btnURL]="ChatURlLink" [customClass]="ChatCustomClass"
+              [icon]="ChatbtnIcon"></app-buttons>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-16 middle-md center-md">
+      <div class="col-md-16 column-md">
+        <div class="flex-col middle-md center-md icons">
+          <div class="col column-md middle-md center-md item">
+            <i class="icon-bed"></i>
+            <p>{{ roomDetails['data'][0]['card']['bed'] }} تخت</p>
+          </div>
+          <div class="col column-md middle-md center-md item">
+            <i class="icon-door_handle"></i>
+            <p>{{ roomDetails['data']['property_INFO']['Bedrooms'] }} اتاق</p>
+          </div>
+          <div class="col column-md middle-md center-md item">
+            <i class="icon-profile"></i>
+            <p>{{ roomDetails['data'][0]['card']['guest'] }} مهمان</p>
+          </div>
+          <div class="col column-md middle-md center-md item">
+            <i class="icon-house-outline"></i>
+            <p>{{ roomDetails['data'][0]['property_type_trans'] }}</p>
+          </div>
+        </div>
+        <div class="context">
+          <div class="title">
+            <h5>توضیحات</h5>
+          </div>
+          <div class="content">
+            <p>
+              {{ roomDetails['data'][0]['description'] }}
+              <!--span><a href="#">بیشتر بخوانید</a></span-->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-16 flex-col column-md features">
+      <div class="title">
+        <h5>امکانات</h5>
+      </div>
+      <div class="col-md-16 between-md description">
+        <div class="col-md-16  between-md items">
+          <div class="col-md-8 middle-md item">
+            <i class="icon-bed"></i>
+            <div class="captopn">
+              <p>حمام</p>
+            </div>
+            <div class="icon-faq_strock">
+              <span class="path1"></span>
+              <span class="path2"></span>
+              <span class="path3"></span>
+            </div>
+          </div>
+          <div class="col-md-8 middle-md item">
+            <i class="icon-bed"></i>
+            <div class="captopn">
+              <p>حمام</p>
+            </div>
+          </div>
+          <div class="col-md-8 middle-md item">
+            <i class="icon-bed"></i>
+            <div class="captopn">
+              <p>حمام</p>
+            </div>
+          </div>
+          <div class="col-md-8 middle-md item">
+            <i class="icon-bed"></i>
+            <div class="captopn">
+              <p>حمام</p>
+            </div>
+          </div>
+          <div class="col-md-8 middle-md item">
+            <i class="icon-bed"></i>
+            <div class="captopn">
+              <p>حمام</p>
+            </div>
+          </div>
+          <div class="col-md-8 middle-md item">
+            <i class="icon-bed"></i>
+            <div class="captopn">
+              <p>حمام</p>
+            </div>
+          </div>
+          <div class="col-md-8 middle-md item">
+            <i class="icon-bed"></i>
+            <div class="captopn">
+              <p>حمام</p>
+            </div>
+          </div>
+          <div class="col-md-8 middle-md item">
+            <i class="icon-bed"></i>
+            <div class="captopn">
+              <p>حمام</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="datePrice">
+      <div class="datePrice--title">
+        <h5>تقویم قیمت</h5>
+        <div class="col-md-16">
+          <div class="col-md-8">
+            <div class="col-md-4">
+              <label for="" class="pos" style="color: silver; font-size: 1.5rem">
+                قیمت هر شب :
+              </label>
+            </div>
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
+              <label for="" class="posB" style="font-size: 1rem;">
+                <b>
+                  65000تومان
+                </b>
+              </label>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="col-md-8">
+              <label for="" class="pos" style="color: silver; font-size: 1.5rem">
+                قیمت هر نفر اضافه :
+              </label>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+              <label for="" class="posB" style="font-size: 1rem;">
+                <b>
+                  25000تومان
+                </b>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-16">
+          <div class="col-md-8">
+            <div class="col-md-4">
+              <label for="" class="pos" style="color: silver; font-size: 1.5rem">
+                قیمت هر شب :
+              </label>
+            </div>
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
+              <label for="" class="posB" style="font-size: 1rem;">
+                <b>
+                  65000تومان
+                </b>
+              </label>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="col-md-8">
+              <label for="" class="pos" style="color: silver; font-size: 1.5rem">
+                قیمت ایام خاص:
+              </label>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+              <label for="" class="posB" style="font-size: 1rem;">
+                <b>
+                  25000تومان
+                </b>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-16">
+          <div class="col-md-8">
+            <div class="col-md-12">
+              <label for="" class="pos" style="color: silver; font-size: 1.5rem">
+                درصد تخفیف رزرو بیش از یک هفته:
+              </label>
+            </div>
+            <div class="col-md-4">
+              <label for="" class="posB" style="font-size: 1rem;">
+                <b>
+                  10درصد
+                </b>
+              </label>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="col-md-12">
+              <label for="" class="pos" style="color: silver; font-size: 1.5rem">
+                درصد تخفیف رزرو بیش از یک ماه: 1
+              </label>
+            </div>
+            <div class="col-md-4">
+              <label for="" class="posB" style="font-size: 1rem;">
+                <b>
+                  25000تومان
+                </b>
+              </label>
+            </div>
+          </div>
+        </div>
+        <app-date-price></app-date-price>
+        <div class="datePrice_itmes"></div>
+        <div class="date"></div>
+      </div>
+      <div class="col-md-16 flex-col column-md policies">
+        <div class="title">
+          <h5>قوانین لغو و مقررات اقامتگاه</h5>
+        </div>
+        <div class="col-md-16 flex-col descriptions">
+          <div class="col-md-8 flex-col items">
+            <div class="flex-col start-xs start-sm item">
+              <div class="title">
+                <p>شرایط کنسلی رزرو بعد از پرداخت :</p>
+              </div>
+              <div class="content">
+                <p>میانه</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 flex-col items">
+            <div class="flex-col item">
+              <div class="title">
+                <p>قوانین اقامتگاه :</p>
+              </div>
+              <div class="content">
+                <p>مدارک محرمیت الزامیست</p>
+                <p>مدارک محرمیت الزامیست</p>
+                <p>مدارک محرمیت الزامیست</p>
+                <p>مدارک محرمیت الزامیست</p>
+                <p>مدارک محرمیت الزامیست</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-16 flex-col column-md experiences">
+        <div class="title">
+          <h5>حتما باید تجربه کنید</h5>
+        </div>
+        <div class="col-md-16 between-md flex-col description">
+          <div class="col-md-8  col-xs-16 flex-col column-md  details">
+            <app-suggestion-item [data]="'assets/img/ramsar.png'" (myOutput)="getsuggestimagesrc($event)">
+            </app-suggestion-item>
+            <app-suggestion-item [data]="'assets/img/shiraz.png'" (myOutput)="getsuggestimagesrc($event)">
+            </app-suggestion-item>
+            <app-suggestion-item [data]="'assets/img/Mask_4.png'" (myOutput)="getsuggestimagesrc($event)">
+            </app-suggestion-item>
+            <app-suggestion-item [data]="'assets/img/masal.png'" (myOutput)="getsuggestimagesrc($event)">
+            </app-suggestion-item>
+            <app-suggestion-item [data]="'assets/img/kish.png'" (myOutput)="getsuggestimagesrc($event)">
+            </app-suggestion-item>
+            <app-suggestion-item [data]="'assets/img/Mask_2.png'" (myOutput)="getsuggestimagesrc($event)">
+            </app-suggestion-item>
+            <app-suggestion-item [data]="'assets/img/Mask_3.png'" (myOutput)="getsuggestimagesrc($event)">
+            </app-suggestion-item>
+          </div>
+          <div class="col-md-7 image" [style.backgroundImage]="'url(' + suggestImage + ')'"></div>
+        </div>
+      </div>
+      <div class="flex-col column-md between-md middle-md comments">
+        <div class="flex-col between-md middle-md heading">
+          <div class="title">
+            <h5>نظرات</h5>
+          </div>
+          <div class="description">
+            <p>برای ثبت نظر باید قبلا این اقامتگاه را رزرو کرده باشید</p>
+          </div>
+          <app-buttons [btnTitle]="commentsTitleBtnName" [btnURL]="commentsURlLink" [customClass]="commentsCustomClass"
+            [icon]="commentsbtnIcon" (click)="openComments()"></app-buttons>
+        </div>
+        <ng-container *ngIf="comments">
+          <div class="flex-col center-md middle-md comment">
+            <app-comment-submit></app-comment-submit>
+          </div>
+        </ng-container>
+        <div class="col-16-md start-md top-md rates">
+          <div class="flex-col between-md ratingItemsContainer">
+            <div class="flex-col center-md middle-md ratingitems" *ngFor="let item of ratingItems">
+              <div class="flex-col between-md middle-md rate">
+                <div class="title">{{ item.title }}</div>
+                <app-rating [rating]='item.rating' [itemId]='item.id'>
+                </app-rating>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <app-comments></app-comments>
+
+    <div class="flex-col column-md map">
+      <div class="title">
+        <h5>نقشه</h5>
+      </div>
+      <app-map [costumStyle]="map"></app-map>
+    </div>
+
+    <div class="aboutHost_container">
+      <div class="aboutHost_container-title">
+        <h5>من آرش خرسند هستم</h5>
+      </div>
+      <div class="aboutHost_container-sub">
+        <h6>در سال 1398 به موسم پیوستم</h6>
+      </div>
+      <div class="aboutHost_container-description">
+        <p>
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+          از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
+          سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+          متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه
+          درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با
+          نرم افزارها شناخت بیشتری
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="flex-col column-xs column-sm mobile">
+  <div class="col-md-16 middle-md between-md">
+    <app-bread-crumb></app-bread-crumb>
+    <div class=" flex-col center-xs center-sm middle-sm middle-xs buttons">
+      <img src="assets/img/bookmardoutline.svg" alt="">
+      <span class="icon-share"></span>
+    </div>
+  </div>
+
+  <div class="col-xs-16 detials">
+    <div class="col-xs-12 column-xs between-xs center-xs titles">
+      <div class="flex-col middle-xs main-title">
+        <h5>{{ roomDetails['data'][0]['title'] }}</h5>
+        <!-- <app-rating [stars]="roomHollowStars" [fillStars]="roomRate" [ratingScore]="roomScore"></app-rating> -->
+      </div>
+      <div class="flex-col middle-xs location">
+        <div class="icon-pin_location"></div>
+        <div class="description">
+          <p>{{ roomDetails['data']['province_name'] }} , {{ roomDetails['data']['city_name'] }}</p>
+        </div>
+      </div>
+      <div class="flex-col column-xs column-sm content">
+        <div class="flex-col item">
+          <div class="title">
+            <p>کد اقامتگاه :</p>
+          </div>
+          <div class="description">
+            <p>MSM-{{ roomDetails['data'][0]['id'] }}</p>
+          </div>
+        </div>
+        <div class="flex-col item">
+          <div class="title">
+            <p>میانگین زمان پاسخگویی میزبان :</p>
+          </div>
+          <div class="description">
+            <p>۲ ساعت</p>
+          </div>
+        </div>
+        <div class="flex-col item">
+          <div class="title">
+            <p>آدرس اقامتگاه :</p>
+          </div>
+          <div class="description">
+            <p>{{ roomDetails['data'][0]['address'] }}</p>
+          </div>
+        </div>
+        <div class="flex-col item">
+          <div class="title">
+            <p>ساعت ورود :</p>
+          </div>
+          <div class="description">
+            <p>{{ roomDetails['data'][0]['check_in_time'] }}</p>
+          </div>
+        </div>
+        <div class="flex-col item">
+          <div class="title">
+            <p>متراژ کلی :</p>
+          </div>
+          <div class="description">
+            <p>{{ roomDetails['data'][0]['metraj'] }} متر</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="col-xs-4 flex-col column-xs middle-xs center-xs middle-sm center-sm column-md middle-md center-md avatar">
+      <div class="image">
+        <img [src]='basePath + userDetails["avatar"]' alt="" />
+        <div class="icon-accepted">
+          <span class="path1"></span>
+          <span class="path2"></span>
+          <span class="path3"></span>
+          <span class="path4"></span>
+        </div>
+      </div>
+      <div class="caption">
+        <p>میزبان: <span class="name"> {{ userDetails["proifle"]["display_name"] }}</span></p>
+        <!-- <app-buttons [btnTitle]="ChatTitleBtnName" [btnURL]="ChatURlLink" [customClass]="ChatCustomClass"
+          [icon]="ChatbtnIcon"></app-buttons> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-16 descriptions">
+    <div class="col-xs-16 col-sm-16 middle-xs middle-sm center-xs center-sm">
+      <div class="column-xs column-sm">
+        <div class="flex-col middle-xs center-xs icons">
+          <div class="col column-xs middle-xs center-xs item">
+            <i class="icon-bed"></i>
+            <p>{{ roomDetails['data'][0]['card']['bed'] }} تخت</p>
+          </div>
+          <div class="col column-xs middle-xs center-xs item">
+            <i class="icon-door_handle"></i>
+            <p>{{ roomDetails['data']['property_INFO']['Bedrooms'] }} اتاق</p>
+          </div>
+          <div class="col column-xs middle-xs center-xs item">
+            <i class="icon-profile"></i>
+            <p>{{ roomDetails['data'][0]['card']['guest'] }} مهمان</p>
+          </div>
+          <div class="col column-xs middle-xs center-xs item">
+            <i class="icon-house-outline"></i>
+            <p>{{ roomDetails['data'][0]['property_type_trans'] }}</p>
+          </div>
+        </div>
+        <div class="col-xs-16 middle-xs around-xs calls">
+          <app-buttons [btnTitle]="ChatTitleBtnName" [btnURL]="ChatURlLink" [customClass]="ChatCustomClass"
+            [icon]="ChatbtnIcon"></app-buttons>
+          <app-buttons [btnTitle]="CallTitleBtnName" [btnURL]="CallURlLink" [customClass]="CallCustomClass"
+            [icon]="CallbtnIcon"></app-buttons>
+        </div>
+        <div class="context">
+          <div class="title">
+            <h5>توضیحات</h5>
+          </div>
+          <div class="content">
+            <p>
+              {{ roomDetails['data'][0]['description'] }}
+              <!--span><a href="#">بیشتر بخوانید</a></span-->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-16 flex-col column-xs features">
+    <div class="title">
+      <h5>امکانات</h5>
+    </div>
+    <div class="col-xs-16 between-xs description">
+      <div class="col-xs-16  between-xs items">
+        <div class="col-xs-8 middle-xs item">
+          <i class="icon-bed"></i>
+          <div class="captopn">
+            <p>حمام</p>
+          </div>
+          <div class="icon-faq_strock">
+            <span class="path1"></span>
+            <span class="path2"></span>
+            <span class="path3"></span>
+          </div>
+        </div>
+        <div class="col-xs-8 middle-xs item">
+          <i class="icon-bed"></i>
+          <div class="captopn">
+            <p>حمام</p>
+          </div>
+        </div>
+        <div class="col-xs-8 middle-xs item">
+          <i class="icon-bed"></i>
+          <div class="captopn">
+            <p>حمام</p>
+          </div>
+        </div>
+        <div class="col-xs-8 middle-xs item">
+          <i class="icon-bed"></i>
+          <div class="captopn">
+            <p>حمام</p>
+          </div>
+        </div>
+        <div class="col-xs-8 middle-xs item">
+          <i class="icon-bed"></i>
+          <div class="captopn">
+            <p>حمام</p>
+          </div>
+        </div>
+        <div class="col-xs-8 middle-xs item">
+          <i class="icon-bed"></i>
+          <div class="captopn">
+            <p>حمام</p>
+          </div>
+        </div>
+        <div class="col-xs-8 middle-xs item">
+          <i class="icon-bed"></i>
+          <div class="captopn">
+            <p>حمام</p>
+          </div>
+        </div>
+        <div class="col-xs-8 middle-xs item">
+          <i class="icon-bed"></i>
+          <div class="captopn">
+            <p>حمام</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="datePrice">
+    <div class="column-xs column-sm datePrice--title">
+      <h5>تقویم قیمت</h5>
+      <div class="col-xs-16">
+        <div class="col-xs-12">
+          <label for="" class="pos" style="color: silver; font-size: 1.5rem">
+            قیمت هر شب :
+          </label>
+        </div>
+
+        <div class="col-xs-4">
+          <label for="" class="posB" style="font-size: 1rem;">
+            <b>
+              65000تومان
+            </b>
+          </label>
+        </div>
+      </div>
+      <div class="col-xs-16">
+        <div class="col-xs-12">
+          <label for="" class="pos" style="color: silver; font-size: 1.5rem">
+            قیمت هر نفر اضافه :
+          </label>
+        </div>
+        <div class="col-xs-4">
+          <label for="" class="posB" style="font-size: 1rem;">
+            <b>
+              25000تومان
+            </b>
+          </label>
+        </div>
+      </div>
+      <div class="col-xs-16">
+        <div class="col-xs-12">
+          <label for="" class="pos" style="color: silver; font-size: 1.5rem">
+            قیمت هر شب :
+          </label>
+        </div>
+        <div class="col-xs-4">
+          <label for="" class="posB" style="font-size: 1rem;">
+            <b>
+              65000تومان
+            </b>
+          </label>
+        </div>
+      </div>
+      <div class="col-xs-16">
+        <div class="col-xs-12">
+          <label for="" class="pos" style="color: silver; font-size: 1.5rem">
+            قیمت ایام خاص:
+          </label>
+        </div>
+        <div class="col-xs-4">
+          <label for="" class="posB" style="font-size: 1rem;">
+            <b>
+              25000تومان
+            </b>
+          </label>
+        </div>
+      </div>
+      <div class="col-xs-16">
+        <div class="col-xs-12">
+          <label for="" class="pos" style="color: silver; font-size: 1.5rem">
+            درصد تخفیف رزرو بیش از یک هفته:
+          </label>
+        </div>
+        <div class="col-xs-4">
+          <label for="" class="posB" style="font-size: 1rem;">
+            <b>
+              10درصد
+            </b>
+          </label>
+        </div>
+      </div>
+      <div class="col-xs-16">
+        <div class="col-xs-12">
+          <label for="" class="pos" style="color: silver; font-size: 1.5rem">
+            درصد تخفیف رزرو بیش از یک ماه: 1
+          </label>
+        </div>
+        <div class="col-xs-4">
+          <label for="" class="posB" style="font-size: 1rem;">
+            <b>
+              25000تومان
+            </b>
+          </label>
+        </div>
+      </div>
+      <app-date-price></app-date-price>
+      <div class="datePrice_itmes"></div>
+      <div class="date"></div>
+    </div>
+  </div>
+  <div class="col-xs-16 flex-col column-xs start-xs top-xs start-sm top-sm policies">
+    <div class="title">
+      <h5>قوانین لغو و مقررات اقامتگاه</h5>
+    </div>
+    <div class="col-xs-16 flex-col column-xs column-sm descriptions">
+      <div class="col-xs-16 flex-col items">
+        <div class="col-xs-16 center-xs flex-col item">
+          <div class="title">
+            <p>شرایط کنسلی رزرو بعد از پرداخت :</p>
+          </div>
+          <div class="content">
+            <p>میانه</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-16 flex-col items">
+        <div class="col-xs-16 start-xs  flex-col item">
+          <div class="title">
+            <p>قوانین اقامتگاه :</p>
+          </div>
+          <div class="content">
+            <p>مدارک محرمیت الزامیست</p>
+            <p>مدارک محرمیت الزامیست</p>
+            <p>مدارک محرمیت الزامیست</p>
+            <p>مدارک محرمیت الزامیست</p>
+            <p>مدارک محرمیت الزامیست</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-16 flex-col column-xs experiences">
+    <div class="title">
+      <h5>حتما باید تجربه کنید</h5>
+    </div>
+    <div class="col-xs-16 between-xs flex-col description">
+      <div class="col-xs-16 flex-col column-xs  details">
+        <app-suggestion-item [data]="'assets/img/ramsar.png'" (myOutput)="getsuggestimagesrc($event)">
+        </app-suggestion-item>
+        <app-suggestion-item [data]="'assets/img/shiraz.png'" (myOutput)="getsuggestimagesrc($event)">
+        </app-suggestion-item>
+        <app-suggestion-item [data]="'assets/img/Mask_4.png'" (myOutput)="getsuggestimagesrc($event)">
+        </app-suggestion-item>
+        <app-suggestion-item [data]="'assets/img/masal.png'" (myOutput)="getsuggestimagesrc($event)">
+        </app-suggestion-item>
+        <app-suggestion-item [data]="'assets/img/kish.png'" (myOutput)="getsuggestimagesrc($event)">
+        </app-suggestion-item>
+        <app-suggestion-item [data]="'assets/img/Mask_2.png'" (myOutput)="getsuggestimagesrc($event)">
+        </app-suggestion-item>
+        <app-suggestion-item [data]="'assets/img/Mask_3.png'" (myOutput)="getsuggestimagesrc($event)">
+        </app-suggestion-item>
+      </div>
+      <div class="col-xs-16 image" [style.backgroundImage]="'url(' + suggestImage + ')'" style="margin-bottom: 2rem;">
+      </div>
+    </div>
+  </div>
+  <div class="flex-col column-xs between-xs middle-xs comments">
+    <div class="flex-col between-xs middle-xs column-xs heading">
+      <div class="flex-col between-xs" style="width: 100%;">
+        <div class="title">
+          <h5>نظرات</h5>
+        </div>
+        <app-buttons [btnTitle]="commentsTitleBtnName" [btnURL]="commentsURlLink" [customClass]="commentsCustomClass"
+          [icon]="commentsbtnIcon" (click)="openComments()" style="align-self: center;"></app-buttons>
+      </div>
+      <app-buttons></app-buttons>
+      <div class="description">
+        <p>برای ثبت نظر باید قبلا این اقامتگاه را رزرو کرده باشید</p>
+      </div>
+    </div>
+    <ng-container *ngIf="comments">
+      <div class="flex-col center-xs middle-xs comment">
+        <app-comment-submit></app-comment-submit>
+      </div>
+    </ng-container>
+    <div class="col-16-xs start-xs top-xs rates">
+      <div class="flex-col col-xs-16 between-xs ratingItemsContainer">
+        <div class="flex-col col-xs-16 center-xs middle-xs ratingitems" *ngFor="let item of ratingItems">
+          <div class="flex-col between-xs middle-xs rate">
+            <div class="title">{{ item.title }}</div>
+            <app-rating [rating]='item.rating' [itemId]='item.id'>
+            </app-rating>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-comments></app-comments>
+  <div class="flex-col column-xs map">
+    <div class="title">
+      <h5>نقشه</h5>
+    </div>
+    <app-map [costumStyle]="mobileMap"></app-map>
+  </div>
+
+  <div class="aboutHost_container">
+    <div class="aboutHost_container-title">
+      <h5>من آرش خرسند هستم</h5>
+    </div>
+    <div class="aboutHost_container-sub">
+      <h6>در سال 1398 به موسم پیوستم</h6>
+    </div>
+    <div class="aboutHost_container-description">
+      <p>
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+        از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
+        سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+        متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه
+        درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با
+        نرم افزارها شناخت بیشتری
+      </p>
+    </div>
+  </div>
+  <!-- <div class="RelatedPlaces">
+    <div class="relatedPlaces--title">
+      <h5>اقامتگاه‌های مشابه</h5>
+    </div>
+    <app-related-items [slideData]="rentSlideData"></app-related-items>
+  </div> -->
+
+  <app-buttons class="reserveButt" [btnTitle]="reserveTitleBtnName" [btnURL]="reserveURlLink"
+    [customClass]="reserveCustomClass" [icon]="reservebtnIcon" (click)="reserveCardClicked()"></app-buttons>
+
+  <div class="roomResponsiveContainer" [ngClass]="{show : clicked}">
+    <div class="column-xs header">
+      <div class="close" (click)="reserveCardClicked()"></div>
+    </div>
+    <div class="flex-col column-sm column-xs column-md reserveCardContainer ">
+      <div class="flex-col middle-xs center-xs titleCont">
+        <div class="col-xs-8 middle-xs center-xs title">
+          <div class="">
+            <p>اجاره هر شب</p>
+          </div>
+
+        </div>
+        <div class="col-xs-8 middle-xs center-xs price">
+          <span>350,000</span>
+        </div>
+      </div>
+      <div class="flex-col column-xs content">
+        <div class="flex-col datesContainer">
+          <div class="col center-xs middle-xs">
+            <!-- <input type="text" class="dateContainer" placeholder="از تاریخ" /> -->
+            <app-date></app-date>
+
+          </div>
+          <div class="col center-xs middle-xs">
+            <!-- <input type="text" class="dateContainer" placeholder="از تاریخ" /> -->
+            <app-date></app-date>
+
+          </div>
+        </div>
+        <!-- <app-select-box [title]="selectTitle"></app-select-box> -->
+        <!-- <app-inputs></app-inputs> -->
+
+        <div class="flex-col inputCont">
+          <input class="phoneInput" type="number" placeholder="" style="border: 1px solid silver;
+            border-radius: 2rem;
+            width: 90%;" />
+          <span class="phoneBtn" style="    padding-right: 1rem;
+            padding-top: 0.3rem;">نفر</span>
+        </div>
+
+        <div class="notation">
+          <p>کودکان بیش از 5 سال"یک نفر" محسوب می‌شوند</p>
+        </div>
+        <div class="flex-col column-xs" style="flex-wrap: wrap;">
+          <ng-container *ngFor="let item of selectbox2; let i = index">
+            <div class="col-xs-16 " style="padding-top: 1rem">
+              <app-select-box2 [id]="i" [data]="item"></app-select-box2>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      <div class="flex-col" style="padding-top: 2rem;">
+        <div class="col-xs-4" style="padding-right:1rem ;">
+          <label for="" style="color: silver;">
+            تعداد شب
+          </label>
+        </div>
+        <div class="col-xs-4">
+          <label for="" style="color: black;">
+            6 شب
+          </label>
+          <div class="toolOverlay" (click)="tooltipToggle()" [ngClass]="{show: tooltip}"></div>
+          <img src="assets/img/SVGs/faq_fill.svg" alt="" style="width:2rem; margin-right:1rem;"  (click)="tooltipToggle()">
+          <div class="ki2" [ngClass]="{show: tooltip}">
+            <div class=" flex-col between-xs" style="margin-top: 2.5rem;width: 100%;">
+              <div class=" flex-col column-xs" style="padding: 2rem;">
+                <p class="ki" *ngFor="let tool of toolTipDate,let i = index">
+                  {{tool.title}}
+                </p>
+              </div>
+              <div class=" column-xs bottom-xs" style="margin-top: 2rem;">
+                <p class="ki" *ngFor="let tool of toolTipDate,let i = index">
+                  {{tool.price}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-col column-xs reserve">
+        <div class="flex-col column-xs">
+          <label>کد تخفیف</label>
+          <div class="flex-col inputCont">
+            <input class="phoneInput" type="text" placeholder="درصورت داشتن کد تخفیف، وارد کنید" />
+            <button class="phoneBtn">اعمال</button>
+          </div>
+        </div>
+      </div>
+      <div class="flex-col">
+        <div class="4" style="width: 100%; padding-right: 1rem;">
+          <label for="" style="color: silver;">
+            کارمزد
+          </label>
+        </div>
+        <div class="8" style="width: 100%;"></div>
+        <div class="4" style="width: 100%;"> 15000 تومان</div>
+      </div>
+      <div class="flex-col" style="padding-top: 1rem;">
+        <div class="4" style="width: 100%; padding-right: 1rem;">
+          <label for="" style="color: #ff4141;">
+            تخفیف
+          </label>
+        </div>
+        <div class="8" style="width: 100%;"></div>
+        <div class="4" style="width: 100%;color:#ff4141"> -6500000 تومان</div>
+      </div>
+      <div class="flex-col" style="padding-top: 1rem;">
+        <div class="4" style="width: 100%; padding-right: 1rem;">
+          <label for="" style="color: silver;">
+            کارمزد
+          </label>
+        </div>
+        <div class="8" style="width: 100%;"></div>
+        <div class="4" style="width: 100%;"> 15000 تومان</div>
+        <!-- </div>
+            </div> -->
+      </div>
+        <div class="middle-xs center-xs reserve-btn" [ngClass]="{show : clicked}" [ngStyle]="{'margin':'0'}">
+          <app-buttons class="reserveResponsiveButt" [btnTitle]="reserveBtnTitle2" [btnURL]="reserveBtnUrl2" [icon]=""
+            [customClass]="reserveCustomClass2"
+            [ngStyle]="{'position':'fixed', 'bottom':'1rem', 'z-index':'1010','width':'90%','self-align':'center'}">
+          </app-buttons>
+        </div>
+    </div>
+  </div>
+</div>

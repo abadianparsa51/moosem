@@ -1,0 +1,17 @@
+@import './../../../../assets/scss/abstract/headquarters';
+
+.roomInfoContainer {
+  padding: 2rem 0;
+
+  app-room-info {
+    width: 100%;
+  }
+}
+
+::ng-deep {
+  .card-infoCont{
+    @include responsive(xs) {
+      display: none;
+    }
+  }
+}

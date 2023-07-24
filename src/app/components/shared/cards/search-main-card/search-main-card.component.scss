@@ -1,0 +1,461 @@
+// @import './../../../../../assets/scss/abstract/headquarters';
+
+
+// .cardCont {
+//   padding: 0.5rem;
+//   margin: 1rem;
+//   border-radius: $border_radius;
+//   box-shadow: 0 0 5px 0px $blue_boxShadow;
+//   position: relative;
+
+//   .sliderCont {
+//     border-top-left-radius: $border_radius;
+//     border-top-right-radius: $border_radius;
+//     width: 100%;
+//     overflow: hidden;
+//     z-index: 4;
+
+//     img {
+//       height: 50%;
+
+//       @include responsive(sm) {
+//         height: 13rem;
+//       }
+//     }
+//   }
+
+//   .discount {
+//     background-color: $discountRed;
+//     border-radius: 35rem;
+//     position: absolute;
+//     top: 1rem;
+//     left: 1rem;
+//     padding: 0.5rem 2rem;
+//     z-index: 10;
+
+//     span,
+//     p {
+//       color: $white;
+//     }
+//   }
+
+//   .bookmark {
+//     // background-color: $discountRed;
+//     // border-radius: 35rem;
+//     position: absolute;
+//     top: 1rem;
+//     right: 1rem;
+//     // padding: 0.5rem 2rem;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     z-index: 12;
+
+//     >span {
+//       font-size: 3rem;
+//     }
+//   }
+
+//   .priceCont {
+//     padding: 1rem 0;
+//     background-color: $light_blue;
+//     border-bottom-left-radius: $border_radius;
+//     border-bottom-right-radius: $border_radius;
+
+//     @include responsive(sm) {
+//       p {
+//         font-size: 1.1rem;
+//       }
+//     }
+//   }
+
+//   .descriptionCont {
+//     padding: 1rem;
+//     border-bottom: 0.1rem solid $gray_border;
+
+//     .title {
+//       margin: 0.5rem 0;
+
+//       @include responsive(sm) {
+//         font-size: 1.3rem;
+//       }
+//     }
+
+//     .subTitle {
+//       margin: 0.5rem 0;
+
+//       @include responsive(sm) {
+//         font-size: 1.1rem;
+//       }
+//     }
+//   }
+
+//   .detailsCont {
+//     .show {
+//       display: flex;
+//     }
+
+//     .hide {
+//       display: none;
+//     }
+
+//     .detail {
+//       margin: 0.5rem 0 0;
+
+//       &:not(:last-child) {
+//         border-left: 0.1rem solid $gray_border;
+//       }
+
+//       >span {
+//         padding: 1rem 0;
+//         font-size: 2rem;
+
+//         &.yellow {
+//           color: $stars_color;
+//         }
+//       }
+
+//       >p {
+//         font-size: 1rem;
+//       }
+//     }
+//   }
+// }
+
+// :host {
+//   // &.notSlider {
+//   //   width: 24rem;
+
+//   .cardCont {
+//     border: solid 0.5px #dbe4f9;
+//     margin: 1rem;
+//   }
+
+//   // }
+
+//   &.horizontal {
+//     width: 100%;
+
+//     .cardCont {
+
+//       display: flex;
+//       width: 100%;
+//       margin: 1rem 0;
+
+//       .sliderCont {
+//         border-bottom-right-radius: $border_radius;
+//         border-top-right-radius: $border_radius;
+//         width: 47%;
+//         overflow: hidden;
+
+//         img {
+//           height: 100%;
+
+//           @include responsive(sm) {
+//             height: 50%;
+//           }
+//         }
+//       }
+
+//       >a {
+//         width: 55%;
+
+//         .priceCont {
+//           padding: 1rem 0;
+//           background-color: $light_blue;
+//           border-bottom-left-radius: $border_radius;
+//           border-bottom-right-radius: $border_radius;
+//         }
+
+//         .descriptionCont {
+//           padding: 1rem;
+//           border-bottom: 0.1rem solid $gray_border;
+
+//           .title {
+//             margin: 0.5rem 0;
+//           }
+
+//           .subTitle {
+//             margin: 0.5rem 0;
+//             color: $subtitle_font_color;
+//           }
+//         }
+
+//         .detailsCont {
+
+//           .detail {
+//             margin: 0.5rem 0 0;
+
+//             &:not(:last-child) {
+//               border-left: 0.1rem solid $gray_border;
+//             }
+
+//             >span {
+//               padding: 1rem 0;
+//               font-size: 2rem;
+//             }
+
+//             >p {
+//               font-size: 1rem;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+@import './../../../../../assets/scss/abstract/headquarters';
+
+::ng-deep {
+
+  // .owl-stage {
+  //   margin-bottom: 1rem;
+  // }
+
+  .owl-nav {
+    position: absolute;
+    justify-content: space-between;
+    width: 105%;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%, -50%);
+  }
+
+  .owl-theme {
+    .owl-dots {
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .owl-dot {
+        span {
+          width: 8px;
+          height: 8px;
+
+          @include responsive(sm) {
+            width: 4px;
+            height: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  .owl-theme .owl-nav [class*=owl-] {
+    background: transparent;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+}
+
+.cardCont {
+  padding: 0.5rem;
+  // margin: 1rem 1rem;
+  border-radius: $border_radius;
+  box-shadow: 0 0 5px 0px $blue_boxShadow;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  @include responsive(xs) {
+    width: 100%;
+    margin: 0;
+  }
+
+  .sliderCont {
+    border-top-left-radius: $border_radius;
+    border-top-right-radius: $border_radius;
+    width: 100%;
+
+    img {
+      height: 100%;
+    }
+
+    .removeCustomSliderStyle {
+      .owl-carousel {
+
+        .owl-nav {
+          position: absolute;
+          justify-content: space-between;
+          width: 105%;
+          top: 50%;
+          left: 50%;
+          display: flex;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  .discount {
+    background-color: $discountRed;
+    border-radius: 35rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem 2rem;
+    z-index: 10;
+
+    span,
+    p {
+      color: $white;
+    }
+  }
+
+  .bookmark {
+    // background-color: $discountRed;
+    // border-radius: 35rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    // padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 12;
+
+    >span {
+      font-size: 3rem;
+    }
+  }
+
+  .priceCont {
+    padding: 1rem 0;
+    background-color: $light_blue;
+    border-bottom-left-radius: $border_radius;
+    border-bottom-right-radius: $border_radius;
+  }
+
+  .descriptionCont {
+    padding: 1rem;
+    border-bottom: 0.1rem solid $gray_border;
+    width: 100%;
+
+    .title {
+      margin: 0.5rem 0;
+    }
+
+    .subTitle {
+      margin: 0.5rem 0;
+    }
+  }
+
+  .detailsCont {
+
+    .detail {
+      margin: 0.5rem 0 0;
+
+      &:not(:last-child) {
+        border-left: 0.1rem solid $gray_border;
+      }
+
+      >span {
+        padding: 1rem 0;
+        font-size: 2rem;
+
+        @include responsive(xs) {
+          font-size: 1.5rem;
+        }
+      }
+
+      >p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+:host {
+  &.notSlider {
+    width: 28rem;
+
+    .cardCont {
+      border: solid 0.5px #dbe4f9;
+      // margin: 1rem 1rem;
+    }
+  }
+
+  &.horizontal {
+    width: 100%;
+
+    .cardCont {
+      display: flex;
+      width: 100%;
+      // margin: 1rem 1rem;
+
+      .sliderCont {
+        border-bottom-right-radius: $border_radius;
+        border-top-right-radius: $border_radius;
+        width: 47%;
+        overflow: hidden;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .discount {
+        background-color: $discountRed;
+        border-radius: 35rem;
+        position: absolute;
+        top: 1rem;
+        left: 55%;
+        padding: 0.5rem 2rem;
+        z-index: 10;
+
+        span,
+        p {
+          color: $white;
+        }
+      }
+
+      >a {
+        width: 55%;
+
+        .priceCont {
+          padding: 1rem 0;
+          background-color: $light_blue;
+          border-bottom-left-radius: $border_radius;
+          border-bottom-right-radius: $border_radius;
+        }
+
+        .descriptionCont {
+          padding: 1rem;
+          border-bottom: 0.1rem solid $gray_border;
+
+          .title {
+            margin: 0.5rem 0;
+          }
+
+          .subTitle {
+            margin: 0.5rem 0;
+          }
+        }
+
+        .detailsCont {
+          .detail {
+            margin: 0.5rem 0 0;
+
+            &:not(:last-child) {
+              border-left: 0.1rem solid $gray_border;
+            }
+
+            >span {
+              padding: 1rem 0;
+              font-size: 2rem;
+            }
+
+            >p {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

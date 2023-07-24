@@ -1,0 +1,24 @@
+@import './../../../../../assets/scss/abstract/headquarters';
+.setHeight {
+  min-height: calc(100vh - 11rem);
+}
+.title {
+  margin: 5rem 0;
+  p {
+    font-weight: 600;
+  }
+}
+.inputContainer {
+  width: 60%;
+  .policytextBtn {
+    color: $blue;
+    text-decoration: underline;
+    margin: 1rem 0;
+    cursor: pointer;
+  }
+}
+.links {
+  width: 60%;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}

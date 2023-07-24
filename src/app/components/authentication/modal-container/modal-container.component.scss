@@ -1,0 +1,73 @@
+@import './../../../../assets/scss/abstract/headquarters';
+
+.modalMainContaienr {
+  width: 100%;
+  min-height: calc(100vh - 10rem);
+  padding: 5rem 0;
+  background-color: $main_authentication_bg_color;
+
+  .modalContainer {
+    background-color: $white;
+    width: 70%;
+    /*  padding: 0 3rem 3rem; */
+    border-radius: $border_radius;
+
+    .modalHeader {
+      .menuItems {
+        border-bottom: 0.1rem solid $gray_border;
+
+        .menuItem {
+          width: 10rem;
+
+          >a {
+            height: 7rem;
+
+            &.active {
+              color: $blue;
+              border-bottom: 0.1rem solid $blue;
+            }
+
+            &:hover {
+              color: $blue;
+            }
+          }
+
+          >.close {
+            position: relative;
+
+            &:before {
+              content: '';
+              width: 1.5rem;
+              height: 0.2rem;
+              background: $black;
+              transform: rotate(-45deg);
+              position: absolute;
+              top: 50%;
+              left: 50%;
+            }
+
+            &:after {
+              content: '';
+              width: 1.5rem;
+              height: 0.2rem;
+              background: $black;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(sm) {
+    background-color: $white;
+    @include flex('', center, flex-start, '', '');
+
+    .modalContainer {
+      width: 90%;
+    }
+  }
+}

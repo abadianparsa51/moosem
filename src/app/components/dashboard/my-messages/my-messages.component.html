@@ -1,0 +1,32 @@
+<div class="flex-col between-md top-md myProfileContainer">
+  <div class="col-md-4">
+    <div class="profileCard">
+      <span class="spanTitle">بخش ها</span>
+      <div class="flex-col column-md  center-md userInfo" style="margin-top: 2rem; text-align: center;">
+        <div>
+          <app-buttons [btnTitle]="myMsgTitle" [btnURL]="myMsgURLLink" [icon]="myMsgIcon"
+            [customClass]="myMsgCustomClass"></app-buttons>
+        </div>
+
+      </div>
+      <div class="flex-col middle-md column-md userInfo links">
+        <div class="square">
+          <div class="circle">
+            <h3 style="padding: 0.5rem">
+              3
+            </h3>
+            <h5 style="padding: 0.5rem">
+              اقامتگاه
+            </h5>
+          </div>
+          <p style="margin-top: 1.5rem;">
+            چندتا اقامگاه نشان کردم؟
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-11">
+    <router-outlet></router-outlet>
+  </div>
+</div>

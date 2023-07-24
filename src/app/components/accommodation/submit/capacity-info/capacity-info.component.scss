@@ -1,0 +1,36 @@
+@import './../../../../../assets/scss/abstract/headquarters';
+::ng-deep{  
+  @include responsive(xs){
+    .capacity-info-card{
+      display: none;
+    }
+  }
+}
+.setHeight {
+  min-height: calc(100vh - 11rem);
+}
+.title {
+  margin: 5rem 0;
+  p {
+    font-weight: 600;
+  }
+}
+.inputContainer {
+  width: 60%;
+  .inputTitle {
+    margin-bottom: 3rem;
+  }
+  .quantityRow {
+    margin-bottom: 2rem;
+  }
+  .errorMessage {
+    background-color: $danger_light_color;
+    color: $danger_color;
+    padding: 1rem 0.5rem;
+    border-radius: $border_radius;
+  }
+}
+.links {
+  width: 60%;
+  margin-top: 5rem;
+}

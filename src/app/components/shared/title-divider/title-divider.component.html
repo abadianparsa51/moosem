@@ -1,0 +1,13 @@
+<div class="row">
+  <!-- [routerLink]="[data[0].link]" -->
+  <div class="col-md-16 middle-md center-md titleDividerCont">
+    <div class="deviderTitle">
+      <p>{{ data[0].title }}</p>
+    </div>
+    <ng-container *ngIf="data[0].linkTitle">
+      <a class="deviderLink" [routerLink]="[data[0].link]">{{
+        data[0].linkTitle
+      }}</a>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+@import './../../../../assets/scss/abstract/headquarters';
+
+.supportFeatures {
+  @include flex('', center, center, '', wrap);
+  background-color: $white;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  width: 100%;
+
+
+
+  @include responsive(sm) {
+    margin-top: -4rem;
+
+  }
+
+  .supportFeaturesCont {
+    padding: 5rem 0;
+
+    @include responsive(xs) {
+      min-width: 29%;
+    }
+
+    img {
+      width: 10rem;
+    }
+
+    p {
+      color: $title_font_color;
+      margin-top: 3rem;
+      font-size: 1.6rem;
+      font-weight: 700;
+
+      @include responsive(xs) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import './../../../../assets/scss/abstract/headquarters';
+
+.row {
+  > .title {
+    width: 100%;
+    padding-top: 7rem;
+    color: $title_font_color;
+  }
+  .mechanismContainer {
+    padding: 7rem 0;
+    .image {
+      width: 20rem;
+      height: 18rem;
+      img {
+        width: 100%;
+      }
+    }
+    .title {
+      color: $title_font_color;
+      margin-top: 3rem;
+      font-size: 1.7rem;
+      font-weight: 500;
+    }
+    .description {
+      color: $subtitle_font_color;
+      margin-top: 1rem;
+    }
+  }
+}

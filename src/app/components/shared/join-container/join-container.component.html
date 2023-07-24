@@ -1,0 +1,19 @@
+<div class="row center-md flex-col middle-md center-sm middle-sm">
+  <div class="col-md-16 joinContainer">
+    <div class="col-md-11 title">
+      <p>{{ title }}</p>
+    </div>
+    <div class="col-md-5  middle-md around-md links">
+      <app-buttons
+        [btnTitle]="loginTitleBtnName"
+        [btnURL]="loginURLLink"
+        [customClass]="loginCustomClass"
+      ></app-buttons>
+      <app-buttons
+        [btnTitle]="signupTitleBtnName"
+        [btnURL]="signUpURLLink"
+        [customClass]="signupCustomClass"
+      ></app-buttons>
+    </div>
+  </div>
+</div>

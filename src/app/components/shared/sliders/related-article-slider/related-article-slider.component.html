@@ -1,0 +1,19 @@
+<div class="sliderContainer">
+    <owl-carousel-o [options]="customOptions" class="customSliderStyle">
+      <ng-template carouselSlide
+        ><app-news-card [newsData]="news[0]"></app-news-card
+      ></ng-template>
+      <ng-template carouselSlide
+        ><app-news-card [newsData]="news[1]"></app-news-card
+      ></ng-template>
+      <ng-template carouselSlide
+        ><app-news-card [newsData]="news[2]"></app-news-card
+      ></ng-template>
+      <ng-template carouselSlide
+        ><app-news-card [newsData]="news[3]"></app-news-card
+      ></ng-template>
+      <ng-template carouselSlide
+        ><app-news-card [newsData]="news[4]"></app-news-card
+      ></ng-template>
+    </owl-carousel-o>
+</div>

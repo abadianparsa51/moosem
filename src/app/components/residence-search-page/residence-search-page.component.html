@@ -1,0 +1,385 @@
+<div class="searchBar">
+  <app-search-bar></app-search-bar>
+</div>
+
+<div class="row" style="margin-top: 2rem;">
+  <div class=" flex-col filters">
+    <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs filter"
+      [ngClass]="provienceFlag ? 'show' : 'hide'">
+      <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs provience"
+        (click)="openFilters(1)">
+        <div class="title">{{ stateTitle }}</div>
+        <div [className]="provienceFlag ? 'show' : 'hidden'">
+          <div class="range">
+            <div style="height: 30rem; overflow-y: scroll;">
+              <ng-container *ngIf="!searchOrTel">
+                <div class="search">
+                  <input type="text" placeholder="کجا می‌خوای بری؟" />
+                  <span class="icon-search"></span>
+                </div>
+              </ng-container>
+              <app-buttons *ngFor="let prov of province" btnTitle={{prov.title}} (click)="selectProv(prov.title)"
+                [customClass]="cityCustomClass"></app-buttons>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs filter"
+      [ngClass]="cityFlag ? 'show' : 'hide'">
+      <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs city" (click)="openFilters(2)">
+        <div class="title">{{ cityTitle }}</div>
+        <div [className]="cityFlag ? 'show' : 'hidden'">
+          <div class="range">
+            <div style="height: 30rem; overflow-y: scroll;">
+              <ng-container *ngIf="!searchOrTel">
+                <div class="search">
+                  <input type="text" placeholder="کجا می‌خوای بری؟" />
+                  <span class="icon-search"></span>
+                </div>
+              </ng-container>
+              <app-buttons *ngFor="let cit of citys" btnTitle={{cit.title}} (click)="selectCit(cit.title)"
+                [customClass]="cityCustomClass"></app-buttons>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs filter"
+      [ngClass]="dateFlag ? 'show' : 'hide'">
+      <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs date" (click)="openFilters(3)">
+        <div class="title">{{ dateTitle }}</div>
+        <div [className]="dateFlag ? 'show' : 'hidden'">
+          <div class="range" style="padding: 2rem;">
+            <app-date></app-date>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs filter"
+      [ngClass]="personFlag ? 'show' : 'hide'">
+      <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs person" (click)="openFilters(4)">
+        <div class="title">{{ guestsTitle }}</div>
+        <div [className]="personFlag ? 'show' : 'hidden'">
+          <div class="range" style="padding: 3rem 4rem 3rem 4rem;
+        width: 22rem;">
+            <app-quantity></app-quantity>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs filter"
+      [ngClass]="priceFlag ? 'show' : 'hide'">
+      <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs price" (click)="openFilters(5)">
+        <div class="title">{{ priceTitle }}</div>
+        <div [className]="priceFlag ? 'show' : 'hidden'">
+          <div class="range" style="padding: 1rem 4rem 3rem 4rem;width: 32rem;">
+
+            <div class="costumSlider">
+              <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs filter"
+      [ngClass]="residenceTypeFlag ? 'show' : 'hide'">
+      <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs provience"
+        (click)="openFilters(6)">
+        <div class="title">{{ typeTitle }}</div>
+        <div [className]="residenceTypeFlag ? 'show' : 'hidden'">
+          <div class="range" style="padding:1rem 1rem 1rem 1rem">
+            <div style="height: 30rem; overflow-y: scroll;">
+              <ng-container *ngIf="!searchOrTel">
+                <div class="search">
+                  <input type="text" placeholder="کجا می‌خوای بری؟" />
+                  <span class="icon-search"></span>
+                </div>
+              </ng-container>
+              <app-buttons *ngFor="let res of residence" btnTitle={{res.title}} (click)="selectRes(res.title)"
+                [customClass]="cityCustomClass">
+              </app-buttons>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs filter"
+      [ngClass]="moreFilterFlag ? 'show' : 'hide'">
+      <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs moreFilter"
+        (click)="openFilters(7)">
+        <div class="title">فیلتر بیشتر</div>
+        <div [className]="moreFilterFlag ? 'show' : 'hidden'">
+          <div class="range flex-col">
+            <div class="col-md-7 column-md" style="    padding: 2rem 2rem 2rem 0;">
+              <div style="border-bottom: solid 1px silver;">
+                <div style="width: 22rem; margin-top: 2rem;">
+                  <div class="flex-col quantityRow">
+                    <div class="col-md-10">
+                      <p>تعداد اتاق خواب</p>
+                    </div>
+                    <div class="col-md-6 center-md">
+                      <app-quantity></app-quantity>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="width: 22rem;padding-top: 1.5rem; margin-bottom: 2rem;">
+
+                  <div class="flex-col quantityRow">
+                    <div class="col-md-10">
+                      <p>تعداد تخت</p>
+                    </div>
+                    <div class="col-md-6 center-md">
+                      <app-quantity></app-quantity>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h6 style="padding: 0.5rem;">
+                  قوانین اقامتگاه
+                </h6>
+                <div class="inputContainer2" style="margin-top: 2rem;">
+                  <ng-container *ngFor="let item of selectbox2; let j = index">
+                    <app-select-box [id]="j + 20" [data]="item"></app-select-box>
+                  </ng-container>
+                </div>
+              </div>
+
+              <div class="section" style="border-top: 1px solid silver; padding-top: 1rem;">
+                <app-radio-btn></app-radio-btn>
+              </div>
+            </div>
+
+            <div class="col-md-9  flex-col" style="border-right: solid 1px silver;padding-bottom: 2rem">
+
+              <div class="col-md-1">
+                <h6 style="padding: 0.5rem;">
+                  اقامتگاه
+                </h6>
+              </div>
+              <div class="col-md-16 inputContainer" style="margin-top: 4rem;">
+
+                <ng-container *ngFor="let item of selectbox; let i = index">
+                  <div class="col-md-8" style="padding-top: 1rem;">
+                    <app-select-box [id]="i" [data]="item"></app-select-box>
+                  </div>
+                </ng-container>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="changeToMap">
+    <app-buttons [btnTitle]="mapTitleBtnName" [btnURL]="mapURLLink" [icon]="mapBtnIcon" [customClass]="mapCustomClass"
+      (click)="openMap()"></app-buttons>
+  </div>
+
+  <div class="flex-col center-md column-md residenceContainer">
+    <div class="flex-col between-md content">
+      <div class="flex-col center-xs middle-xs itemsContainer"
+        [ngClass]="{ 'col-md-7 column-md': openMapVar === true }">
+        <ng-container *ngFor="let data of cardDatas">
+          <app-search-main-card class="notSlider" [ngClass]="{ horizontal: openMapVar === true }" [cardData]="data"
+            style="margin: 0.5rem;">
+          </app-search-main-card>
+        </ng-container>
+      </div>
+      <div class="flex-col content " [ngClass]="{ 'col-md-8 alignSelf-start': openMapVar === true }"
+        [ngStyle]="{ 'margin-top': '1rem' }">
+        <app-map [costumStyle]="map"></app-map>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div [className]="filterFlag ? 'show' : 'hidden'">
+  <div class="overlay" (click)="closeFilters()"></div>
+</div>
+
+<div class="flex-col column-sm column-xs filtersContainer" [ngClass]="provienceFlag ? 'show' : 'hide'"
+  style="padding: 2rem 2rem 0 2rem">
+  <div class="flex-col column-sm column-xs center-xs center-sm middle-xs middle-sm filter"
+    [ngClass]="provienceFlag ? 'show' : 'hide'">
+    <div class="flex-col column-xs column-sm middle-md middle-sm middle-xs center-md center-sm center-xs provience"
+      (click)="openFilters(1)" style="width: 100%">
+      <!-- <div class="title">{{ stateTitle }}</div> -->
+      <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs "
+        [ngClass]="provienceFlag ? 'show' : 'hidden'" style="width: 100%">
+        <div class="range" style="width: 100%">
+          <ng-container *ngIf="!searchOrTel">
+            <div class="search">
+              <app-search-bar></app-search-bar>
+            </div>
+          </ng-container>
+          <app-buttons *ngFor="let prov of province" btnTitle={{prov.title}} (click)="selectProv(prov.title)"
+            [customClass]="cityCustomClass"></app-buttons>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="flex-col column-sm column-xs filtersContainer" [ngClass]=" cityFlag ? 'show' : 'hide'"
+  style="padding: 2rem 2rem 0 2rem">
+  <div class="flex-col column-sm column-xs center-xs center-sm middle-xs middle-sm filter"
+    [ngClass]="cityFlag ? 'show' : 'hide'">
+    <div class="flex-col column-xs column-sm middle-md middle-sm middle-xs center-md center-sm center-xs provience"
+      (click)="openFilters(2)" style="width: 100%">
+      <!-- <div class="title">{{ stateTitle }}</div> -->
+      <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs "
+        [ngClass]="cityFlag ? 'show' : 'hidden'" style="width: 100%">
+        <div class="range" style="width: 100%">
+          <ng-container *ngIf="!searchOrTel">
+            <div class="search">
+              <app-search-bar></app-search-bar>
+            </div>
+          </ng-container>
+          <app-buttons *ngFor="let cit of citys" btnTitle={{cit.title}} (click)="selectCit(cit.title)"
+            [customClass]="cityCustomClass"></app-buttons>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="flex-col column-sm column-xs filtersContainer" [ngClass]=" dateFlag ? 'show' : 'hide'"
+  style="padding: 2rem 2rem 0 2rem">
+  <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs date" (click)="openFilters(3)">
+    <div class="title">{{ dateTitle }}</div>
+    <div [className]="dateFlag ? 'show' : 'hidden'">
+      <div class="range" style="padding: 2rem;">
+        <app-date></app-date>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="flex-col column-sm column-xs filtersContainer" [ngClass]=" personFlag ? 'show' : 'hide'"
+  style="padding: 2rem 2rem 0 2rem">
+  <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs person" (click)="openFilters(4)">
+    <div class="title">{{ guestsTitle }}</div>
+    <div [className]="personFlag ? 'show' : 'hidden'">
+      <div class="range" style="padding: 3rem 4rem 3rem 4rem;
+    width: 22rem;">
+        <app-quantity></app-quantity>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="flex-col column-sm column-xs filtersContainer" [ngClass]=" priceFlag ? 'show' : 'hide'"
+  style="padding: 2rem 2rem 0 2rem">
+  <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs price" (click)="openFilters(5)">
+    <div class="title">{{ priceTitle }}</div>
+    <div [className]="priceFlag ? 'show' : 'hidden'">
+      <div class="range" style="padding: 1rem 4rem 3rem 4rem;width: 32rem;">
+
+        <div class="costumSlider">
+          <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="flex-col column-sm column-xs filtersContainer" [ngClass]=" residenceTypeFlag ? 'show' : 'hide'"
+  style="padding: 2rem 2rem 0 2rem">
+  <div class="flex-col column-sm column-xs center-xs center-sm middle-xs middle-sm filter"
+    [ngClass]="residenceTypeFlag ? 'show' : 'hide'">
+    <div class="flex-col column-xs column-sm middle-md middle-sm middle-xs center-md center-sm center-xs provience"
+      (click)="openFilters(2)" style="width: 100%">
+      <!-- <div class="title">{{ stateTitle }}</div> -->
+      <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs "
+        [ngClass]="residenceTypeFlag ? 'show' : 'hidden'" style="width: 100%">
+        <div class="range" style="width: 100%">
+          <ng-container *ngIf="!searchOrTel">
+            <div class="search">
+              <app-search-bar></app-search-bar>
+            </div>
+          </ng-container>
+          <app-buttons *ngFor="let res of residence" btnTitle={{res.title}} (click)="selectRes(res.title)"
+            [customClass]="cityCustomClass">
+          </app-buttons>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="flex-col column-sm column-xs filtersContainer" [ngClass]=" moreFilterFlag ? 'show' : 'hide'"
+  style="padding: 2rem 2rem 0 2rem">
+  <div class="flex-col middle-md middle-sm middle-xs center-md center-sm center-xs moreFilter"
+        (click)="openFilters(7)">
+        <div class="title">فیلتر بیشتر</div>
+        <div [className]="moreFilterFlag ? 'show' : 'hidden'">
+          <div class="range flex-col">
+            <div class="col-md-7 column-md" style="    padding: 2rem 2rem 2rem 0;">
+              <div style="border-bottom: solid 1px silver;">
+                <div style="width: 22rem; margin-top: 2rem;">
+                  <div class="flex-col quantityRow">
+                    <div class="col-md-10">
+                      <p>تعداد اتاق خواب</p>
+                    </div>
+                    <div class="col-md-6 center-md">
+                      <app-quantity></app-quantity>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="width: 22rem;padding-top: 1.5rem; margin-bottom: 2rem;">
+
+                  <div class="flex-col quantityRow">
+                    <div class="col-md-10">
+                      <p>تعداد تخت</p>
+                    </div>
+                    <div class="col-md-6 center-md">
+                      <app-quantity></app-quantity>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h6 style="padding: 0.5rem;">
+                  قوانین اقامتگاه
+                </h6>
+                <div class="inputContainer2" style="margin-top: 2rem;">
+                  <ng-container *ngFor="let item of selectbox2; let j = index">
+                    <app-select-box [id]="j + 20" [data]="item"></app-select-box>
+                  </ng-container>
+                </div>
+              </div>
+
+              <div class="section" style="border-top: 1px solid silver; padding-top: 1rem;">
+                <app-radio-btn></app-radio-btn>
+              </div>
+            </div>
+
+            <div class="col-md-9  flex-col" style="border-right: solid 1px silver;padding-bottom: 2rem">
+
+              <div class="col-md-1">
+                <h6 style="padding: 0.5rem;">
+                  اقامتگاه
+                </h6>
+              </div>
+              <div class="col-md-16 inputContainer" style="margin-top: 4rem;">
+
+                <ng-container *ngFor="let item of selectbox; let i = index">
+                  <div class="col-md-8" style="padding-top: 1rem;">
+                    <app-select-box [id]="i" [data]="item"></app-select-box>
+                  </div>
+                </ng-container>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

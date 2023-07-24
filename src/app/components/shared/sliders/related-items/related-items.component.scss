@@ -1,0 +1,13 @@
+::ng-deep {
+  .relatedSliderContainer {
+    width: 100%;
+
+    .owl-stage {
+      padding: 2rem 0;
+    }
+
+    .owl-nav {
+      width: 105%;
+    }
+  }
+}

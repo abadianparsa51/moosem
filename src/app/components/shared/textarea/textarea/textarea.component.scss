@@ -1,0 +1,19 @@
+@import './../../../../../assets/scss/abstract/headquarters';
+:host {
+  width: 100%;
+}
+.textAreaContainer {
+  width: 100%;
+  .subTitle {
+    margin: 1.5rem 0;
+  }
+  textarea {
+    padding: 1rem;
+    width: 100%;
+    margin: 0 0 1rem;
+    border: 0.1rem solid $gray_border;
+    border-radius: $border_radius;
+    resize: none;
+    outline: none;
+  }
+}

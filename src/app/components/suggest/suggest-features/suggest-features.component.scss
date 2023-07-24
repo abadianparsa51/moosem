@@ -1,0 +1,46 @@
+// .suggestFeaturesContainer {
+//   width: 100%;
+//   .suggestFeatures {
+//     .image {
+//       height: 20rem;
+//       img {
+//         width: 60%;
+//       }
+//     }
+//   }
+// }
+
+@import './../../../../assets/scss/abstract/headquarters';
+
+.row {
+  >.title {
+    color: $title_font_color;
+    width: 100%;
+    margin-top: 7rem;
+    font-weight: 500;
+  }
+
+  .suggestFeaturesCont {
+    margin-top: 6rem;
+
+    .suggestFeature {
+      padding: 2rem 5rem;
+
+      .image {
+        img {
+          width: 22rem;
+        }
+      }
+
+      .description {
+        padding: 2rem 0;
+        text-align: center;
+        color: $font_gray_desc;
+
+        p {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

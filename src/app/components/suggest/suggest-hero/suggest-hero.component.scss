@@ -1,0 +1,30 @@
+@import './../../../../assets/scss/abstract/headquarters';
+
+.suggestHeroContainer {
+  width: 100%;
+  height: calc(100vh - 10rem);
+  position: relative;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .content {
+    text-align: center;
+    color: $main_font_color;
+    margin-left: 22rem;
+    width: 25%;
+
+    .title {
+      margin-bottom: 2rem;
+      font-weight: 900;
+    }
+
+    .subTitle {
+      p {
+        font-size: 1.8rem;
+        color: $title_font_color;
+      }
+    }
+  }
+}

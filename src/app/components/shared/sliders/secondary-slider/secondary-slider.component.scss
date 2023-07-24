@@ -1,0 +1,24 @@
+@import './../../../../../assets/scss/abstract/headquarters';
+
+::ng-deep {
+  .owl-stage-outer {
+    padding: 2rem 0;
+  }
+}
+
+.sliderContainer {
+  max-width: 120rem;
+  // min-width: 120rem;
+  margin: 0 auto;
+  padding: 2rem;
+
+  @include responsive(xs) {
+    padding: 0;
+  }
+
+  .sliderPadding {
+    >.owl-stage {
+      padding: 1rem 0;
+    }
+  }
+}

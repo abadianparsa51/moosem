@@ -1,0 +1,16 @@
+<div class="flex-col column-md column-xs selectContainer">
+  <ng-container *ngIf="title !== '' ">
+    <div class="title">
+      <p>{{ title }}</p>
+    </div>
+  </ng-container>
+
+  <div class="selectBox">
+    <span class="icon-arrow_down"></span>
+    <select name="" id="selectLabel">
+      <ng-container *ngFor="let item of items">
+        <option value="{{ item.title }}">{{ item.title }}</option>
+      </ng-container>
+    </select>
+  </div>
+</div>

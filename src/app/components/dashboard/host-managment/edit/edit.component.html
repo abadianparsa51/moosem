@@ -1,0 +1,392 @@
+<div class="flex-col between-md myProfileContainer">
+  <div class="col-md-4 top-md">
+    <div class="profileCard">
+      <div class="flex-col middle-md column-md userInfo">
+        <!-- <div class="image" [style.backgroundImage]="'url(' + userImage + ')'"></div> -->
+        <div class="userName">
+          <p>
+            پشتیبانی
+          </p>
+        </div>
+        <div class="userMobile">
+          <p>{{ userMobile }}</p>
+        </div>
+      </div>
+      <div class="flex-col column-md links">
+        <p>
+          در صورتی که نیاز به راهنمایی بیشتر دارید
+          تماس بگیرید با شماره تماس ۰۲۱ - 95111559
+          یا از بخش زیر راهنمایی های بیشتر دریافت کنید
+        </p>
+        <div class="buttons">
+          <app-buttons [btnTitle]="addResidenceGuideBtnName" [btnURL]="addResidenceGuideURLLink"
+            [icon]="addResidenceGuideBtnIcon" [customClass]="addResidenceGuideCustomClass"></app-buttons>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-11 ">
+    <div class="flex-col column-md editprofileContainer">
+      <div class="flex-col middle-md editprofileHeader">
+        <div class="col-md-16">
+          <div class="flex-col column-md">
+            <h6>
+              ویرایش قیمت
+            </h6>
+            <p style="color: gray">
+
+              در این قسمت قیمت اقامتگاه خود را ویرایش کنید.
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex-col middle-md center-md editprofileContent">
+
+
+        <div class="col-md-16 mainInputs between-md box">
+          <!-- <div class="col-md-16"> -->
+          <div class="flex-col middle-md editprofileHeader2">
+            <div class="col-md-12">
+              <div class="flex-col column-md">
+                <h6>
+                  بازه عدم دسترسی
+                </h6>
+                <p style="color: gray">
+                  بازه عدم دسترس بودن اقامتگاه خود را مشخص نمایید
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="flex-end">
+                <app-buttons [btnTitle]="addIntervalBtnName" [btnURL]="addIntervalURLLink" [icon]="addIntervalBtnIcon"
+                  [customClass]="addIntervalCustomClass"></app-buttons>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-col middle-md center-md editprofileHeader" style="margin: 1.3rem;">
+            <div class="col-md-2">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  از
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  مرداد ماه 2
+                </p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  تا
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  مرداد ماه 7
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="flex-end">
+                <app-buttons [btnTitle]="deleteBtnName" [btnURL]="" [icon]="deleteBtnIcon"
+                  [customClass]="deleteCustomClass"></app-buttons>
+              </div>
+            </div>
+          </div>
+          <div class="flex-col middle-md center-md editprofileHeader2" style="margin: 1.3rem;">
+            <div class="col-md-2">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  از
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  مرداد ماه 2
+                </p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  تا
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  مرداد ماه 7
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="flex-end">
+                <app-buttons [btnTitle]="deleteBtnName" [btnURL]="" [icon]="deleteBtnIcon"
+                  [customClass]="deleteCustomClass"></app-buttons>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-16 mainInputs between-md box" style="margin-top: 2.5rem">
+          <!-- <div class="col-md-16"> -->
+          <div class="flex-col middle-md editprofileHeader2" style="margin: 2.5rem;">
+            <div class="col-md-12">
+              <div class="flex-col column-md">
+                <h6>
+                  تعیین قیمت
+                </h6>
+                <p style="color: gray">
+                  قیمت و بازه در دسترس بودن اقامتگاه خود را مشخص نمایید
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="flex-end">
+                <app-buttons [btnTitle]="addIntervalBtnName" [btnURL]="addIntervalURLLink" [icon]="addIntervalBtnIcon"
+                  [customClass]="addIntervalCustomClass"></app-buttons>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-col middle-md center-md editprofileHeader" style="margin: 1.3rem;">
+            <div class="col-md-1">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  از
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  2 مرداد ماه
+                </p>
+              </div>
+            </div>
+            <div class="col-md-1">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  تا
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  7 مرداد ماه
+                </p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  هر شب
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  350,000 تومان
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="flex-end">
+                <app-buttons [btnTitle]="deleteBtnName" [btnURL]="" [icon]="deleteBtnIcon"
+                  [customClass]="deleteCustomClass"></app-buttons>
+              </div>
+            </div>
+          </div>
+          <div class="flex-col middle-md center-md editprofileHeader2" style="margin: 1.3rem;">
+            <div class="col-md-1">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  از
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  2 مرداد ماه
+                </p>
+              </div>
+            </div>
+            <div class="col-md-1">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  تا
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  7 مرداد ماه
+                </p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  هر شب
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  350,000 تومان
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="flex-end">
+                <app-buttons [btnTitle]="deleteBtnName" [btnURL]="" [icon]="deleteBtnIcon"
+                  [customClass]="deleteCustomClass"></app-buttons>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-16 mainInputs between-md box" style="margin-top: 2.5rem">
+          <!-- <div class="col-md-16"> -->
+          <div class="flex-col middle-md editprofileHeader2">
+            <div class="col-md-12">
+              <div class="flex-col column-md">
+                <h6>
+                  بازه عدم دسترسی
+                </h6>
+                <p style="color: gray">
+                  بازه عدم دسترس بودن اقامتگاه خود را مشخص نمایید
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="flex-end">
+                <app-buttons [btnTitle]="addIntervalBtnName" [btnURL]="addIntervalURLLink" [icon]="addIntervalBtnIcon"
+                  [customClass]="addIntervalCustomClass"></app-buttons>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-col middle-md center-md editprofileHeader" style="margin: 1.3rem;">
+            <div class="col-md-1">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  از
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  مرداد ماه 2
+                </p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  تا
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  مرداد ماه 7
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  10 درصد
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="flex-end">
+                <app-buttons [btnTitle]="deleteBtnName" [btnURL]="" [icon]="deleteBtnIcon"
+                  [customClass]="deleteCustomClass"></app-buttons>
+              </div>
+            </div>
+          </div>
+          <div class="flex-col middle-md center-md editprofileHeader2" style="margin: 1.3rem;">
+            <div class="col-md-1">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  از
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  مرداد ماه 2
+                </p>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  تا
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  مرداد ماه 7
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="flex-col column-md">
+                <p style="color: gray">
+                  10 درصد
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="flex-end">
+                <app-buttons [btnTitle]="deleteBtnName" [btnURL]="" [icon]="deleteBtnIcon"
+                  [customClass]="deleteCustomClass"></app-buttons>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-13 inputContainer between-md space-between">
+          <div class="inputContainer space-between">
+
+          </div>
+        </div>
+        <div class="col-md-3 inputContainer flex-end  " style="padding: 2.5rem;">
+          <app-buttons [btnTitle]="saveBtnName" [btnURL]="saveURLLink" [icon]="saveBtnIcon"
+            [customClass]="saveCustomClass"></app-buttons>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>

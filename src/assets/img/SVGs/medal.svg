@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24.31" height="31.537" viewBox="0 0 24.31 31.537">
+  <g id="medal" transform="translate(-57.47)">
+    <path id="Path_1554" data-name="Path 1554" d="M189.127,6.9h8.147L204.435,0h-8.147Z" transform="translate(-123.379)" fill="#f1543f"/>
+    <path id="Path_1555" data-name="Path 1555" d="M170.387,92.83H158.824V87.771h11.563V92.83Zm-10.249-1.314h8.935V89.085h-8.935Z" transform="translate(-94.981 -82.252)" fill="#f8b64c"/>
+    <path id="Path_1556" data-name="Path 1556" d="M89.562,6.9H81.415L74.188,0H82.4Z" transform="translate(-15.667)" fill="#ff7058"/>
+    <circle id="Ellipse_505" data-name="Ellipse 505" cx="12.155" cy="12.155" r="12.155" transform="translate(57.47 7.227)" fill="#ffd15c"/>
+    <path id="Path_1557" data-name="Path 1557" d="M113.688,180.355a9.2,9.2,0,1,1,9.2-9.2A9.225,9.225,0,0,1,113.688,180.355Z" transform="translate(-44.063 -151.775)" fill="#f8b64c"/>
+    <path id="Path_1558" data-name="Path 1558" d="M131.314,176.588l1.905,5.782h6.11l-4.993,3.614,1.905,5.782-4.928-3.614-4.928,3.614,1.905-5.782L123.3,182.37h6.11Z" transform="translate(-61.689 -165.484)" fill="#ffd15c"/>
+  </g>
+</svg>

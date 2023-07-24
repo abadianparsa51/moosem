@@ -1,0 +1,27 @@
+@import './../../../../../assets/scss/abstract/headquarters';
+
+.commentcardContainer {
+  box-shadow: 0.2rem 0.4rem 1rem $blue_boxShadow;
+  margin: 5rem 2rem;
+  border-radius: $border_radius;
+  .image {
+    width: 15rem;
+    padding: 2rem 0;
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .title {
+    > p {
+      font-size: 1.7rem;
+      color: $main_font_color;
+    }
+  }
+
+  .comment {
+    padding: 4rem;
+    color: $title_font_color;
+  }
+}

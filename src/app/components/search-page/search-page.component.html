@@ -1,0 +1,112 @@
+<div class="searchBar">
+  <app-search-bar></app-search-bar>
+</div>
+<div class="row filtersSection">
+  <div [className]="dateFlag ? 'filter show' : 'hide'">
+    <div class="date" (click)="openFilters(3)">
+      <div class="title">تاریخ</div>
+      <div [className]="dateFlag ? 'show' : 'hidden'">
+        <div class="range">
+          <app-date></app-date>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div [className]="personFlag ? 'filter show' : 'hide'">
+    <div class="person" (click)="openFilters(4)">
+      <div class="title">نفرات</div>
+      <div [className]="personFlag ? 'show' : 'hidden'">
+        <div class="range" style="padding: 3rem 4rem 3rem 4rem;
+                width: 22rem;">
+          <app-quantity></app-quantity>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row col-sm-16 center-sm start-md placefiltering">
+  <div class="col-md-3 col-sm-7 categoryCont">
+    <div class="image"><img src='assets/img/56b96d18-8a29-45e3-b714-a9df8728dc0f.png'></div>
+    <div class="title">
+      <app-buttons [btnTitle]="residencePageTitleBtnName" [btnURL]="residencePageURLLink">
+      </app-buttons>
+    </div>
+  </div>
+  <div class="col-md-3 col-sm-7 categoryCont">
+    <div class="image"><img src='assets/img/56b96d18-8a29-45e3-b714-a9df8728dc0f.png'></div>
+    <div class="title">
+      <app-buttons [btnTitle]="exprincePageTitleBtnName" [btnURL]="exprincePageURLLink">
+      </app-buttons>
+    </div>
+  </div>
+</div>
+<div class="row flex-col middle-md between-md title">
+  <div class="row middle-md between-md between-sm between-xs middle-sm middle-xs">
+    <h3>اقامتگاه</h3>
+    <app-buttons [btnTitle]="seeMoreTitleBtnName" [btnURL]="seeMoreURLLink" [customClass]="seeMoreCustomClass">
+    </app-buttons>
+  </div>
+</div>
+<div class="residences">
+  <div class="flex-col center-md  content">
+    <div class="row">
+      <ng-container *ngFor="let data of cardDatas">
+        <app-main-card class="searchCardsList" [cardData]="data"></app-main-card>
+      </ng-container>
+    </div>
+  </div>
+  <div class="flex-col middle-md between-md title">
+    <div class="row middle-md between-md">
+      <h3>تجربه سفر</h3>
+      <app-buttons [btnTitle]="seeMoreTitleBtnName" [btnURL]="seeMoreURLLink" [customClass]="seeMoreCustomClass">
+      </app-buttons>
+    </div>
+  </div>
+  <div class="flex-col center-md  content">
+    <div class="row between-md ">
+      <ng-container *ngFor="let data of cardDatas2">
+        <!-- <app-main-card class="searchCardsList" [cardData]="data"></app-main-card> -->
+        <app-secondary-card></app-secondary-card>
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div class="residenceSlider">
+  <app-residence-slider [slideData]="rentSlideData" style="width: 100%;"></app-residence-slider>
+</div>
+<div class="flex-col middle-md between-md title">
+  <div class="row middle-md between-md between-sm between-xs middle-sm middle-xs">
+    <h3>تجربه سفر</h3>
+    <app-buttons [btnTitle]="seeMoreTitleBtnName" [btnURL]="seeMoreURLLink" [customClass]="seeMoreCustomClass">
+    </app-buttons>
+  </div>
+</div>
+<div class="experienceSlider">
+  <app-secondary-slider [slides]="cardDatas3" style="width: 100%;"></app-secondary-slider>
+</div>
+<div class="flex-col middle-md between-md title">
+  <div class="row middle-md between-md between-sm between-xs middle-sm middle-xs">
+    <h3>دیدنی‌ها</h3>
+    <app-buttons [btnTitle]="seeMoreTitleBtnName" [btnURL]="seeMoreURLLink" [customClass]="seeMoreCustomClass">
+    </app-buttons>
+  </div>
+</div>
+<div class="sights">
+  <div class="flex-col center-md  content">
+    <div class="row between-md">
+      <ng-container *ngFor="let data of cardDatas3">
+        <app-secondary-slider></app-secondary-slider>
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div class="sightsSlider">
+  <app-attraction-slider [slides]="cardDatas3" style="width: 100%;"></app-attraction-slider>
+</div>
+
+
+<div [className]="filterFlag ? 'show' : 'hidden'">
+  <div class="overlay" (click)="closeFilters()"></div>
+</div>

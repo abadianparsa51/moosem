@@ -1,0 +1,106 @@
+<div class="flex-col between-md myProfileContainer">
+  <div class="col-md-4 top-md">
+    <div class="profileCard">
+      <div class="flex-col middle-md column-md userInfo">
+        <!-- <div class="image" [style.backgroundImage]="'url(' + userImage + ')'"></div> -->
+        <div class="userName">
+          <p>
+            پشتیبانی
+          </p>
+        </div>
+        <div class="userMobile">
+          <p>{{ userMobile }}</p>
+        </div>
+      </div>
+      <div class="flex-col column-md links">
+        <p>
+          در صورتی که نیاز به راهنمایی بیشتر دارید
+          تماس بگیرید با شماره تماس ۰۲۱ - 95111559
+          یا از بخش زیر راهنمایی های بیشتر دریافت کنید
+        </p>
+        <div class="buttons">
+          <app-buttons [btnTitle]="addResidenceGuideBtnName" [btnURL]="addResidenceGuideURLLink"
+            [icon]="addResidenceGuideBtnIcon" [customClass]="addResidenceGuideCustomClass"></app-buttons>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-11 ">
+    <div class="flex-col column-md editprofileContainer">
+      <div class="flex-col middle-md editprofileHeader">
+        <div class="col-md-16">
+          <div class="flex-col column-md">
+            <h6>
+              ویرایش قیمت
+            </h6>
+            <p style="color: gray">
+
+              در این قسمت قیمت اقامتگاه خود را ویرایش کنید.
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex-col middle-md center-md editprofileContent">
+
+
+        <div class="col-md-16 mainInputs between-md">
+          <div class="col-md-7 inputContainer between-md space-between">
+            <div class="inputContainer space-between">
+              <label>
+                قیمت پایه
+              </label>
+              <input class="input" />
+            </div>
+          </div>
+          <div class="col-md-2 inputContainer between-md space-between">
+
+          </div>
+          <div class="col-md-7 inputContainer space-between ">
+            <div class="inputContainer">
+              <label>
+                قیمت آخر هفته
+              </label>
+              <input class="input" />
+            </div>
+          </div>
+          <div class="col-md-7 inputContainer between-md space-between">
+            <div class="inputContainer space-between">
+              <label>
+                قیمت ایام خاص
+              </label>
+              <input class="input" />
+            </div>
+          </div>
+          <div class="col-md-2 inputContainer between-md space-between">
+
+          </div>
+          <div class="col-md-7 inputContainer space-between ">
+            <div class="inputContainer">
+              <label>
+                هزینه نفر اضافی
+              </label>
+              <input class="input" />
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-13 inputContainer between-md space-between">
+          <div class="inputContainer space-between">
+
+          </div>
+        </div>
+        <div class="col-md-3 inputContainer flex-end  " style="padding: 2.5rem;">
+          <app-buttons [btnTitle]="newResidenceRegistrationBtnName" [btnURL]="newResidenceRegistrationURLLink"
+            [icon]="newResidenceRegistrationBtnIcon" [customClass]="newResidenceRegistrationCustomClass"></app-buttons>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>

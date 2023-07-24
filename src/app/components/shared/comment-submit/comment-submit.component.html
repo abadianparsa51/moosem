@@ -1,0 +1,22 @@
+<div class="col-md-16 col-xs-16 start-md top-md rates">
+  <div class="flex-col col-xs-16 between-md items">
+    <div class="flex-col col-xs-16 center-md middle-md ratingitems" *ngFor="let item of ratingItems">
+      <div class="flex-col col-xs-16 between-md between-xs middle-md middle-xs rate">
+        <div class="title">{{ item.title }}</div>
+        <app-rating [rating]='item.rating' [itemId]='item.id' (ratingClick)='ratingComponentClick($event)'></app-rating>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-md-16 col-xs-16 center-md">
+  <div class="col-md-16 col-xs-16 center-md middle-md">
+    <app-textarea></app-textarea>
+  </div>
+</div>
+<div class="col-md-16 col-xs-16 end-md">
+  <div class="col-md-4 col-xs-16 center-xs middle-xs center-md middle-md">
+    <app-buttons (click)="sendComment()" [btnURL]="commentURlLink" [btnTitle]="commentTitleBtnName"
+      [customClass]="commentCustomClass">
+    </app-buttons>
+  </div>
+</div>

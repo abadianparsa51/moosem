@@ -1,0 +1,150 @@
+<div class="flex-col column-md editprofileContainer">
+    <div class="flex-col middle-md editprofileHeader">
+      <div class="col-md-15">
+        <div class="flex-col column-md">
+          <h6>
+            (میزبان) اقامتگاه‌های پرداخت و رزرو شده
+  
+          </h6>
+          <p>
+            اینجا می‌توانید گزارش خریدهایتان را با تاریخ و ساعت دقیق ببینید و نتیجه خرید را بررسی نمایید
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="flex-col middle-md editprofileHeader ">
+      <div class="col-md-16 ">
+        <table class=" center-md midTabel  ">
+          <tr>
+            <th>شماره پیگیری</th>
+            <th>تاریخ درخواست</th>
+            <th>تعداد افراد</th>
+            <th>تاریخ ورود و خروج</th>
+            <th>وضعیت</th>
+            <th>عملیات</th>
+          </tr>
+          <tr>
+            <td>44521</td>
+            <td>1398/۰2/03</td>
+            <td> 50 </td>
+            <td>1398/۰2/03 تا 1398/۰2/20 </td>
+            <td class="status">پرداخت و رزرو</td>
+            <div class="size" >
+              <td class="space">
+                  <app-buttons [btnTitle]=" viewReceiptTitle" [btnURL]="viewReceiptURLLink" [icon]="viewReceiptlIcon"
+                    [customClass]="viewReceiptCustomClass" ></app-buttons>
+                  </td>
+                  <td class="red">
+                    <app-buttons [btnTitle]=" cancelBookingTitle" [btnURL]="cancelBookingURLLink" [icon]="" 
+                    [customClass]="cancelBookingCustomClass">
+                  </app-buttons> 
+                  <button class="redDropDown" type="button">
+                      <app-buttons [btnTitle]="dropDownTitle" [btnURL]="dropDownURLLink" [icon]="dropDownIcon"
+                      [customClass]="dropDownCustomClass" (click)="click()">
+                    </app-buttons> 
+                  </button> 
+                </td>
+              </div>
+              <div [ngStyle] ="{'display': divStyle ? 'block' : 'none'}" style="float: left;position: relative;"  
+                (click)="clickHide()">
+                    <div class="box red " > 
+                        <app-buttons [btnTitle]=" boxTitle" 
+                        [btnURL]="boxURLLink" [icon]="" 
+                        [customClass]="boxCustomClass">
+                      </app-buttons> 
+                      <button class="blackUp" type="button">
+                          <app-buttons [btnTitle]="upTitle" 
+                          [btnURL]="upURLLink" [icon]="upIcon"
+                          [customClass]="upCustomClass" (click)="click()">
+                        </app-buttons> 
+                      </button> 
+                  </div>
+                   </div>
+          </tr>
+          <tr>
+            <td>44521</td>
+            <td>1398/۰2/03</td>
+            <td> 50 </td>
+            <td>1398/۰2/03 تا 1398/۰2/20 </td>
+            <td class="status">پرداخت و رزرو</td>
+            <div class="size" >
+              <td class="space">
+                  <app-buttons [btnTitle]=" viewReceiptTitle" [btnURL]="viewReceiptURLLink" [icon]="viewReceiptlIcon"
+                    [customClass]="viewReceiptCustomClass" ></app-buttons>
+                  </td>
+                  <td class="red">
+                    <app-buttons [btnTitle]=" cancelBookingTitle" [btnURL]="cancelBookingURLLink" [icon]="" 
+                    [customClass]="cancelBookingCustomClass">
+                  </app-buttons> 
+                  <button class="redDropDown" type="button">
+                      <app-buttons [btnTitle]="dropDownTitle" [btnURL]="dropDownURLLink" [icon]="dropDownIcon"
+                      [customClass]="dropDownCustomClass" (click)="click2()">
+                    </app-buttons> 
+                  </button> 
+                </td>
+              </div>
+              <div [ngStyle] ="{'display': divStyle2 ? 'block' : 'none'}" style="float: left;position: relative;"  
+              (click)="clickHide2()">
+                  <div class="box red " > 
+                      <app-buttons [btnTitle]=" boxTitle" 
+                      [btnURL]="boxURLLink" [icon]="" 
+                      [customClass]="boxCustomClass">
+                    </app-buttons> 
+                    <button class="blackUp" type="button">
+                        <app-buttons [btnTitle]="upTitle" 
+                        [btnURL]="upURLLink" [icon]="upIcon"
+                        [customClass]="upCustomClass" (click)="click2()">
+                      </app-buttons> 
+                    </button> 
+                </div>
+                 </div>
+          </tr>
+          <tr>
+            <td>44521</td>
+            <td>1398/۰2/03</td>
+            <td> 50 </td>
+            <td>1398/۰2/03 تا 1398/۰2/20 </td>
+            <td class="status">پرداخت و رزرو</td>
+            <div class="size" >
+              <td class="space">
+                  <app-buttons [btnTitle]=" viewReceiptTitle" [btnURL]="viewReceiptURLLink" [icon]="viewReceiptlIcon"
+                    [customClass]="viewReceiptCustomClass" ></app-buttons>
+                  </td>
+                  <td class="red">
+                    <app-buttons [btnTitle]=" cancelBookingTitle" [btnURL]="cancelBookingURLLink" [icon]="" 
+                    [customClass]="cancelBookingCustomClass">
+                  </app-buttons> 
+                  <button class="redDropDown" type="button">
+                      <app-buttons [btnTitle]="dropDownTitle" [btnURL]="dropDownURLLink" [icon]="dropDownIcon"
+                      [customClass]="dropDownCustomClass" (click)="click3()">
+                    </app-buttons> 
+                  </button> 
+                </td>
+              </div>
+              <div [ngStyle] ="{'display': divStyle3 ? 'block' : 'none'}" style="float: left;position: relative;"  
+              (click)="clickHide3()">
+                  <div class="box red " > 
+                      <app-buttons [btnTitle]=" boxTitle" 
+                      [btnURL]="boxURLLink" [icon]="" 
+                      [customClass]="boxCustomClass">
+                    </app-buttons> 
+                    <button class="blackUp" type="button">
+                        <app-buttons [btnTitle]="upTitle" 
+                        [btnURL]="upURLLink" [icon]="upIcon"
+                        [customClass]="upCustomClass" (click)="click3()">
+                      </app-buttons> 
+                    </button> 
+                </div>
+                 </div>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- <div class="flex-col middle-md center-md editProfileContent">
+      <div class="col-md-16">
+        <table class="flex-col center-md startr-md midTabel">
+        </table>
+      </div>
+    </div> -->
+  </div>
+  

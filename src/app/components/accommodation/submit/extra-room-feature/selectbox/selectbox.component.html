@@ -1,0 +1,14 @@
+<div class="flex-col middle-md selectboxContainer">
+  <div class="col-md-8 end-md selectContainer" [ngClass]="{
+      'col-md-8 ': data.input === true,
+      'col-md-16 vertical-gutter': data.input === false
+    }">
+    <label for="{{ id }}" class="text" (click)="openinputFunc()">{{ data.title }}
+    </label>
+    <input id="{{ id }}" type="checkbox" />
+    <span class="checkmark"></span>
+  </div>
+  <div class="col-md-8 middle-md inputContainer" *ngIf="data.input">
+    <app-inputs class="nopadding" [placeholderValue]="data.placeholder" *ngIf="openInput"></app-inputs>
+  </div>
+</div>

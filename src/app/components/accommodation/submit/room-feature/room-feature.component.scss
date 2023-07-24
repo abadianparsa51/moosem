@@ -1,0 +1,27 @@
+@import './../../../../../assets/scss/abstract/headquarters';
+.setHeight {
+  min-height: calc(100vh - 11rem);
+  .cardInfo {
+    align-self: flex-start;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.title {
+  margin: 5rem 0;
+  p {
+    font-weight: 600;
+  }
+}
+.inputContainer {
+  width: 60%;
+  .subTitle {
+    margin: 1rem 0;
+  }
+}
+.links {
+  width: 60%;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}

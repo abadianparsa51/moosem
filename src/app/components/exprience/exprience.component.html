@@ -1,0 +1,90 @@
+<div class="row">
+  <div class="col-md-16 between-md roomInfoContainer">
+    <div class="col-md-5">
+      <!-- <app-single-silder [slides]="popularSlides"></app-single-silder> -->
+      <!-- <app-bg-slider [slides]="popularSlides"></app-bg-slider> -->
+      <div class="sliderCont" style="position:sticky;">
+        <owl-carousel-o [options]="customOptionsForImage" class="attractionslider">
+          <ng-container *ngFor="let slide of popularSlides">
+            <ng-template carouselSlide>
+              <img [src]="slide.image" [alt]="slide.alt" />
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
+    <div class="col-md-10 column-md ">
+      <div class="column-md">
+        <div class="col-md-16 between-md header">
+          <div class="col-md-16 column-md between-md center-md titles">
+            <div class="flex-col middle-md main-title">
+              <div class="description">
+                <p style="font-size: 1.8rem;"> سی و سه پل نصف جهان</p>
+              </div>
+            </div>
+            <div class="flex-col middle-md location" style="border-bottom:1px solid silver; width: 100%;">
+              <div class="icon-pin_location"></div>
+              <div class="description">
+                <p>اصفهان , اصفهان </p>
+              </div>
+            </div>
+            <div class="col-md-16 flex-col column-md features">
+              <div class="title">
+                <h5>توضیحات</h5>
+              </div>
+              <p>
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+                از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+                متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه
+                درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با
+                نرم افزارها شناخت بیشتری
+              </p>
+              <div style="padding-top: 4rem;">
+                <app-map [costumStyle]="map"></app-map>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="datePrice">
+          <div class="flex-col column-md between-md middle-md comments">
+            <div class="flex-col between-md middle-md heading" style="    padding-top: 8rem;">
+              <div class="title">
+                <h5>نظرات</h5>
+              </div>
+              <div class="description">
+                <p>برای ثبت نظر باید قبلا این اقامتگاه را رزرو کرده باشید</p>
+              </div>
+              <app-buttons (click)="open()" [btnURL]="''" [btnTitle]="BtnTitle" [customClass]="BtnCustomClass">
+              </app-buttons>
+            </div>
+          </div>
+          <ng-container *ngIf="openVal">
+            <div class="col-md-16 center-md">
+              <div class="col-md-1"></div>
+              <div class="col-md-14">
+                <app-textarea></app-textarea>
+              </div>
+              <div class="col-md-1"></div>
+            </div>
+            <div class="col-md-16 center-md">
+              <div class="col-md-14"></div>
+              <div class="col-md-2" style="padding: 3rem;">
+                <app-buttons (click)="open()" [btnURL]="''" [btnTitle]="BtnTitle2" [customClass]="BtnCustomClass2">
+                </app-buttons>
+              </div>
+            </div>
+          </ng-container>
+
+          <app-comments></app-comments>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-16 flex-col column-md relatedPlaces">
+    <div class="relatedPlaces--title">
+      <h5>اقامتگاه‌های مشابه</h5>
+    </div>
+    <app-related-items [slideData]="rentSlideData"></app-related-items>
+  </div>

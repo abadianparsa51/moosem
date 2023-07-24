@@ -1,0 +1,17 @@
+@import './../../../../../assets/scss/abstract/headquarters';
+
+.sliderContainer {
+  max-width: 120rem;
+
+  // min-width: 120rem;
+
+
+  margin: 0 auto;
+  padding: 2rem;
+
+  .sliderPadding {
+    >.owl-stage {
+      padding: 1rem 0;
+    }
+  }
+}

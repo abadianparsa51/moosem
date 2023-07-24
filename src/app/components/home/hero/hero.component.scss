@@ -1,0 +1,26 @@
+@import './../../../../assets/scss/abstract/headquarters';
+
+.heroContainer {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+
+  @include responsive(sm) {
+    height: 50vh;
+    background-size: inherit;
+    -webkit-background-size: inherit;
+    -moz-background-size: inherit;
+    -o-background-size: inherit;
+  }
+
+  .mainTitle {
+    color: $white;
+    margin-bottom: 2rem;
+  }
+}
+
+
+

@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="flex-col center-md column-md residenceContainer">
+    <div class="flex-col between-md middle-md filtersContainer">
+      <!-- <app-filter></app-filter> -->
+      <app-buttons
+        [btnTitle]="mapTitleBtnName"
+        [btnURL]="mapURLLink"
+        [icon]="mapBtnIcon"
+        [customClass]="mapCustomClass"
+        (click)="openMap()"
+      ></app-buttons>
+    </div>
+    <div class="flex-col between-md content">
+      <div class="flex-col itemsContainer" [ngClass]="{ 'col-md-7 column-md': openMapVar === true }">
+        <ng-container *ngFor="let data of cardDatas">
+          <app-main-card
+            class="notSlider"
+            [ngClass]="{ horizontal: openMapVar === true }"
+            [cardData]="data"
+          ></app-main-card>
+        </ng-container>
+      </div>
+      <div
+        class="flex-col content "
+        [ngClass]="{ 'col-md-8 alignSelf-start': openMapVar === true }"
+        [ngStyle]="{ 'margin-top': '1rem' }"
+      >
+        <app-map [costumStyle]="map" [pins]="pinsList" [popCard]="popMainCard"></app-map>
+      </div>
+    </div>
+  </div>
+</div>

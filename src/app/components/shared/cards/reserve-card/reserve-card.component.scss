@@ -1,0 +1,166 @@
+@import './../../../../../assets/scss/abstract/headquarters';
+
+:host {
+  width: 100%;
+
+  @include responsive(xs) {
+    display: none;
+  }
+}
+
+.ki2 {
+  background-color: white;
+  width: 85%;
+  padding: 2rem;
+  border-radius: $border-radius;
+  position: absolute;
+  z-index: 1000;
+  /* left: -134px; */
+  box-shadow: 0 0.15rem 0.3rem rgba($color: #000000, $alpha: 0.2);
+  right: 3rem;
+  top: 0rem;
+  display: none;
+  transition: 0.7s;
+}
+
+.ki {
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.titleCont {
+  .title {}
+}
+
+.tooltipicon {
+
+  cursor: pointer;
+
+  &:hover {
+    .ki2 {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+
+.toolTip {
+  width: 25rem;
+  height: 58rem;
+  background-color: white;
+  position: absolute;
+}
+
+.reserveCardContainer {
+  border-radius: $border_radius * 2;
+  box-shadow: 0 0 5px 0px $blue_boxShadow;
+  width: 100%;
+  position: sticky;
+  top: 5rem;
+  overflow: hidden;
+
+  .titleCont {
+    margin: 0;
+    background-color: $light_blue;
+    padding: 2rem 0;
+
+    .title {
+      color: $main_font_color;
+      font-size: 2rem;
+
+      .icon-faq_strock {
+        margin-right: 1rem;
+
+        span {
+          font-size: 1.7rem;
+          font-family: 'moosem-icon-v12';
+        }
+      }
+    }
+
+    .price {
+      span {
+        color: $main_font_color;
+        font-size: 1.7rem;
+
+        &:after {
+          content: ' تومان';
+          padding-right: 1rem;
+        }
+      }
+    }
+  }
+
+  .content {
+    padding: 1rem 3rem;
+    border-bottom: 1px dashed $gray_border;
+
+    .datesContainer {
+      padding: 1rem 0;
+
+      .dateContainer {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid $gray_border;
+        border-radius: $border_radius;
+
+        &::placeholder {
+          color: $font_light_gray;
+        }
+      }
+    }
+
+    .notation {
+      padding: 1rem;
+
+      p {
+        color: $font_light_gray;
+      }
+    }
+  }
+
+  .reserve {
+    padding: 0rem 1rem;
+
+    .inputCont {
+      margin-bottom: 2rem;
+      padding: 2rem 0;
+
+      .phoneInput {
+        width: 75%;
+        padding: 1rem;
+        border: 1px solid $gray_border;
+        border-left: none;
+        border-top-right-radius: $border_radius;
+        border-bottom-right-radius: $border_radius;
+
+        &::placeholder {
+          color: $font_light_gray;
+        }
+      }
+
+      .phoneBtn {
+        border: 1px solid $gray_border;
+        border-right: none;
+        width: 25%;
+        padding: 1rem;
+        background-color: $light_blue;
+        color: $blue;
+        border-top-left-radius: $border_radius;
+        border-bottom-left-radius: $border_radius;
+      }
+    }
+
+    label {
+      margin-top: 2rem;
+      color: $main_font_color;
+    }
+
+    &-btn {
+      padding: 0 8rem;
+      margin-bottom: 4rem;
+    }
+  }
+}

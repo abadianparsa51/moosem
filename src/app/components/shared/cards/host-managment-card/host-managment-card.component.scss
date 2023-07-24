@@ -1,0 +1,57 @@
+@import './../../../../../assets/scss/abstract/headquarters';
+
+:host {
+  width: 100%;
+}
+
+.cardCont {
+  padding: 0.5rem;
+  border-radius: $border_radius;
+  box-shadow: 0 0 5px 0px $blue_boxShadow;
+
+  .sliderCont {
+    border-top-left-radius: $border_radius;
+    border-top-right-radius: $border_radius;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30rem;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .priceCont {
+    padding: 1rem 0;
+    background-color: $light_blue;
+    border-bottom-left-radius: $border_radius;
+    border-bottom-right-radius: $border_radius;
+  }
+
+  .descriptionCont {
+    padding: 2rem 1rem;
+    border-bottom: 0.1rem solid $gray_border;
+
+    .title {
+      margin: 0.5rem 0;
+    }
+  }
+
+  .detailsCont {
+    padding: 1rem;
+  }
+}
+
+:host {
+  &.notSlider {
+    width: 30rem;
+
+    .cardCont {
+      border: solid 0.05rem #dbe4f9;
+      margin: 1rem;
+    }
+  }
+}

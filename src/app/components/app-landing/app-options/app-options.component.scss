@@ -1,0 +1,97 @@
+@import './../../../../assets/scss/abstract/headquarters';
+.appOptionContainer {
+  margin: 10rem 0;
+  .titles {
+    padding: 5rem 0;
+    .mainTitle {
+      h3 {
+        background-color: $title_yello_bg_color;
+        padding: 2rem 4rem;
+        border-top-left-radius: $border_radius * 4;
+        border-bottom-left-radius: $border_radius * 4;
+        border-bottom-right-radius: $border_radius * 4;
+      }
+    }
+    .titleContent {
+      margin-top: 2rem;
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  .phoneImageContainer {
+    position: relative;
+    width: 100%;
+    .mobile {
+      position: relative;
+      height: 100%;
+      width: 40%;
+      &.iphone {
+        position: absolute;
+        top: 50%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        img {
+          height: 90%;
+          bottom: 0;
+        }
+      }
+      &.pixel {
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translate(-80%, -50%);
+        img {
+          height: 100%;
+          top: 0;
+        }
+      }
+      img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+      }
+      > span {
+        color: $white;
+        font-size: 4rem;
+      }
+    }
+  }
+
+  .contents {
+    padding: 2rem 0;
+    flex-wrap: wrap;
+    .items {
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+      .icon {
+        background-image: linear-gradient(185deg, #0389ff, #08559a);
+        width: 100%;
+        height: 10rem;
+        border-radius: $border_radius * 4 0 $border_radius * 4 $border_radius *
+          4;
+
+        span {
+          font-size: 4rem;
+          color: $white;
+          font-family: 'moosem-icon-v12';
+          &.icon-Check_accommodation {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+    &.reverse {
+      .items {
+        flex-direction: row-reverse;
+        .icon {
+          padding: 3rem 1rem;
+          border-radius: 0 $border_radius * 4 $border_radius * 4 $border_radius *
+            4;
+        }
+      }
+    }
+  }
+}

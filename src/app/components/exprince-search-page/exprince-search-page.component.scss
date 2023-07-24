@@ -1,0 +1,232 @@
+@import './../../../assets/scss/abstract/headquarters';
+
+.title {
+  width: 100%;
+}
+
+.pos {
+  width: 20.5rem;
+  border-radius: 2.5rem;
+  height: 3rem;
+  padding-right: 5rem;
+  margin-left: 2.5rem;
+}
+
+.smallPos {
+  width: 12.5rem;
+  border-radius: 2.5rem;
+  height: 3.1rem;
+  padding-right: 2.5rem;
+}
+
+.content {
+  flex-wrap: wrap;
+  margin-top: 3rem;
+
+
+
+  .searchCardsList {
+    width: calc(20% - 1rem);
+    margin-left: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+  }
+}
+
+.person {
+  position: relative;
+  z-index: 23;
+  border-radius: 1.5rem;
+
+  border: 1px solid silver;
+  padding: 0.5rem 2rem;
+  background-color: $white;
+
+
+  .range {
+    // width: 10rem;
+    // height: 5rem;
+    background-color: white;
+    border-radius: $border-radius*2;
+    position: absolute;
+    top: 5rem;
+    right: 0;
+
+    &.show {
+      display: flex;
+
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+
+.date {
+  position: relative;
+  z-index: 23;
+  border-radius: 1.5rem;
+
+  border: 1px solid silver;
+  padding: 0.5rem 2rem;
+  background-color: $white;
+
+
+  .range {
+    background-color: white;
+    -webkit-border-radius: 2rem;
+    border-radius: 2rem;
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    width: 52rem;
+    padding-top: 2rem;
+
+    &.show {
+      display: flex;
+
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+
+.row {
+  .categoryCont {
+    width: 20%;
+    @include flex('', center, center, '', '');
+    // border: solid 1px grey;
+
+    .image {
+      width: 30%;
+
+      img {
+        width: 100%;
+        border-top-right-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+      }
+    }
+
+    .title {
+      margin-right: 2rem;
+      width: calc(70% - 2rem);
+    }
+  }
+}
+
+::ng-deep {
+  .header {
+    background-color: #fff;
+  }
+}
+
+.row {
+  .priceRange {
+    position: relative;
+    z-index: 23;
+    border-radius: 1.5rem;
+
+    border: 1px solid $black;
+    padding: 0.5rem 2rem;
+    background-color: $white;
+
+
+
+    .range {
+      width: 10rem;
+      height: 5rem;
+      background-color: red;
+      border-radius: $border-radius*2;
+      position: absolute;
+      top: 5rem;
+      right: 0;
+
+      &.show {
+        display: flex;
+      }
+
+      &.hidden {
+        display: none;
+      }
+    }
+
+    .persons {
+      position: relative;
+      z-index: 23;
+    }
+  }
+
+  .show {
+    z-index: 23;
+
+  }
+
+  .hide {
+    z-index: 5;
+  }
+
+  .provience {
+    position: relative;
+    z-index: 23;
+    width: 13rem;
+    -webkit-border-radius: 1.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid #000000;
+    padding: 0.5rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+
+    .range {
+      width: 10rem;
+      height: 5rem;
+      background-color: yellow;
+      border-radius: $border-radius*2;
+      position: absolute;
+      top: 5rem;
+      right: 0;
+
+      &.show {
+        display: flex;
+
+      }
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba($color: $black, $alpha: 0.26);
+  z-index: 22;
+  top: 0;
+  left: 0;
+}
+
+.show {
+  display: flex;
+
+  .priceFilterSection {
+    @include flex('', center, center, '', '');
+    width: 10rem;
+    height: 5rem;
+    background-color: $white;
+    border-radius: $border-radius*2;
+    position: fixed;
+    z-index: 25;
+  }
+}
+
+.hidden {
+  display: none;
+}

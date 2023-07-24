@@ -1,0 +1,7 @@
+<div
+  [ngStyle]="costumStyle"
+  leaflet
+  [leafletOptions]="options"
+  [leafletLayers]="pins"
+  (leafletMapReady)="onmapReady($event)"
+></div>

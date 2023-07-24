@@ -1,0 +1,52 @@
+<div class="row setHeight">
+  <div class="col-md-8 column-md middle-md center-md">
+    <div class="title">
+      <p>{{ formTitle }}</p>
+    </div>
+    <div class="inputContainer">
+      <ng-container>
+        <div>
+          <label for="">عنوان تجربه سفر</label>
+          <app-inputs></app-inputs>
+        </div>
+      </ng-container>
+      <ng-container>
+        <div>
+          <label for="">توضیحات</label>
+          <app-textarea></app-textarea>
+        </div>
+      </ng-container>
+      <ng-container>
+        <div class="col-md-16">
+          <div class="col-md-8">
+            <label for="">زمان حرکت</label>
+            <!-- <app-inputs></app-inputs> -->
+          </div>
+          <div class="col-md-8" style="margin-right: 1rem;">
+            <label for="">زمان برگشت</label>
+            <!-- <app-inputs></app-inputs> -->
+          </div>
+        </div>
+      </ng-container>
+      <ng-container>
+        <div class="col-md-16">
+          <div class="col-md-8">
+            <!-- <label for="">توضیحات</label> -->
+            <app-inputs></app-inputs>
+          </div>
+          <div class="col-md-8" style="margin-right: 1rem;">
+            <!-- <label for="">توضیحات</label> -->
+            <app-inputs></app-inputs>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <div class="flex-col end-md links" style="margin-bottom: 2.5rem;">
+      <app-buttons (click)="incProgress()" [btnTitle]="nextBtnTitle" [customClass]="nextBtnCustomClass"></app-buttons>
+    </div>
+  </div>
+  <div class="col-md-8 middle-md center-md" style="margin-bottom: 2.5rem;">
+    <app-info-card [title]="info[0].infoTitle" [content]="info[0].infoContent" class="col-md-8" *ngIf="info">
+    </app-info-card>
+  </div>
+</div>

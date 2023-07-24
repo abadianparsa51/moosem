@@ -1,0 +1,31 @@
+<!-- <div class="row">
+  <div class="flex-col center-md middle-md suggestFeaturesContainer">
+    <div
+      *ngFor="let item of properties"
+      class="col column-md center-md middle-md suggestFeatures"
+    >
+      <div class="flex-col center-md middle-md image">
+        <img [src]="item.image" />
+      </div>
+      <div class="col center-md middle-md description">
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="row">
+  <div class="flex-col center-md middle-md title">
+    <h3>{{ title }}</h3>
+  </div>
+  <div class="col center-md middle-md suggestFeaturesCont">
+    <div *ngFor="let item of properties" class="col column-md center-md middle-md suggestFeature">
+      <div class="flex-col center-md middle-md image">
+        <img [src]="item.image" />
+      </div>
+      <div class="col center-md middle-md description">
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="col-md-16 column-sm">
+  <div class="col-md-8 middle-md center-md middle-sm center-sm">
+    <app-social-auth></app-social-auth>
+  </div>
+  <div class="col-md-8 middle-md center-md">
+    <div class="signupForm">
+      <app-inputs
+        [type]="nameType"
+        [value]="nameVal"
+        [placeholderValue]="nameplaceholder"
+      ></app-inputs>
+      <app-inputs
+        [type]="familynameType"
+        [value]="familynameVal"
+        [placeholderValue]="familynameplaceholder"
+      ></app-inputs>
+      <app-inputs
+        [type]="mobileType"
+        [value]="mobileVal"
+        [placeholderValue]="mobileplaceholder"
+      ></app-inputs>
+      <app-inputs
+        [type]="emailType"
+        [value]="emailVal"
+        [placeholderValue]="emailplaceholder"
+      ></app-inputs>
+      <app-inputs
+        [type]="passwordType"
+        [value]="passwordVal"
+        [placeholderValue]="passwordplaceholder"
+      ></app-inputs>
+      <div class="flex-col center-md between-md signupBtn">
+        <div class="col-md-8">
+          <button class="btn btn_blue" (click)="checkVal()">عضویت</button>
+        </div>
+        <div class="col-md-8 end-md">
+          <div class="rules">
+            <p>
+              عضویت به معنای پذیرفتن<br />
+              <a [routerLink]=""> شرایط و قوانین</a>موسم است 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+@import './../../../../../assets/scss/abstract/headquarters';
+
+:host {
+  width: 100%;
+  @include flex ("", center, center, "", "");
+}
+
+.editprofileContainer {
+  width: 100%;
+  // border: 0.1rem solid $gray_border;
+  box-shadow: 0 0.1rem 0.2rem $blue_boxShadow;
+  border-radius: $border_radius;
+  background-color: $white;
+  padding: 1rem;
+
+  .editprofileHeader {
+    width: 100%;
+
+  }
+
+  .editprofileContent {
+    width: 100%;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+
+    .mainInputs {
+      flex-wrap: wrap;
+    }
+  }
+}
+.status{
+color:  $success_color;
+}
+.cancel{
+  color:$danger_color;
+}
+
+.mt3{
+  margin-top: 3rem;
+}
+.mt2{
+  margin-top: 2rem;
+}
+.mt4{
+  margin-top: 4rem;
+}
+.midTabel {
+  
+  width: 100%;
+    margin-top: 2rem;
+
+  &:first-child{
+    padding: 2rem 0;
+    border-top: 0.1rem solid $gray_border;  
+  }
+  tr{
+  }
+  
+  td,th {
+    // padding-right: 8.5rem;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+}

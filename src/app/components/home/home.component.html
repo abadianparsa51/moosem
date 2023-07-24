@@ -1,0 +1,54 @@
+<app-hero></app-hero>
+<app-support-features [properties]="supportfeature"></app-support-features>
+<app-title-divider [data]="rentHost"></app-title-divider>
+<app-default-slider class="homeDefaultSlider" [slideData]="rentSlideData"></app-default-slider>
+<div class="mobileContainer">
+  <ng-container *ngFor="let slide of rentSlideData; let i = index">
+    <ng-container *ngIf="i < 4">
+      <app-main-card [cardData]="slide"></app-main-card>
+    </ng-container>
+  </ng-container>
+  <a [routerLink]="['/rentals']" routerLinkActive="router-link-active" class="more">مشاهده همه</a>
+</div>
+<app-default-slider [className]="innerWidth < 600 ? 'mobile': 'show' " [slideData]="rentSlideData2">
+</app-default-slider>
+<app-title-divider [data]="indoorsHost"></app-title-divider>
+<app-default-slider class="homeDefaultSlider" [slideData]="rentSlideData"></app-default-slider>
+<div class="mobileContainer">
+  <ng-container *ngFor="let slide of rentSlideData; let i = index">
+    <ng-container *ngIf="i < 4">
+      <app-main-card [cardData]="slide"></app-main-card>
+    </ng-container>
+  </ng-container>
+  <a [routerLink]="['/rentals']" routerLinkActive="router-link-active" class="more">مشاهده همه</a>
+</div>
+<app-title-divider [data]="popularHost"></app-title-divider>
+<app-bg-slider [slides]="popularSlides"></app-bg-slider>
+<app-join-container></app-join-container>
+
+<app-title-divider [data]="travelExprience"></app-title-divider>
+<app-secondary-slider></app-secondary-slider>
+
+<div class="mobileContainer">
+  <a [routerLink]="['/rentals']" routerLinkActive="router-link-active" class="more">مشاهده همه</a>
+</div>
+<app-title-divider [data]="suggestHost"></app-title-divider>
+<app-default-slider [slideData]="rentSlideData"></app-default-slider>
+<div class="mobileContainer">
+  <a [routerLink]="['/rentals']" routerLinkActive="router-link-active" class="more">مشاهده همه</a>
+</div>
+<app-title-divider [data]="sights"></app-title-divider>
+
+<!-- <app-secondary-slider></app-secondary-slider> -->
+
+<app-secondary-slider2></app-secondary-slider2>
+
+<div class="mobileContainer">
+  <a [routerLink]="['/rentals']" routerLinkActive="router-link-active" class="more">مشاهده همه</a>
+</div>
+<app-bg-slider [slides]="popularSlides"></app-bg-slider>
+<app-title-divider [data]="blogData"></app-title-divider>
+<div class="mobileContainer">
+  <a [routerLink]="['/rentals']" routerLinkActive="router-link-active" class="more"> مشاهده همه مطالب</a>
+</div>
+<app-news-slider [news]="blog"></app-news-slider>

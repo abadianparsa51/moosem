@@ -1,0 +1,50 @@
+@import './../../../../assets/scss/abstract/headquarters';
+:host {
+  width: 100%;
+}
+.myProfileContainer {
+  width: 100%;
+  padding: 2rem 0;
+  .profileCard {
+    width: 100%;
+    background-color: $white;
+    // border: 0.1rem solid $gray_border;
+    box-shadow: 0 0.1rem 0.2rem $blue_boxShadow;
+    border-radius: $border_radius;
+    padding: 1rem;
+    .userInfo {
+      justify-content: flex-start;
+      border-bottom: 0.1rem solid $gray_border;
+      padding-bottom: 2rem;
+      width: 100%;
+      .image {
+        width: 12rem;
+        height: 12rem;
+        background-position: center;
+        background-size: cover;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    }
+    .size{
+      width: 100%;
+      padding: 2rem;
+      
+    }
+    .links {
+      > a {
+        
+      }
+    }
+  }
+}
+.padding{
+  padding-bottom: 2 rem;
+}
+.spanTitle{
+  padding-top: 1.5rem;
+color: gray;
+}
+.bPadding{
+  padding-bottom: 2 rem;
+}

@@ -1,0 +1,77 @@
+@import "./../../../../assets/scss/abstract/headquarters";
+
+:host {
+  padding-bottom: 5rem;
+  border-bottom: 1px solid $gray_border;
+}
+
+.commentsContainer {
+  box-shadow: 0 0 5px 0px $blue_boxShadow;
+  border-radius: $border_radius;
+
+  .header {
+    border-bottom: 1px solid $gray_border;
+    margin: 0 4rem;
+
+    .raiting {
+      position: relative;
+
+      .ki2 {
+        background-color: white;
+        // width: 29.3rem;
+        min-height: 25rem;
+        position: absolute;
+        z-index: 1000;
+        /* left: -134px; */
+        box-shadow: 0 0.15rem 0.3rem rgba($color: #000000, $alpha: 0.2);
+        right: -10.5rem;
+        display: none;
+        transition: 0.7s;
+      }
+
+
+      &:hover {
+        .ki2 {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    .avatar {
+      padding: 2rem 0;
+
+      .image {
+        position: relative;
+
+        img {
+          width: 60%;
+          border-radius: 50%;
+          border: 2px solid $blue;
+          padding: 0.1rem;
+        }
+      }
+
+
+
+      .name {
+        color: $main_font_color;
+
+        .date {
+          color: $font_light_gray;
+        }
+      }
+    }
+
+    app-rating {
+      padding: 0 1rem;
+    }
+  }
+
+  .description {
+    padding: 2rem 5rem;
+    @include responsive(xs){
+      padding: 2rem;
+    }
+  }
+}

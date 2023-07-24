@@ -1,0 +1,26 @@
+<div class="flex-col between-md myProfileContainer">
+  <div class="col-md-4">
+    <div class="profileCard">
+      <div class="flex-col middle-md column-md userInfo">
+        <div class="image" [style.backgroundImage]="'url(' + userImage + ')'"></div>
+        <div class="userName">
+          <h6>{{ userName }}</h6>
+        </div>
+        <div class="userMobile">
+          <p>{{ userMobile }}</p>
+        </div>
+      </div>
+      <div class="flex-col column-md links">
+        <app-buttons [btnTitle]="editProfileTitleBtnName" [btnURL]="editProfileURLLink" [icon]="editProfilebtnIcon"
+          [customClass]="editProfileCustomClass"></app-buttons>
+        <app-buttons [btnTitle]="authProfileTitleBtnName" [btnURL]="authProfileURLLink" [icon]="authProfilebtnIcon"
+          [customClass]="authProfileCustomClass"></app-buttons>
+        <app-buttons [btnTitle]="changePassTitleBtnName" [btnURL]="changePassURLLink" [icon]="changePassbtnIcon"
+          [customClass]="changePassCustomClass"></app-buttons>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-11">
+    <router-outlet></router-outlet>
+  </div>
+</div>

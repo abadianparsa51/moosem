@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29.15" height="23.203" viewBox="0 0 29.15 23.203">
+    <defs>
+        <style>
+            .cls-1{fill:#5e5e5e;stroke:#5e5e5e;stroke-width:.3px}
+        </style>
+    </defs>
+    <g id="hairdryer" transform="translate(.15 -5.829)">
+        <g id="Group_15" data-name="Group 15" transform="translate(0 5.981)">
+            <path id="Path_975" d="M23.419 7.357L6.459 6A5.9 5.9 0 0 0 0 11.969 5.95 5.95 0 0 0 1.9 16.4a5.832 5.832 0 0 0 3.079 1.477v7.773c0 1.782 1.116 3.231 2.487 3.231s2.487-1.449 2.487-3.231v-7.963c0-.01-.005-.019-.006-.029l13.476-1.077a.5.5 0 0 0 .458-.5V7.853a.5.5 0 0 0-.462-.496zM8.954 25.65c0 1.213-.683 2.236-1.492 2.236s-1.493-1.024-1.493-2.236v-7.693c.162 0 .326-.007.49-.02l2.495-.2zm13.927-10.024L6.38 16.945a5.031 5.031 0 0 1-3.809-8.676 4.914 4.914 0 0 1 3.37-1.293q.218 0 .439.017l16.5 1.319z" class="cls-1" data-name="Path 975" transform="translate(0 -5.981)"/>
+            <path id="Path_976" d="M51.5 12.014h1.99a.5.5 0 1 0 0-.995H51.5a.5.5 0 1 0 0 .995z" class="cls-1" data-name="Path 976" transform="translate(-25.631 -8.513)"/>
+            <path id="Path_977" d="M54.487 17.019H52.5a.5.5 0 0 0 0 .995h1.99a.5.5 0 0 0 0-.995z" class="cls-1" data-name="Path 977" transform="translate(-26.134 -11.529)"/>
+            <path id="Path_978" d="M52.487 23.019H50.5a.5.5 0 1 0 0 .995h1.99a.5.5 0 1 0 0-.995z" class="cls-1" data-name="Path 978" transform="translate(-25.129 -14.544)"/>
+            <path id="Rectangle_1084" d="M0 0h.995v2.487H0z" class="cls-1" data-name="Rectangle 1084" transform="translate(6.964 12.952)"/>
+        </g>
+    </g>
+</svg>

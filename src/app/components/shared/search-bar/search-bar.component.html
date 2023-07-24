@@ -1,0 +1,58 @@
+<div class="flex-col column-md column-sm mainSearchCont" [ngClass]="{ searching: playerName !== '' }">
+  <div class="flex-col searchContainer">
+    <div class="flex-col prefixCont middle-md">
+      <p>کجا می‌خواید برید؟</p>
+    </div>
+
+    <input class="mainSearch" type="text" placeholder="کد یا شهر اقامت مقصد رو جستجو کنید">
+    <button class="flex-col middle-md center-md btn mainSearchBtn">
+      <a class="flx-col middle-md">
+        <span class="icon-search"></span></a>
+    </button>
+  </div>
+
+
+  <!-- <a class="flx-col middle-md" [routerLink]="['search-page']">
+    <span class="icon-search"></span></a> -->
+
+  <ng-container *ngIf="playerName !== ''">
+
+    <!-- <div class="col-md-2" *ngFor="let city of state | async | filter: playerName">
+        <p class="search-item" innerHTML="{{ city.name | highlight: playerName }}">
+
+        </p>
+      </div> -->
+
+    <div class=" hide displayed flex-col center-md center-sm">
+      <!-- <div class=""> -->
+      <div class="col-md-16 searchDrops">
+        <ng-container *ngFor="let search of searchs">
+          <div class="col-md-16 col-sm-16 searchItem">
+            <div class="col center-md center-sm">
+              <P>
+                <span [class]=search.icon></span>
+              </P>
+              <p style="padding-right: 0.5rem;">
+                <a class="flx-col middle-md">
+                  {{search.city}}
+                </a>
+              </p>
+            </div>
+            <div class="col center-md center-sm">
+              <p style="color: #acacac;">
+                  <span>در</span>
+                {{search.town}}
+              </p>
+            </div>
+            <div class="col center-md center-sm">
+              <p>
+                {{search.numOfRes}}
+              </p>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <!-- </div> -->
+  </ng-container>
+</div>

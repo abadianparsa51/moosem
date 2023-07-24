@@ -1,0 +1,28 @@
+@import './../../../../assets/scss/abstract/headquarters';
+.selectContainer {
+  width: 100%;
+  .title {
+    color: $selectBox_title_color;
+    margin: 1.5rem 0;
+  }
+  .selectBox {
+    width: 100%;
+    position: relative;
+    span {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.5rem;
+      color: $blue;
+    }
+    select {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      border: 0.1rem solid $gray_border;
+      border-radius: $border_radius * 2;
+      outline: none;
+      appearance: none;
+    }
+  }
+}

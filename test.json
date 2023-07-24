@@ -1,0 +1,215 @@
+{
+  "status": "success",
+  "message": "1",
+  "data": {
+    "0": {
+      "id": 3,
+      "created_at": "2017-01-01 21:25:48",
+      "updated_at": "2019-10-14 17:30:00",
+      "user_id": 16418,
+      "property_type": "VILLA",
+      "property_type_new": "Villa",
+      "capacity": 3,
+      "city_id": 344,
+      "title": "\u0627\u06cc\u0646 \u0648\u0627\u062d\u062f \u062a\u0633\u062a\u06cc \u0645\u06cc \u0628\u0627\u0634\u062f \" \u0644\u0637\u0641\u0627 \u062f\u0631 \u062e\u0648\u0627\u0633\u062a \u0646\u0632\u0646\u06cc\u062f\"",
+      "description": "\u062a\u0648\u0633\u062a\u0631 \u0640 \u0645\u06cc\u0632\u0646\u0627\u0647\u0627\u0631 \u062e\u0648\u0631\u06cc \u062f\u0631 \u0622\u0634\u067e\u0632\u062e\u0627\u0646\u0647 \u0648 \u0628\u0627\u0644\u06a9\u0646 \u0640 \u0634\u0637\u0631\u0646\u062c \u0640 \u067e\u0627\u0631\u06a9\u0646\u06cc\u06af \u0633\u0647 \u062e\u0648\u062f\u0631\u0648 \u0640 \u0648 \u0628\u06cc\u0645\u0647 \u0645\u0633\u0626\u0648\u0644\u06cc\u062a - \u0648 ...",
+      "property_score": 28,
+      "deleted": "UNDELETED",
+      "price_per_night": "200,000",
+      "cancelation_unit": "percent",
+      "cancelation_amount": 2,
+      "address": ".",
+      "temp": "FALSE",
+      "comission": 10,
+      "user_comisson": 0,
+      "check_in_rules": " ",
+      "property_rules": "{\"1\":\"1\",\"2\":\"1\"}",
+      "check_in_time": "14:00PM",
+      "check_out_time": "12:00AM",
+      "cancelation_plan": "HARD",
+      "active": "ACTIVE",
+      "main_page": 1,
+      "max_capacity": 6,
+      "prop_image": "",
+      "cover_image": "",
+      "fara_region": "{\"2\":\"1\"}",
+      "metraj": "100",
+      "property_rate": 1,
+      "count": 1,
+      "dicount_percent": 5,
+      "html_title": "",
+      "html_description": "",
+      "html_keywords": "",
+      "province_id": 6,
+      "slider_type": "GRID",
+      "request_number": 170,
+      "rating_count": 0,
+      "trip_count": 4,
+      "update_date_base_price": "2019-07-31 12:09:33",
+      "update_date_calendar_price": "2019-06-23 16:26:03",
+      "update_date_calendar_availability": "2019-07-17 16:14:22",
+      "update_date_peek_price": "2019-07-31 12:11:20",
+      "update_date_weekend_price": "2019-07-31 12:10:15",
+      "update_date_extra_guest_price": "2019-07-31 12:11:56",
+      "update_date_per_person_price": "2019-07-31 12:18:22",
+      "property_activate_date": "2019-08-28 18:57:22",
+      "property_deactive_date": "2019-05-11 01:16:07",
+      "property_deleted_date": "2019-05-11 01:19:04",
+      "property_type_trans": "\u0648\u06cc\u0644\u0627",
+      "lat": "36.9218017745976",
+      "lang": "50.64617469906807",
+      "image": "\/photo\/ads\/500-200_5869777f6fa32.jpg",
+      "pricetext": "\u062a\u0648\u0645\u0627\u0646 \u0647\u0631 \u0634\u0628",
+      "owner": {
+        "show_name": "\u0627\u0645\u06cc\u0631\u062d\u0633\u06cc\u0646 \u0642\u0627\u0633\u0645\u06cc \u0631\u0627\u062f",
+        "avatar": "\/photo\/avatar\/150-150_5cb3135154e19.jpg",
+        "avatarnew": "\/photo\/avatar\/300-300_5cb3135154e19.jpg",
+        "isMoosemVerified": 0
+      },
+      "card": {
+        "shower": 1,
+        "room": 3,
+        "bed": 3,
+        "guest": 6
+      },
+      "avg_rate": 0,
+      "price_section": {
+        "fa": [
+          {
+            "key": "\u0642\u06cc\u0645\u062a \u0647\u0631 \u0634\u0628",
+            "value": "200,000"
+          },
+          {
+            "key": "\u0647\u0632\u06cc\u0646\u0647 \u0628\u0647 \u0627\u0632\u0627\u06cc \u0647\u0631 \u0646\u0641\u0631 \u0628\u06cc\u0634\u062a\u0631 \u0627\u0632 \u0638\u0631\u0641\u06cc\u062a",
+            "value": "20,000"
+          },
+          {
+            "key": "\u0642\u06cc\u0645\u062a \u0622\u062e\u0631 \u0647\u0641\u062a\u0647",
+            "value": 400000
+          },
+          {
+            "key": "\u0642\u06cc\u0645\u062a \u0627\u06cc\u0627\u0645 \u067e\u06cc\u06a9 \u0633\u0641\u0631",
+            "value": "600,000"
+          },
+          {
+            "key": "\u062f\u0631\u0635\u062f \u062a\u062e\u0641\u06cc\u0641 \u0647\u0631 \u0634\u0628 ,\u0628\u06cc\u0634 \u0627\u0632 \u06cc\u06a9 \u0647\u0641\u062a\u0647",
+            "value": 10
+          }
+        ]
+      }
+    },
+    "city_name": "\u062e\u0627\u0634",
+    "province_name": "\u0633\u06cc\u0633\u062a\u0627\u0646 \u0648 \u0628\u0644\u0648\u0686\u0633\u062a\u0627\u0646",
+    "property_AMENITIES": {
+      "wifi": "1",
+      "kitchen": "1",
+      "tv": "1",
+      "spilet": "1",
+      "internet": "",
+      "dishwasher": "1",
+      "dryer": "",
+      "safebox": "1",
+      "elevator": "1",
+      "firehood": "1",
+      "hottub": "",
+      "gym": "1",
+      "parking": "1",
+      "pool": "1",
+      "mattress": "",
+      "sofa": "",
+      "vacume_cleaner": "1",
+      "tea_maker": "1",
+      "ooto": "1",
+      "hair_dryer": "1",
+      "cooler": "1",
+      "dry_cleaner": "1",
+      "audio_system": "1",
+      "heater": "1",
+      "shufaj": "1",
+      "biliard": "1",
+      "hand_ball": "1",
+      "takhte_nard": "1",
+      "ping_pong": "1",
+      "alachigh": "1",
+      "teras": "1",
+      "barbeque": "1",
+      "pool_with_head_warn": "1",
+      "jakuzi": "1",
+      "sona": "1",
+      "wc": "1"
+    },
+    "property_INFO": {
+      "lat": "36.9218017745976",
+      "lang": "50.64617469906807",
+      "Bedrooms": "3",
+      "Beds_normal": "3",
+      "Bathrooms": "bath_public",
+      "parking_count": "",
+      "Beds_king": "0",
+      "Beds_kid": "",
+      "iranin_wc": "1",
+      "each_room_bathroom": "1",
+      "rest_room_count": "",
+      "bath_room_count": "1"
+    },
+    "property_RULES": {
+      "min_stay": "2",
+      "ceremony_ok": "1",
+      "wheelchair": "1",
+      "Categirng_servinces": "no_catering",
+      "KidFriendly": "1",
+      "PetsAllowed": "1"
+    },
+    "property_PRICE": {
+      "peek_price": " 600000",
+      "more_than_month_price": "0",
+      "more_than_week_price": "10",
+      "price_per_person": "0",
+      "norouz_price": "",
+      "extra_people": "20000",
+      "week_end_percent": "400000"
+    },
+    "images": [
+      {
+        "filename": "\/photo\/ads\/x-x_5869777f6fa32.jpg",
+        "main_image": "MAIN_IMAGE"
+      },
+      {
+        "filename": "\/photo\/ads\/x-x_5869777cc8155.jpg",
+        "main_image": "OTHER"
+      },
+      {
+        "filename": "\/photo\/ads\/x-x_5869777cd2b46.jpg",
+        "main_image": "OTHER"
+      },
+      {
+        "filename": "\/photo\/ads\/x-x_5869777d4ef95.jpg",
+        "main_image": "OTHER"
+      },
+      {
+        "filename": "\/photo\/ads\/x-x_5869777d793a3.jpg",
+        "main_image": "OTHER"
+      },
+      {
+        "filename": "\/photo\/ads\/x-x_5869777dace2e.jpg",
+        "main_image": "OTHER"
+      },
+      {
+        "filename": "\/photo\/ads\/x-x_5869777f1cffa.jpg",
+        "main_image": "OTHER"
+      },
+      {
+        "filename": "\/photo\/ads\/x-x_5869777f70dec.jpg",
+        "main_image": "OTHER"
+      },
+      {
+        "filename": "\/photo\/ads\/x-x_586977812167e.jpg",
+        "main_image": "OTHER"
+      },
+      {
+        "filename": "\/photo\/ads\/x-x_5d3c476308fd3.jpg",
+        "main_image": "OTHER"
+      }
+    ]
+  }
+}

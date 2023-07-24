@@ -1,0 +1,11 @@
+<div class="col-md-16 col-xs-16 flex-col middle-md selectboxContainer" style="padding-top: 0.5rem;">
+  <div class="col-md-16 col-xs-16 column-xs end-md selectContainer">
+    <label for="{{ id }}" class="text" (click)="openinputFunc()">{{ data.title }}
+    </label>
+    <input id="{{ id }}" type="checkbox" />
+    <span class="checkmark"></span>
+  </div>
+  <!-- <div class="col-md-8 middle-md inputContainer" *ngIf="data.input">
+      <app-inputs class="nopadding" [placeholderValue]="data.placeholder" *ngIf="openInput"></app-inputs>
+    </div> -->
+</div>

@@ -1,0 +1,10 @@
+@import ' ./../../../../../assets/scss/abstract/headquarters';
+.footerAboutContainer {
+  background-color: $footer_dark_gray_bg;
+  padding: 4rem 0;
+  p {
+    text-align: justify;
+    line-height: 4rem;
+    font-size: 1.6rem;
+  }
+}

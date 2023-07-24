@@ -1,0 +1,15 @@
+<div class="flex-col column-md infoCardContainer">
+  <div class="flex-col middle-md center-md title">
+    <p>{{ title }}</p>
+  </div>
+  <div class="flex-col column-md content">
+    <ng-container *ngFor="let item of content">
+      <div class="contentTitle">
+        <p>{{item.title}}</p>
+      </div>
+      <div class="contentText">
+        <p>{{item.text}}</p>
+      </div>
+    </ng-container>
+  </div>
+</div>

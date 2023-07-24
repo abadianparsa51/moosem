@@ -1,0 +1,55 @@
+<div class="flex-col between-md top-md myProfileContainer">
+    <div class="col-md-4">
+      <div class="profileCard">
+          <span class="spanTitle">بخش میزبان</span>
+          <div class="flex-col column-md  userInfo"> 
+              <app-buttons 
+              [btnTitle]="awaitingApprovalTitle"
+              [btnURL]="awaitingApprovalURLLink"
+              [icon]="awaitingApprovalIcon"
+              [customClass]="awaitingApprovalCustomClass"
+            ></app-buttons>
+              <app-buttons
+              [btnTitle]="cancelTitle"
+              [btnURL]="cancelURLLink"
+              [icon]="cancelIcon"
+              [customClass]="cancelCustomClass">
+            </app-buttons>
+              <app-buttons
+              [btnTitle]="paidFinalizedTitle"
+              [btnURL]="paidFinalizedURLLink"
+              [icon]="paidFinalizedIcon"
+              [customClass]="paidFinalizedCustomClass">
+            </app-buttons>
+          </div>
+        <div class="flex-col center-md column-md links  "  style="padding-bottom: 1.5rem">
+            <span class="spanTitle" >بخش کاربر</span>
+            <app-buttons
+            [btnTitle]="clientWaittingTitle"
+            [btnURL]="clientWaittingURLLink"
+            [icon]="clientWaittingIcon"
+            [customClass]="clientWaittingCustomClass"
+          ></app-buttons>
+            <app-buttons
+            [btnTitle]="awaitingPaymentTitle"
+            [btnURL]="awaitingPaymentURLLink"
+            [icon]="awaitingPaymentIcon"
+            [customClass]="awaitingPaymentCustomClass">
+          </app-buttons>
+            <app-buttons 
+              [btnTitle]="finalizedReservationsTitle"
+              [btnURL]="finalizedReservationsURLLink"
+              [icon]="finalizedReservationsIcon"
+              [customClass]="finalizedReservationsCustomClass"></app-buttons>  
+            <app-buttons
+            [btnTitle]="clientCancelTitle"
+            [btnURL]="clientCancelURLLink"
+            [icon]="clientCancelIcon"
+            [customClass]="clientCancelCustomClass"
+          ></app-buttons>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-11"><router-outlet></router-outlet></div>
+  </div>
+  

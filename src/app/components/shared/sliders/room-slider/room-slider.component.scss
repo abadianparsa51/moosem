@@ -1,0 +1,29 @@
+// @import './../../../../../assets/scss/abstract/headquarters';
+// .sliderContainer {
+//   width: 100%;
+// }
+
+// ::ng-deep{
+//   .owl-nav.ng-star-inserted{
+//     width: 80%;
+//   }
+// }
+@import './../../../../../assets/scss/abstract/headquarters';
+
+.sliderContainer {
+  width: 100%;
+}
+
+::ng-deep {
+  .owl-nav.ng-star-inserted {
+    width: 80%;
+
+    @include responsive(xs) {
+      width: 100%;
+
+      .owl-prev,.owl-next{
+        transform: scale(0.5);
+      }
+    }
+  }
+}

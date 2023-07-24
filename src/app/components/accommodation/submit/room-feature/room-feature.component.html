@@ -1,0 +1,26 @@
+<div class="row setHeight">
+  <div class="col-md-8 column-md middle-md start-md ">
+    <div class="title">
+      <p>{{ formTitle }}</p>
+    </div>
+    <div class="inputContainer">
+      <div class="subTitle">
+        <p>{{ subformTitle }}</p>
+      </div>
+      <!-- <app-set-room-bed2 [title]="'اتاق 1'"></app-set-room-bed2>
+      <app-set-room-bed2 [title]="'اتاق 2'"></app-set-room-bed2>
+      <app-set-room-bed2 [title]="'فضای مشترک'"></app-set-room-bed2> -->
+      <app-textarea [title]="textareaTitle" [value]="textareaVal" [placeholderValue]="textareaPlaceholder"
+        [customClass]="textareaClass"></app-textarea>
+    </div>
+    <div class="flex-col between-md links">
+      <app-buttons (click)="decProgress()" [btnTitle]="prevBtnTitle" [customClass]="prevBtnCustomClass"
+        [icon]="iconValue"></app-buttons>
+      <app-buttons (click)="incProgress()" [btnTitle]="nextBtnTitle" [customClass]="nextBtnCustomClass"></app-buttons>
+    </div>
+  </div>
+  <div class="col-md-8 middle-md center-md cardInfo">
+    <app-info-card [title]="info[0].infoTitle" [content]="info[0].infoContent" class="col-md-8" *ngIf="info">
+    </app-info-card>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="flex-col column-md setRoomBedsContainer">
+  <div class="flex-col column-md setRoomHeader">
+    <div class="flex-col">
+      <div class="col-md-10 column-md">
+        <div class="title">
+          <h6>{{ title }}</h6>
+        </div>
+      </div>
+      <div class="col-md-6 end-md">
+        <app-buttons (click)="open()" [btnURL]="''" [btnTitle]="BtnTitle" [customClass]="BtnCustomClass"></app-buttons>
+      </div>
+    </div>
+    <div class="quantityOfTotalBeds">
+      <p>
+        <span>{{ totalBed() }}</span>جای خواب
+      </p>
+    </div>
+    <div class="flex-col quantityOfBeds">
+      <p class="item">
+        <span>{{ singleBed }}</span>تخت یک نفره
+      </p>
+      <p class="item">
+        <span>{{ doubleBed }}</span>تخت دو نفره
+      </p>
+      <p class="item">
+        <span>{{ traditionalBed }}</span>رختخواب سنتی
+      </p>
+    </div>
+  </div>
+  <div class="flex-col column-md setRoomContent hidden" [ngClass]="{ show: openVal }">
+    <div class="flex-col quantityRow">
+      <div class="col-md-10">
+        <p>تخت یک نفره</p>
+      </div>
+      <div class="col-md-6 center-md">
+        <app-quantity [minValue]="0" (QuantityNum)="getSingleValue($event)"></app-quantity>
+      </div>
+    </div>
+    <div class="flex-col quantityRow">
+      <div class="col-md-10">
+        <p>تخت دو نفره</p>
+      </div>
+      <div class="col-md-6 center-md">
+        <app-quantity [minValue]="0" (QuantityNum)="getDoubleValue($event)"></app-quantity>
+      </div>
+    </div>
+    <div class="flex-col quantityRow">
+      <div class="col-md-10">
+        <p>رخت خواب سنتی</p>
+      </div>
+      <div class="col-md-6 center-md">
+        <app-quantity [minValue]="0" (QuantityNum)="getTraditionalValue($event)"></app-quantity>
+      </div>
+    </div>
+    <div class="flex-col inputContainer">
+      <app-inputs [type]="inputType" [value]="inputVal" [placeholderValue]="inputPlaceholder" [customClass]="inputClass"
+        [icon]="inputIcon"></app-inputs>
+    </div>
+  </div>
+</div>

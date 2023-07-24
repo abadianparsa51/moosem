@@ -1,0 +1,44 @@
+<div class="row setHeight">
+  <div class="col-md-8 column-md middle-md center-md">
+    <div class="title">
+      <p>{{ formTitle }}</p>
+    </div>
+    <div class="inputContainer">
+      <app-textarea
+        [title]="textareaTitle"
+        [value]="textareaVal"
+        [placeholderValue]="textareaPlaceholder"
+        [customClass]="textareaClass"
+      ></app-textarea>
+      <div class="tooltip">
+        <p>
+          جاذبه های گردشگری ‏اطراف اقامتگاه خود همچون ساحل دریا/رودخانه/کوهستان/
+          اماکن تاریخی/بازار محلی را با ذکر فاصله از اقامتگاه و شیوه ‏دسترسی
+          گردشگران به آنها شرح دهید. وجود فروشگاههای مواد غذایی و بهداشتی و
+          نانوایی در مجاورت منزل خود را مشخص ‏کنید.‏‎
+        </p>
+      </div>
+    </div>
+    <div class="flex-col between-md links">
+      <app-buttons
+        (click)="decProgress()"
+        [btnTitle]="prevBtnTitle"
+        [customClass]="prevBtnCustomClass"
+        [icon]="iconValue"
+      ></app-buttons>
+      <app-buttons
+        (click)="incProgress()"
+        [btnTitle]="nextBtnTitle"
+        [customClass]="nextBtnCustomClass"
+      ></app-buttons>
+    </div>
+  </div>
+  <div class="col-md-8 middle-md center-md">
+    <app-info-card
+      [title]="info[0].infoTitle"
+      [content]="info[0].infoContent"
+      class="col-md-8"
+      *ngIf="info"
+    ></app-info-card>
+  </div>
+</div>

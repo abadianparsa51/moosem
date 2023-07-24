@@ -1,0 +1,30 @@
+<div class="col-md-16 column-sm">
+  <div class="col-md-8 col-sm-16 middle-md center-md middle-sm center-sm">
+    <app-social-auth></app-social-auth>
+  </div>
+  <div class="col-md-8 middle-md center-md">
+    <div class="loginForm">
+      <app-inputs
+        [type]="mobileType"
+        [value]="mobileVal"
+        [placeholderValue]="mobileplaceholder"
+        [customClass]="inputClass"
+        [icon]="mobilehideIcon"
+      ></app-inputs>
+      <app-inputs
+        [type]="passType"
+        [value]="passVal"
+        [placeholderValue]="passplaceholder"
+        [customClass]="inputClass"
+        [icon]="hideIcon"
+      ></app-inputs>
+      <div class="flex-col center-md center-sm loginBtn">
+        <a [routerLink]="['/dashboard/myProfile/editInfo']" class="btn btn_blue">ورود</a>
+      </div>
+      <div class="flex-col center-md recoveryLink">
+        <p>رمز عبور خود را فراموش کردم؟</p>
+        <a [routerLink]="['/authentication/recovery']">بازیابی رمز عبور</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<a
+  *ngIf="btnURL !== ''"
+  [routerLink]="[btnURL]"
+  routerLinkActive="active"
+  [ngClass]="{
+    'flex-col middle-md center-md': icon !== ''
+  }"
+  class="{{ customClass }}"
+  ><ng-container *ngIf="icon !== ''">
+    <span class="{{ icon }}"></span> </ng-container
+  >{{ btnTitle }}</a>
+
+  <a 
+  *ngIf="btnURL === ''"
+  [ngClass]="{'flex-col middle-md center-md': icon !== ''}"
+  class="{{ customClass }}">
+  <ng-container>
+      <span class="{{ icon }}" style="margin-left: 10"></span>  
+    {{ btnTitle }}</ng-container>
+  
+</a>
+
+
+

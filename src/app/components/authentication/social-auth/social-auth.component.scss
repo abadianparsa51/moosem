@@ -1,0 +1,37 @@
+@import './../../../../assets/scss/abstract/headquarters';
+.socialloginContainer {
+  @include responsive(sm){
+    margin-top: 5rem;
+  }
+  width: 100%;
+
+  .title {
+    margin-bottom: 2rem;
+    > p {
+      font-weight: 600;
+    }
+  }
+  .authBtn {
+    width: 100%;
+    .btn {
+      width: 100%;
+      padding: 1rem 2rem;
+      border-radius: $border_radius * 4;
+      color: $white;
+      margin-bottom: 2rem;
+      @include flex('',center,center,'','');
+      @include responsive(sm){
+        padding: 1rem 2rem;
+        p{
+          font-size: 1.2rem;
+        }
+      }
+      &.googlePlus {
+        background-color: $googlePlus_bg_color;
+      }
+      &.pod {
+        background-color: $pod_bg_color;
+      }
+    }
+  }
+}

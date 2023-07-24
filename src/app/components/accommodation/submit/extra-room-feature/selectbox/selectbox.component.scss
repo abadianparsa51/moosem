@@ -1,0 +1,64 @@
+@import './../../../../../../assets/scss/abstract/headquarters';
+.selectContainer {
+  flex-direction: row-reverse;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  label {
+    cursor: pointer;
+    padding-right: 1rem;
+  }
+  &:hover {
+    input {
+      & ~ {
+        .checkmark {
+          border: 0.1rem solid $gray_border;
+        }
+      }
+    }
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    &:checked {
+      & ~ {
+        .checkmark {
+          border: 0.1rem solid $blue;
+          &::after {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .checkmark {
+    height: 2rem;
+    width: 2rem;
+    border: 0.1rem solid $gray_border;
+    border-radius: 50%;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      display: none;
+      top: 27%;
+      right: 65%;
+      width: 5px;
+      height: 10px;
+      border: solid $blue;
+      border-width: 0 0.1rem 0.1rem 0;
+      -webkit-transform: rotate(45deg) translate(50%, -50%);
+      -ms-transform: rotate(45deg) translate(50%, -50%);
+      transform: rotate(45deg) translate(50%, -50%);
+    }
+  }
+}
+.inputContainer {
+  height: 4.5rem;
+}

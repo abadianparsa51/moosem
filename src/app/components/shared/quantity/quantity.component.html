@@ -1,0 +1,15 @@
+<div class="flex-col middle-md center-md quantityContainer">
+  <div class="flex-col middle-md center-md plus" (click)="plus(); passValue()">
+    <p>
+      +
+    </p>
+  </div>
+  <div class="flex-col middle-md center-md center-xs middle-xs number">{{ quantityNumber }}</div>
+  <div
+    class="flex-col middle-md center-md mines"
+    (click)="mines(); passValue()"
+  ><p>
+    -
+  </p>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+<div class="row setHeight">
+  <div class="col-md-8 column-md middle-md center-md">
+    <div class="title">
+      <p>{{ formTitle }}</p>
+    </div>
+    <div class="inputContainer">
+
+      <ng-container>
+        <div>
+          <div class="flex-col column-md ">
+            <div class="prohressbar"></div>
+            <p class="progresstitle">
+              تصویر حساب کاربریت رو آپلود کن
+            </p>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container>
+        <div class=sag>
+          <div class="col-md-6 middle-md  center-md">
+            <app-upload-travel></app-upload-travel>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <div class="flex-col end-md links" style="margin-bottom: 2.5rem;">
+      <div class="flex-col between-md links" style="margin-bottom: 2.5rem;">
+        <app-buttons (click)="decProgress()" [btnTitle]="prevBtnTitle" [customClass]="prevBtnCustomClass"
+          [icon]="iconValue"></app-buttons>
+        <app-buttons (click)="incProgress()" [btnTitle]="nextBtnTitle" [customClass]="nextBtnCustomClass"></app-buttons>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 middle-md center-md flex-col"
+    style="margin-bottom: 2.5rem;  margin-top: 13rem ;height: 50rem; overflow-y: scroll; flex-wrap: wrap; align-self: center;">
+    <div class="col-md-16 flex-col" style="margin-bottom: 2rem;">
+      <div class="col-md-8">
+        <app-image-card>
+        </app-image-card>
+      </div>
+      <div class="col-md-8">
+        <app-image-card>
+        </app-image-card>
+      </div>
+    </div>
+    <div class="col-md-16 flex-col" style="margin-bottom: 2rem;">
+      <div class="col-md-8">
+        <app-image-card>
+        </app-image-card>
+      </div>
+      <div class="col-md-8">
+        <app-image-card>
+        </app-image-card>
+      </div>
+    </div>
+    <div class="col-md-16 flex-col" style="margin-bottom: 2rem;">
+      <div class="col-md-8">
+        <app-image-card>
+        </app-image-card>
+      </div>
+      <div class="col-md-8">
+        <app-image-card>
+        </app-image-card>
+      </div>
+    </div>
+    <!-- <div class="col-md-16 flex-col" style="margin-bottom: 2rem;">
+      <div class="col-md-8">
+        <app-image-card>
+        </app-image-card>
+      </div>
+      <div class="col-md-8">
+        <app-image-card>
+        </app-image-card>
+      </div>
+    </div> -->
+  </div>
+</div>

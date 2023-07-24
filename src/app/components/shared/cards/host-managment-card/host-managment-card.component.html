@@ -1,0 +1,36 @@
+<div class="cardCont">
+
+
+  <div class="flex-col between-md sliderCont" [style.backgroundImage]="
+        'url(assets/img/Image13.png)'
+      ">
+    <app-buttons [btnTitle]="editPriceBtnName" [btnURL]="editPriceURLLink" [icon]="editPriceBtnIcon"
+      [customClass]="editPriceCustomClass"></app-buttons>
+
+    <app-buttons [btnTitle]="removeResidenceBtnName" [btnURL]="removeResidenceURLLink" [icon]="removeResidenceBtnIcon"
+      [customClass]="removeResidenceCustomClass"></app-buttons>
+  </div>
+
+
+  <div class="descriptionCont">
+    <p class="mainTitle">بازدید از حیوانات وحشی مثل گرگ</p>
+  </div>
+  <div class="flex-col detailsCont">
+    <div class="col middle-md center-md">
+      <p>
+        <app-buttons [btnTitle]="editBtnName" [btnURL]="editURLLink" [icon]="editBtnIcon"
+          [customClass]="editCustomClass"></app-buttons>
+      </p>
+    </div>
+
+    <div class="col-md-8 middle-md center-md rate">
+      <div class="col middle-md center-md">
+        <p>
+          <app-buttons [btnTitle]="priceCalendarBtnName" [btnURL]="priceCalendarURLLink" [icon]="priceCalendarBtnIcon"
+            [customClass]="priceCalendarCustomClass"></app-buttons>
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>

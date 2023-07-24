@@ -1,0 +1,9 @@
+<div class="inputContainer">
+  <!-- <label>
+  name
+</label> -->
+  <input class="input {{ customClass }}" [(ngModel)]="value" type="{{ type }}" placeholder="{{ placeholderValue }}" />
+  <ng-container *ngIf="icon !== ''">
+    <span (click)="makePassVisible()" class="icon {{ icon }}"></span>
+  </ng-container>
+</div>

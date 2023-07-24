@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="flex-col between-md col-md-16 supportFeatures">
+    <div *ngFor="let item of properties"
+      class="col column-md center-sm middle-sm column-sm center-md middle-md col-sm-5 supportFeaturesCont">
+      <img [src]="item.image" />
+      <p>{{ item.title }}</p>
+    </div>
+  </div>
+</div>
+
+

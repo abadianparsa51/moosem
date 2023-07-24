@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 43 62" style="enable-background:new 0 0 43 62;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#ACACAC;}
+	.st2{opacity:0.3;fill:#ACACAC;enable-background:new    ;}
+</style>
+<g id="Group_720" transform="translate(-551 -577)">
+	<g id="Ellipse_494" transform="translate(551 577)">
+		<circle class="st0" cx="21.5" cy="21.5" r="21.5"/>
+		<path class="st1" d="M21.5,43C9.6,43,0,33.4,0,21.5C0,9.6,9.6,0,21.5,0C33.4,0,43,9.6,43,21.5C43,33.4,33.4,43,21.5,43z M21.5,2
+			C10.7,2,2,10.7,2,21.5C2,32.3,10.7,41,21.5,41C32.3,41,41,32.3,41,21.5C41,10.7,32.3,2,21.5,2z"/>
+	</g>
+	<circle id="Ellipse_495" class="st1" cx="572.5" cy="598.5" r="16.5"/>
+	<path id="Rectangle_1114" class="st1" d="M571,619h4l0,0v12c0,1.1-0.9,2-2,2l0,0c-1.1,0-2-0.9-2-2V619L571,619z"/>
+	<ellipse id="Ellipse_496" class="st2" cx="573" cy="633" rx="9" ry="6"/>
+</g>
+</svg>

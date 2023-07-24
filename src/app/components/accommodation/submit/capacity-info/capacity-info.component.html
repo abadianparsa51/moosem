@@ -1,0 +1,58 @@
+<div class="row setHeight">
+  <div class="col-md-8 column-md col-xs-16 column-xs middle-xs start-xs middle-md center-md">
+    <div class="title">
+      <p>{{ formTitle }}</p>
+    </div>
+    <div class="inputContainer">
+      <div class="inputTitle">
+        <p>ظرفیت استاندارد و حداکثر ظرفیت اقامتگاه شما چند نفر است؟</p>
+      </div>
+      <div class="flex-col between-xs quantityRow">
+        <div class="col-md-10">
+          <p>ظرفیت استاندارد</p>
+        </div>
+        <div class="col-md-6 center-md">
+          <app-quantity (QuantityNum)="getCapacityValue($event)"></app-quantity>
+        </div>
+      </div>
+      <div class="flex-col between-xs quantityRow">
+        <div class="col-md-10">
+          <p>حداکثر ظرفیت</p>
+        </div>
+        <div class="col-md-6 center-md">
+          <app-quantity
+            (QuantityNum)="getMaxCapacityValue($event)"
+          ></app-quantity>
+        </div>
+      </div>
+      <div *ngIf="checkQuantities()" class="flex-col center-md errorMessage">
+        <p>حداکثر ظرفیت می‌بایست بیشتر از ظرفیت استاندارد باشد</p>
+      </div>
+      <app-select-box
+        [title]="selectboxInfo[0].title"
+        [items]="selectboxInfo[0].content"
+      ></app-select-box>
+    </div>
+    <div class="flex-col between-md links">
+      <app-buttons
+        (click)="decProgress()"
+        [btnTitle]="prevBtnTitle"
+        [customClass]="prevBtnCustomClass"
+        [icon]="iconValue"
+      ></app-buttons>
+      <app-buttons
+        (click)="incProgress()"
+        [btnTitle]="nextBtnTitle"
+        [customClass]="nextBtnCustomClass"
+      ></app-buttons>
+    </div>
+  </div>
+  <div class="col-md-8 middle-md center-md capacity-info-card">
+    <app-info-card
+      [title]="info[0].infoTitle"
+      [content]="info[0].infoContent"
+      class="col-md-8"
+      *ngIf="info"
+    ></app-info-card>
+  </div>
+</div>

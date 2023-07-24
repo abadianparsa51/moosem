@@ -1,0 +1,106 @@
+<div class="flex-col column-md reserveCardContainer ">
+  <div class="flex-col middle-md center-md titleCont">
+    <div class="col-md-8 middle-md center-md title">
+      <div class="">
+        <p>اجاره هر شب</p>
+      </div>
+      <div class="icon-faq_strock" style="position: relative;">
+        <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+        <!-- <div class="toolTip"></div> -->
+        <div class="ki2">
+          <div class=" flex-col between-md" style="margin-top: 2.5rem;width: 100%;">
+            <div class=" flex-col column-md" style="padding: 2rem;">
+              <p class="ki" *ngFor="let tool of toolTipDate,let i = index">
+                {{tool.title}}
+              </p>
+            </div>
+            <div class=" column-md bottom-md" style="margin-top: 2rem;">
+              <p class="ki" *ngFor="let tool of toolTipDate,let i = index">
+                {{tool.price}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 middle-md center-md price">
+      <span>350,000</span>
+    </div>
+  </div>
+  <div class="flex-col column-md content">
+    <div class="col-md-16" style="padding-top: 3rem;">
+      <div class="col-md-16">
+        <div class="col-md-10">
+          <div class="col-md-12 column-md">
+            <P>
+              باقی مانده
+            </P>
+            <div class="col-md-16">
+              <p style="color: silver;font-size: 1rem;">
+                یکشنبه 25 خرداد 1398
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <P>
+              25 نفر
+            </P>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <app-buttons [btnTitle]="selectionBtnTitle" [btnURL]="selectionBtnUrl" [icon]=""
+            [customClass]="selectionCustomClass">
+          </app-buttons>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-16" style="border: silver solid 1px;margin-top: 2rem;margin-bottom: 2rem; "></div>
+
+    <div class="col-md-16">
+      <div class="col-md-16">
+        <div class="col-md-10">
+          <div class="col-md-12 column-md">
+            <P>
+              باقی مانده
+            </P>
+            <div class="col-md-16">
+              <p style="color: silver;font-size: 1rem;">
+                یکشنبه 25 خرداد 1398
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <P>
+              25 نفر
+            </P>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <app-buttons [btnTitle]="selectionBtnTitle" [btnURL]="selectionBtnUrl" [icon]=""
+            [customClass]="selectionCustomClass">
+          </app-buttons>
+        </div>
+
+      </div>
+    </div>
+    <div class="flex-col column-md reserve" style="margin-top: 2.5rem;">
+      <div class="col-md-16 colo">
+        <div class="col-md-10">
+          <p>
+            تعداد نفرات
+          </p>
+        </div>
+        <div class="col-md-6">
+          <app-quantity></app-quantity>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="middle-md center-md reserve-btn" style="padding-top: 2rem;">
+      <app-buttons [btnTitle]="reserveBtnTitle" [btnURL]="reserveBtnUrl" [icon]="" [customClass]="reserveCustomClass">
+      </app-buttons>
+    </div>
+  </div>

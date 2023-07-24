@@ -1,0 +1,95 @@
+@import "../../../../../assets/scss/abstract/headquarters";
+:host {
+  border-top: 1px solid $filter-item-border;
+  border-bottom: 1px solid $filter-item-border;
+  padding: 2rem 0;
+}
+
+.locationFilters,
+.roomFilters {
+  &:first-child {
+    border-left: 1px solid $filter-item-border;
+    padding-left: 2rem;
+    box-sizing: unset;
+  }
+  &:last-child {
+    padding-right: 2rem;
+  }
+  .active {
+    position: relative;
+    z-index: 100;
+  }
+  .mainOverlay {
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .item {
+    position: relative;
+    &:not(:first-child) {
+      margin-right: 1rem;
+    }
+    padding: 1.2rem;
+    background-color: $white;
+    border: 1px solid $filter-item-border;
+    border-radius: $border_radius * 1.5;
+    color: $main_font_color;
+
+    i {
+      font-size: 0.5rem;
+      color: $title_font_color;
+      margin-right: 2rem;
+    }
+
+    .listItems {
+      position: absolute;
+      background-color: $white;
+      top: 6rem;
+      right: 0;
+      border-radius: $border_radius * 1.5;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-bottom: 1px solid $filter-item-border;
+
+      z-index: 100;
+
+      .items {
+        &:first-child {
+          border-bottom: 1px solid $filter-item-border;
+        }
+        .cities {
+          width: 100%;
+          height: 40rem;
+          overflow-y: scroll;
+          padding: 2rem;
+          p {
+            &:hover {
+              background-color: $light_blue;
+            }
+          }
+          ::-webkit-scrollbar {
+            width: 0.2rem;
+          }
+        }
+        .search {
+          border: 1px solid $filter-item-border;
+          padding: 1rem 2rem;
+          margin-bottom: 1rem;
+          border-radius: $border_radius * 1.5;
+          input {
+            width: 20rem;
+          }
+
+          span {
+            background-color: $white;
+            align-self: stretch;
+          }
+        }
+      }
+    }
+  }
+}

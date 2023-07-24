@@ -1,0 +1,25 @@
+@import './../../../../../assets/scss/abstract/headquarters';
+.setHeight {
+  min-height: calc(100vh - 11rem);
+}
+.title {
+  margin: 5rem 0;
+  p {
+    font-weight: 600;
+  }
+}
+.inputContainer {
+  width: 60%;
+  .tooltip {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: solid 0.5px $gray_border;
+    background-color: #f8f8f8;
+    border-radius: $border_radius;
+  }
+}
+.links {
+  width: 60%;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,33 @@
+@import './../../../../../assets/scss/abstract/headquarters';
+
+.breadCrumbsContainer {
+  @include responsive(xs){
+    margin: 0 0.5rem;
+  }
+  .breadCrumb {
+    color: $subtitle_font_color;
+    padding-left: 2rem;
+    position: relative;
+    transition: color .2s;
+
+    @include responsive(xs) {
+      font-size: 1rem;
+    }
+
+    &:not(:last-child) {
+      &::after {
+        content: '>';
+        position: absolute;
+        left: 0.5rem;
+      }
+    }
+
+    &:last-child {
+      color: $title_font_color;
+    }
+
+    &:hover {
+      color: $black;
+    }
+  }
+}

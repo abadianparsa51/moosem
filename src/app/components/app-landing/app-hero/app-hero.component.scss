@@ -1,0 +1,107 @@
+@import './../../../../assets/scss/abstract/headquarters';
+.appHeroContainer {
+  width: 100%;
+  height: calc(100vh - 10rem);
+  position: relative;
+  overflow: hidden;
+  @include flex('', '', '', '', '');
+  .curveBg {
+    width: 70%;
+    height: 80%;
+    background-image: linear-gradient(280deg, #0389ff, #77bfff);
+    position: absolute;
+    right: -10%;
+    top: 50%;
+    transform: translate(20%, -50%) rotate(10deg);
+    border-radius: $border_radius * 25;
+    z-index: -1;
+  }
+  .phoneImageContainer {
+    position: relative;
+    .mobile {
+      position: relative;
+      height: 80%;
+      width: 40%;
+      &.iphone {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        img {
+          height: 90%;
+          bottom: 0;
+        }
+      }
+      &.pixel {
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        transform: translate(-80%, -50%);
+        img {
+          height: 100%;
+          top: 0;
+        }
+      }
+      img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+      }
+      > span {
+        color: $white;
+        font-size: 5rem;
+      }
+    }
+  }
+  .descriptionContainer {
+    padding: 2rem;
+    .title {
+      margin-bottom: 2rem;
+    }
+    .description {
+      padding: 0 4rem;
+      margin-bottom: 2rem;
+      > p {
+        font-size: 1.6rem;
+      }
+    }
+    .appLinks {
+      padding: 0 4rem;
+      .text {
+        margin-bottom: 2rem;
+        > p {
+          font-size: 1.4rem;
+        }
+      }
+      .inputCont {
+        margin-bottom: 2rem;
+        padding: 2rem 0;
+        .phoneInput {
+          width: 75%;
+          padding: 1rem;
+          border: 1px solid $gray_border;
+          border-top-right-radius: $border_radius * 3;
+          border-bottom-right-radius: $border_radius * 3;
+        }
+        .phoneBtn {
+          width: 25%;
+          padding: 1rem;
+          background-color: $blue;
+          color: $white;
+          border-top-left-radius: $border_radius * 3;
+          border-bottom-left-radius: $border_radius * 3;
+        }
+      }
+      .links {
+        flex-wrap: wrap;
+        .storeicon {
+          width: 100%;
+          img {
+            width: 40%;
+          }
+        }
+      }
+    }
+  }
+}

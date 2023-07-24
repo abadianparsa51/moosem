@@ -1,0 +1,18 @@
+<div class="flex-col col-md-16 column-md contentContainer">
+  <div class="flex-col mainTitle" (click)="openModal()">
+    <div class="col-md-15">
+      <p>آیا امکان رزرو ویلا در شمال با موسم وجود دارد؟</p>
+    </div>
+    <div class="col-md-1 middle-md center-md icon">
+      <span class="icon-arrow_down"></span>
+    </div>
+  </div>
+  <div
+    class="flex-col mainContent"
+    [ngClass]="{ closed: !openflag, opened: openflag }"
+  >
+    <p>
+      در زیر به برخی از امکانات اپلیکیشن موسم اشاره شده است و مفتخریم که با پیشنهادات و انتقادات شما هر روز پیشرفت میکنیم در زیر به برخی از امکانات اپلیکیشن موسم اشاره شده است و مفتخریم که با پیشنهادات و انتقادات شما هر روز پیشرفت میکنیم..ّ
+    </p>
+  </div>
+</div>

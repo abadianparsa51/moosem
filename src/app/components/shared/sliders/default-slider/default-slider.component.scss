@@ -1,0 +1,55 @@
+@import './../../../../../assets/scss/abstract/headquarters';
+
+.sliderContainer {
+  max-width: 120rem;
+  // min-width: 120rem;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+}
+
+::ng-deep {
+
+  // .owl-stage {
+  //   margin-bottom: 1rem;
+  // }
+
+  .owl-nav {
+    position: absolute;
+    justify-content: space-between;
+    width: 105%;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%, -50%);
+  }
+
+  .owl-theme {
+    .owl-dots {
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .owl-dot {
+        span {
+          width: 8px;
+          height: 8px;
+
+          @include responsive(sm) {
+            width: 4px;
+            height: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  .owl-theme .owl-nav [class*=owl-] {
+    background: transparent;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+}

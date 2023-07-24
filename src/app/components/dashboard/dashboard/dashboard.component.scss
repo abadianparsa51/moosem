@@ -1,0 +1,11 @@
+@import './../../../../assets/scss/abstract/headquarters';
+
+.dashboardNavigationContainer {
+    background-color: $main_container_bg_color;
+    
+    .appNavCont {
+      width: 100%;
+      background-color: $white;
+        border-top: 1px solid $gray_border;
+  }
+}

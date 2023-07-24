@@ -1,0 +1,50 @@
+<div class="row " style="margin: 2.5rem 0;">
+  <div [className]="dateFlag ? 'show' : 'hide'" style="    padding: 0rem 5rem 0rem 3rem;">
+    <div class="date" (click)="openFilters(3)">
+      <div class="title">تاریخ</div>
+      <div [className]="dateFlag ? 'show' : 'hidden'">
+        <div class="range">
+          <app-date></app-date>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div [className]="personFlag ? 'show' : 'hide'" style="    padding: 0rem 5rem 0rem 3rem;">
+    <div class="person" (click)="openFilters(4)">
+      <div class="title">نفرات</div>
+      <div [className]="personFlag ? 'show' : 'hidden'">
+        <div class="range" style="padding: 3rem 4rem 3rem 4rem;
+              width: 22rem;">
+          <app-quantity></app-quantity>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="flex-col center-md  content">
+  <div class="row between-md ">
+    <ng-container *ngFor="let data of cardDatas2">
+      <app-secondary-card></app-secondary-card>
+    </ng-container>
+  </div>
+</div>
+<div class="flex-col center-md  content">
+  <div class="row between-md">
+    <ng-container *ngFor="let data of cardDatas3">
+      <app-secondary-card></app-secondary-card>
+    </ng-container>
+  </div>
+</div>
+<div class="flex-col center-md  content" style="margin-bottom: 3rem;">
+  <div class="row between-md">
+    <ng-container *ngFor="let data of cardDatas3">
+      <app-secondary-card></app-secondary-card>
+    </ng-container>
+  </div>
+</div>
+<div [className]="filterFlag ? 'show' : 'hidden'">
+  <div class="overlay" (click)="closeFilters()"></div>
+</div>

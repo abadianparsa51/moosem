@@ -1,0 +1,49 @@
+@import './../../../assets/scss/abstract/headquarters';
+
+.mobile {
+  display: none;
+
+  .hidden {
+    display: none;
+  }
+
+  &Container {
+    @include flex('', center, center, '', wrap);
+
+
+
+    app-main-card {
+      width: 50%;
+    }
+
+    .more {
+      font-size: 2rem;
+      color: $blue;
+      margin: 4rem 0;
+    }
+  }
+}
+
+.homeDefaultSlider{
+  display: block;
+
+  @include responsive(xs){
+    display: none;
+  }
+}
+
+.mobileContainer {
+  display: none;
+
+  @include responsive(xs) {
+    display: flex;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}

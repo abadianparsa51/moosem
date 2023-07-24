@@ -1,0 +1,378 @@
+@import './../../../assets/scss/abstract/headquarters';
+
+.searchBar {
+  display: none;
+}
+
+.filtersSection {
+  .filter {
+    padding: 0rem 5rem 0rem 3rem;
+  }
+}
+
+.placefiltering {
+  margin-bottom: 2.5rem;
+  margin-top: 2rem;
+
+  .categoryCont {
+    border: 1px solid $gray_border;
+    border-radius: $border_radius*1.5;
+    @include flex('', center, center, '', '');
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-left: 2rem;
+    }
+
+    .image {
+      width: 50%;
+      @include flex('', center, center, '', '');
+      height: 8rem;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .title {
+      width: 50%;
+      @include flex('', center, center, '', '');
+    }
+
+  }
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  padding: 0 2rem;
+
+}
+
+.residences {
+  flex-wrap: wrap;
+}
+
+.sights {
+  display: flex;
+}
+
+
+.pos {
+  width: 14.5rem;
+  border-radius: 2.5rem;
+  height: 3rem;
+  padding-right: 5rem;
+  margin-left: 2.5rem;
+}
+
+.smallPos {
+  width: 12.5rem;
+  border-radius: 2.5rem;
+  height: 3.1rem;
+  padding-right: 2.5rem;
+}
+
+.content {
+  flex-wrap: wrap;
+
+
+
+  .searchCardsList {
+    width: calc(25% - 1rem);
+    margin-left: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.date {
+  position: relative;
+  z-index: 23;
+
+  @include responsive(xs) {
+    z-index: 1;
+  }
+
+  border-radius: 1.5rem;
+
+  border: 1px solid $black;
+  padding: 0.5rem 2rem;
+  background-color: $white;
+
+
+  .range {
+    background-color: white;
+    -webkit-border-radius: 2rem;
+    border-radius: 2rem;
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    padding-top: 2rem;
+    @include responsive(xs) {
+      display: none;
+    }
+
+    &.show {
+      display: flex;
+
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+.person {
+  position: relative;
+  z-index: 23;
+
+  @include responsive(xs) {
+    z-index: 1;
+  }
+
+  border-radius: 1.5rem;
+
+  border: 1px solid silver;
+  padding: 0.5rem 2rem;
+  background-color: $white;
+
+
+  .range {
+    // width: 10rem;
+    // height: 5rem;
+    background-color: white;
+    border-radius: $border-radius*2;
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    @include responsive(xs) {
+      display: none;
+    }
+
+    &.show {
+      display: flex;
+
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+
+.date {
+  position: relative;
+  z-index: 23;
+
+  @include responsive(xs) {
+    z-index: 1;
+  }
+
+  border-radius: 1.5rem;
+
+  border: 1px solid silver;
+  padding: 0.5rem 2rem;
+  background-color: $white;
+
+
+  .range {
+    background-color: white;
+    -webkit-border-radius: 2rem;
+    border-radius: 2rem;
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    padding-top: 2rem;
+    @include responsive(xs) {
+      display: none;
+    }
+
+    &.show {
+      display: flex;
+
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+
+::ng-deep {
+  .header {
+    background-color: #fff;
+  }
+}
+
+.row {
+  .priceRange {
+    position: relative;
+    z-index: 23;
+
+    @include responsive(xs) {
+      z-index: 1;
+    }
+
+    border-radius: 1.5rem;
+    width: 22rem;
+    border: 1px solid $black;
+    padding: 0.5rem 2rem;
+    background-color: $white;
+
+
+
+    .range {
+      width: 70rem;
+      height: 18rem;
+      background-color: white;
+      -webkit-border-radius: 2rem;
+      border-radius: 2rem;
+      position: absolute;
+      top: 3.2rem;
+      right: 0;
+      @include responsive(xs) {
+        display: none;
+      }
+
+      &.show {
+        display: flex;
+      }
+
+      &.hidden {
+        display: none;
+      }
+    }
+
+    .persons {
+      position: relative;
+      z-index: 23;
+
+      @include responsive(xs) {
+        z-index: 1;
+      }
+    }
+  }
+
+  .show {
+    z-index: 23;
+
+    @include responsive(xs) {
+      z-index: 1;
+    }
+  }
+
+  .hide {
+    z-index: 5;
+  }
+
+  .provience {
+    position: relative;
+    z-index: 23;
+
+    @include responsive(xs) {
+      z-index: 1;
+    }
+
+    border-radius: 1.5rem;
+    width: 12rem;
+    border: 1px solid $black;
+    padding: 0.5rem 2rem;
+    background-color: $white;
+
+
+    .range {
+      @include flex (column, center, center, "", "");
+
+      @include responsive(xs) {
+        display: none;
+      }
+
+      width: 10rem;
+      // height: auto;
+      background-color: $white;
+      border-radius: $border-radius*2;
+      position: absolute;
+      top: 5rem;
+      right: 0;
+
+      &.show {
+        display: flex;
+        margin-top: 19px;
+        border-top: 1px solid;
+        width: 100%;
+
+      }
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba($color: $black, $alpha: 0.26);
+  z-index: 22;
+  top: 0;
+  left: 0;
+}
+
+.residenceSlider {
+  display: none;
+}
+
+.sightsSlider {
+  display: none;
+}
+
+
+.show {
+  display: flex;
+
+  .priceFilterSection {
+    @include flex('', center, center, '', '');
+    width: 10rem;
+    height: 5rem;
+    background-color: $white;
+    border-radius: $border-radius*2;
+    position: fixed;
+    z-index: 25;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@include responsive(xs) {
+  .searchBar {
+    display: flex;
+  }
+
+  .filtersSection {
+    display: none;
+  }
+
+  .residences {
+    display: none;
+  }
+
+  .sights {
+    display: none;
+  }
+
+  .residenceSlider {
+    display: flex;
+  }
+
+  .sightsSlider {
+    display: flex;
+  }
+}

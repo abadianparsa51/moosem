@@ -1,0 +1,131 @@
+@import './../../../../../assets/scss/abstract/headquarters';
+
+:host {
+  width: 100%;
+  @include flex ("", center, center, "", "");
+}
+
+.myProfileContainer {
+  width: 100%;
+  padding: 2rem 0;
+
+
+  .profileCard {
+    width: 100%;
+    // background-color: $white;
+    // border: 0.1rem solid $gray_border;
+    box-shadow: 0 0.1rem 0.2rem $blue_boxShadow;
+    // border-radius: ;
+    padding: 1rem;
+
+    .userInfo {
+      // border-bottom: 0.1rem solid $gray_border;
+      border-radius: 1rem 1rem 0 0;
+      padding: 2rem;
+      width: 100%;
+      background-color: rgba(3, 137, 255, 0.06);
+
+    }
+
+    .links {
+      padding: 1.5rem;
+      background-color: $white;
+      border-radius: 0 0 1rem 1rem;
+      text-align: center;
+
+      >a {}
+    }
+  }
+}
+
+.buttons {
+  padding: 1.1rem;
+}
+
+.editprofileContainer {
+  width: 100%;
+  // border: 0.1rem solid $gray_border;
+  box-shadow: 0 0.1rem 0.2rem $blue_boxShadow;
+  border-radius: $border_radius;
+  background-color: $white;
+  padding: 1rem;
+
+  .editprofileHeader {
+    width: 100%;
+    padding: 2rem 0;
+    border-bottom: 0.1rem solid $gray_border;
+  }
+
+  .editprofileHeader2 {
+    width: 100%;
+    padding: 1rem 0;
+    // border-bottom: 0.1rem solid $gray_border;
+  }
+
+  .editprofileContent {
+    width: 100%;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+
+    .mainInputs {
+      flex-wrap: wrap;
+    }
+  }
+
+}
+
+.box {
+  background-color: #f8f8f8;
+  border-radius: 1.5rem;
+  box-shadow: 0 0.4rem 1rem rgba($color: #000000, $alpha: 0.3);
+}
+
+.inputContainer {
+  width: 100%;
+  position: relative;
+
+  .input {
+    padding: 1rem;
+    width: 100%;
+    margin: 1rem;
+    border: 0.1rem solid $gray_border;
+    border-radius: $border_radius * 3;
+
+    &.center {
+      text-align: center;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3rem;
+    cursor: pointer;
+  }
+}
+
+.button {
+  background-color: #0389ff;
+  height: 32px;
+  color: white;
+  border-radius: 10%;
+  flex: center;
+}
+
+.midTabel {
+  border: 1px solid gray;
+  border-radius: 50px;
+  margin-top: 1.5rem;
+
+  box-shadow: gray td {
+    padding-right: 10rem;
+  }
+
+}
+
+// .support {
+//   background-color: #dbe4f9;
+//   text-align: center;
+//   border-bottom: 1px solid #f5f6fa;
+// }

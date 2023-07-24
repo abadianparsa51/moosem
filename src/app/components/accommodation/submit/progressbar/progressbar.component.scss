@@ -1,0 +1,13 @@
+@import './../../../../../assets/scss/abstract/headquarters';
+.progressBarContainer {
+  width: 100%;
+  background-color: $progress_gray;
+  position: relative;
+  .progressBar {
+    height: 1rem;
+    background-color: $progress_color;
+    border-top-left-radius: $border_radius;
+    border-bottom-left-radius: $border_radius;
+    transition: 0.3s;
+  }
+}

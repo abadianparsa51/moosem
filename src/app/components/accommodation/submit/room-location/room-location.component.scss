@@ -1,0 +1,17 @@
+.setHeight {
+  min-height: calc(100vh - 11rem);
+}
+.title {
+  margin: 5rem 0;
+  p {
+    font-weight: 600;
+  }
+}
+.inputContainer {
+  width: 60%;
+}
+.links {
+  width: 60%;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}

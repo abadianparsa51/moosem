@@ -1,0 +1,115 @@
+<div class="flex-col column-sm column-xs column-md reserveCardContainer ">
+  <div class="flex-col middle-md center-md titleCont">
+    <div class="col-md-8 middle-md center-md title">
+      <div class="">
+        <p>اجاره هر شب</p>
+      </div>
+    </div>
+    <div class="col-md-8 middle-md center-md price">
+      <span>350,000</span>
+    </div>
+  </div>
+  <div class="flex-col column-md content">
+    <div class="flex-col datesContainer">
+      <div class="col center-md">
+        <input type="text" class="dateContainer" [(ngModel)]="selected" placeholder="از تاریخ" />
+      </div>
+      <div class="col center-md">
+        <input type="text" class="dateContainer" [(ngModel)]="selected" placeholder="از تاریخ" />
+      </div>
+    </div>
+    <!-- <app-select-box [title]="selectTitle"></app-select-box> -->
+    <!-- <app-inputs></app-inputs> -->
+
+    <div class="flex-col inputCont">
+      <input class="phoneInput" type="number" placeholder="" style="border: 1px solid silver;
+      border-radius: 2rem;
+      width: 90%;" />
+      <span class="phoneBtn" style="    padding-right: 1rem;
+      padding-top: 0.3rem;">نفر</span>
+    </div>
+
+    <div class="notation">
+      <p>کودکان بیش از 5 سال"یک نفر" محسوب می‌شوند</p>
+    </div>
+    <div class="col-md-16 " style="flex-wrap: wrap;">
+      <ng-container *ngFor="let item of selectbox2; let i = index">
+        <div class="col-md-16 " style="padding-top: 1rem">
+          <app-select-box2 [id]="i" [data]="item"></app-select-box2>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="col-md-16" style="padding-top: 2rem;">
+    <div class="col-md-4" style="padding-right:1rem ;">
+      <label for="" style="color: silver;">
+        تعداد شب
+      </label>
+    </div>
+    <div class="col-md-4">
+      <label for="" style="color: black;">
+        6 شب
+      </label>
+      <div class="tooltipicon">
+        <img src="assets/img/SVGs/faq_fill.svg" alt="" style="width:2rem; margin-right:1rem;">
+        <div class="ki2">
+          <div class=" flex-col between-md column-xs between-xs" style="margin-top: 2.5rem;width: 100%;">
+            <div class=" flex-col column-md column-xs" style="padding: 2rem;">
+              <p class="ki" *ngFor="let tool of toolTipDate,let i = index">
+                {{tool.title}}
+              </p>
+            </div>
+            <div class=" column-xs column-md bottom-xs" style="margin-top: 2rem;">
+              <p class="ki" *ngFor="let tool of toolTipDate,let i = index">
+                {{tool.price}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8"></div>
+  </div>
+  <div class="flex-col column-md reserve">
+    <div class="flex-col column-md">
+      <label>کد تخفیف</label>
+      <div class="flex-col inputCont">
+        <input class="phoneInput" type="text" placeholder="درصورت داشتن کد تخفیف، وارد کنید" />
+        <button class="phoneBtn">اعمال</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-16">
+    <div class="4" style="width: 100%; padding-right: 1rem;">
+      <label for="" style="color: silver;">
+        کارمزد
+      </label>
+    </div>
+    <div class="8" style="width: 100%;"></div>
+    <div class="4" style="width: 100%;"> 15000 تومان</div>
+  </div>
+  <div class="col-md-16" style="padding-top: 1rem;">
+    <div class="4" style="width: 100%; padding-right: 1rem;">
+      <label for="" style="color: #ff4141;">
+        تخفیف
+      </label>
+    </div>
+    <div class="8" style="width: 100%;"></div>
+    <div class="4" style="width: 100%;color:#ff4141"> -6500000 تومان</div>
+  </div>
+  <div class="col-md-16" style="padding-top: 1rem;">
+    <div class="4" style="width: 100%; padding-right: 1rem;">
+      <label for="" style="color: silver;">
+        کارمزد
+      </label>
+    </div>
+    <div class="8" style="width: 100%;"></div>
+    <div class="4" style="width: 100%;"> 15000 تومان</div>
+    <!-- </div>
+      </div> -->
+  </div>
+  <div class="middle-md center-md reserve-btn">
+    <app-buttons [btnTitle]="reserveBtnTitle" [btnURL]="reserveBtnUrl" [icon]="" [customClass]="reserveCustomClass">
+    </app-buttons>
+  </div>
+</div>

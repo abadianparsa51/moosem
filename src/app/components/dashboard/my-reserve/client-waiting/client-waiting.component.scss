@@ -1,0 +1,144 @@
+@import './../../../../../assets/scss/abstract/headquarters';
+
+:host {
+  width: 100%;
+  @include flex ("", center, center, "", "");
+}
+
+.red {
+  font-size: 0.8rem;
+  padding: 0rem;
+  border-radius: 5rem;
+  color: #ff8585;
+  background-color: #ffefef;
+  background-size: 300%;
+  transition: 0.5s;
+}
+
+.inBox {
+  font-size: 0.8rem;
+  border-radius: 5rem;
+  background-color: #ffefef;
+  background-size: 300%;
+  transition: 0.5s;
+}
+
+.box {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 1rem;
+  border-radius: 5rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  width: 19rem;
+  height: 3.5rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.redDropDown {
+  padding: 0px;
+  margin: 0px;
+  font-size: 0.8rem;
+  // color: $white;
+  border-radius: 5rem 0 0 5rem;
+  background-color: #ffdddd;
+
+  // background-color: $red_dropDown;
+  background-size: 300%;
+  transition: 0.5s;
+}
+
+.blackUp {
+  padding: 0px;
+  margin: 0px;
+  font-size: 0.8rem;
+  border-radius: 5rem 0 0 5rem;
+  transition: box-shadow 0.2s;
+  background-color: #ffffff;
+  background-size: 300%;
+  transition: 0.5s;
+}
+
+.editprofileContainer {
+  width: 100%;
+  // border: 0.1rem solid $gray_border;
+  box-shadow: 0 0.1rem 0.2rem $blue_boxShadow;
+  border-radius: $border_radius;
+  background-color: $white;
+  padding: 1rem;
+
+  .editprofileHeader {
+    width: 100%;
+
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+
+  .editprofileContent {
+    width: 100%;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+
+    .mainInputs {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.space {
+  padding-left: 2rem;
+}
+
+.status {
+  color: $success_color;
+}
+
+.cancel {
+  color: $danger_color;
+}
+
+.size {
+
+  padding: 2rem;
+
+}
+
+.waiting {
+  color: #ff9933;
+}
+
+.mt3 {
+  margin-top: 3rem;
+}
+
+.mt2 {
+  margin-top: 2rem;
+}
+
+.mt4 {
+  margin-top: 4rem;
+}
+
+.midTabel {
+
+  width: 100%;
+  margin-top: 2rem;
+  padding-right: 8.5rem;
+  padding: 1rem 0;
+
+  &:first-child {
+    padding: 0rem 0;
+    border-top: 0.1rem solid $gray_border;
+  }
+
+  td,
+  th {
+
+    text-align: center;
+    position: relative;
+  }
+
+}

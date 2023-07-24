@@ -1,0 +1,63 @@
+<div class="flex-col middle-md center-md modalMainContaienr">
+  <div class="modalContainer">
+    <div class="modalHeader">
+      <ul class="flx-col middle-md middle-sm between-sm menuItems">
+
+
+        <ng-container *ngIf="!(checklogin() || checkrecover() || checksignup())">
+          <li class="menuItem">
+            <a class="flx-col middle-md middle-sm center-sm center-md col-8-sm" routerLinkActive="active"
+              [routerLink]="['login']">ورود</a>
+          </li>
+          <li class="menuItem">
+            <a class="flx-col middle-md center-md middle-sm center-sm col-8-sm" routerLinkActive="active"
+              [routerLink]="['signup']">ثبت نام</a>
+          </li>
+          <li class="menuItem">
+            <a class="flx-col middle-md center-md middle-sm center-sm col-8-sm" routerLinkActive="active"
+              [routerLink]="['recovery']">بازیابی رمز عبور</a>
+          </li>
+        </ng-container>
+        <ng-container *ngIf="checklogin()">
+          <li class="menuItem">
+            <a class="flx-col middle-md middle-sm center-sm center-md col-8-sm" routerLinkActive="active"
+              [routerLink]="['login']">ورود</a>
+          </li>
+          <li class="menuItem">
+            <a class="flx-col middle-md center-md middle-sm center-sm col-8-sm" routerLinkActive="active"
+              [routerLink]="['signup']">ثبت نام</a>
+          </li>
+          <li class="menuItem">
+            <a class="flx-col middle-md center-md middle-sm center-sm close" routerLinkActive="active"
+              [routerLink]="['/']"></a>
+          </li>
+        </ng-container>
+        <ng-container *ngIf="checksignup()">
+          <li class="menuItem">
+            <a class="flx-col middle-md middle-sm center-sm center-md col-8-sm" routerLinkActive="active"
+              [routerLink]="['login']">ورود</a>
+          </li>
+          <li class="menuItem">
+            <a class="flx-col middle-md center-md middle-sm center-sm col-8-sm" routerLinkActive="active"
+              [routerLink]="['signup']">ثبت نام</a>
+          </li>
+          <li class="menuItem">
+            <a class="flx-col middle-md center-md middle-sm center-sm close" routerLinkActive="active"
+              [routerLink]="['login']"></a>
+          </li>
+        </ng-container>
+        <ng-container *ngIf="checkrecover()">
+          <li class="menuItem">
+            <a class="flx-col middle-md center-md middle-sm center-sm col-8-sm" routerLinkActive="active"
+              [routerLink]="['recovery']">بازیابی رمز عبور</a>
+          </li>
+          <li class="menuItem">
+            <a class="flx-col middle-md center-md middle-sm center-sm close" routerLinkActive="active"
+              [routerLink]="['login']"></a>
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

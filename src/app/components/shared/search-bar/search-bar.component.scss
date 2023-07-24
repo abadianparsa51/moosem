@@ -1,0 +1,109 @@
+@import './../../../../assets/scss/abstract/headquarters';
+
+:host {
+  @include flex('', center, center, '', '');
+  width: 100%;
+}
+
+.mainSearchCont {
+  position: relative;
+  margin: 2rem 0;
+
+  @include responsive(xs) {
+    width: 90%;
+  }
+
+  .prefixCont {
+    padding: 0 1.5rem;
+    background-color: rgba($color: $white, $alpha: 0.9);
+    color: $font_light_gray;
+    border-top-right-radius: $border_radius * 3;
+    border-bottom-right-radius: $border_radius * 3;
+
+    @include responsive(xs) {
+      display: none;
+    }
+  }
+
+  .mainSearch {
+    width: 40rem;
+    border: none;
+    outline: none;
+    padding: 1.5rem;
+    background-color: rgba($color: $search_bg_color, $alpha: 1);
+
+    @include responsive(xs) {
+      width: 100%;
+      border-top-right-radius: $border_radius * 3;
+      border-bottom-right-radius: $border_radius * 3;
+      padding-right: 1.5rem;
+    }
+
+    &.white-bordered{
+      background-color: rgba($color: $white, $alpha: 1);
+    }
+  }
+
+  .mainSearchBtn {
+    width: 5rem;
+    border-top-left-radius: $border_radius * 3;
+    border-bottom-left-radius: $border_radius * 3;
+    @include flex('', center, center, '', '');
+    background-color: rgba($color: $search_bg_color, $alpha: 0.9);
+
+
+    span {
+      font-size: 2rem;
+    }
+  }
+
+  .hide {
+    width: 100%;
+    background-color: rgba($color: $white, $alpha: 0.9);
+    padding: 0 1rem;
+    border-bottom-right-radius: $border_radius * 3;
+    border-bottom-left-radius: $border_radius * 3;
+
+    .search-item {
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #dcd5d5;
+      }
+
+      &:hover {
+        background-color: rgba(159, 159, 159, 0.37);
+      }
+
+
+
+      margin: 5px;
+    }
+  }
+
+  &.searching {
+    .prefixCont {
+      border-bottom-right-radius: 0;
+    }
+
+    .mainSearchBtn {
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
+.displayed {
+
+  padding: 1rem;
+  display: flex;
+
+  // padding-left: 0.5rem;
+  .searchDrops {
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    border-top: 1px solid $title_font_color;
+
+    .searchItem {
+      padding: 1rem;
+    }
+  }
+}

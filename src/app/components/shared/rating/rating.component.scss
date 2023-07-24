@@ -1,0 +1,54 @@
+@import "./../../../../assets/scss/abstract/headquarters";
+
+// :host {
+//   align-items: center;
+//   display: flex;
+// }
+
+// .stars {
+//   color: $stars_color;
+//   padding: .1rem;
+// }
+// span {
+//   margin-right: 1rem;
+//   color: $main_font_color;
+// }
+
+
+.rating {
+  float: left;
+}
+
+.rating:not(:checked)>input {
+  position: absolute;
+  top: -9999px;
+  clip: rect(0, 0, 0, 0);
+}
+
+.rating:not(:checked)>fa {
+  float: right;
+  width: 1em;
+  padding: 0.1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: #ddd;
+}
+
+.rating>input:checked~fa {
+  color: rgba($color: $stars_color, $alpha: 1.9);
+}
+
+.rating:not(:checked)>fa:hover,
+.rating:not(:checked)>fa:hover~fa {
+  color: $stars_color;
+}
+
+
+.rating>input:checked~fa:hover,
+.rating>input:checked~fa:hover~fa,
+.rating>fa:hover~input:checked~fa {
+  color: rgba($color: $stars_color, $alpha: 0.8);
+}

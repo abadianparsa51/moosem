@@ -1,0 +1,280 @@
+<div class="row">
+  <div class="col">
+    <div class="col-md-4">
+      <div class="sliderCont" style="position:sticky;">
+        <owl-carousel-o [options]="customOptionsForImage" class="experienceslider">
+          <ng-container *ngFor="let slide of popularSlides">
+            <ng-template carouselSlide>
+              <img [src]="slide.image" [alt]="slide.alt" />
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="col-md-16  between-md header">
+        <div class="col-md-16 column-md  top-md titles">
+          <div class="flex-col middle-md main-title">
+            <h5>کویر گردی 5 ساعت در کویر لوت یزد</h5>
+            <!-- <app-rating [stars]="roomHollowStars" [fillStars]="roomRate" [ratingScore]="roomScore"></app-rating> -->
+          </div>
+          <div class="flex-col middle-md location">
+            <div class="icon-pin_location"></div>
+            <div class="description">
+              <!-- <p>{{ roomDetails['data']['province_name'] }} , {{ roomDetails['data']['city_name'] }}</p> -->
+              <p>یزد , کویر لوت</p>
+            </div>
+          </div>
+          <div class="flex-col content">
+            <div class="flex-col item">
+              <div class="title">
+                <p>زمان تجربه : </p>
+              </div>
+              <div class="description">
+                <!-- <p>MSM-{{ roomDetails['data'][0]['id'] }}</p> -->
+                <p> 5 ساعت </p>
+              </div>
+            </div>
+            <div class="flex-col item">
+              <div class="title">
+                <p> شرایط کنسلی رزرو بعد از پرداخت : </p>
+              </div>
+              <div class="description">
+                <p style="color: #0389ff;"> میانه </p>
+              </div>
+            </div>
+            <div class="flex-col item">
+              <div class="title">
+                <p>ساعت حرکت : </p>
+              </div>
+              <div class="description">
+                <!-- <p>{{ roomDetails['data'][0]['address'] }}</p> -->
+                <p>20:30</p>
+              </div>
+            </div>
+            <div class="flex-col item">
+              <div class="title">
+                <p>ساعت برگشت : </p>
+              </div>
+              <div class="description">
+                <!-- <p>{{ roomDetails['data'][0]['check_in_time'] }}</p> -->
+                <p>
+                  14:15
+                </p>
+              </div>
+            </div>
+            <div class="flex-col item">
+              <div class="title">
+                <p>آدرس برگزاری : </p>
+              </div>
+              <div class="description">
+                <!-- <p>{{ roomDetails['data'][0]['metraj'] }} متر</p -->
+                <p>یزد ، کویر لوت</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <app-atter-card></app-atter-card>
+    </div>
+  </div>
+  <div class="col-md-16 top-md titles">
+    <div class="col-md-8 column-md">
+      <h5>
+        درباره میزبان
+      </h5>
+      <P>
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه
+        روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف
+        بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان
+        را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
+        فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به
+        پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد
+        استفاده قرار گیرد.
+      </P>
+    </div>
+    <div class="col-md-5 middle-md center-md header">
+      <div class="flex-col column-md middle-md center-md  avatar">
+        <div class="image">
+          <img src="./../../../assets/img/Mask1.png" />
+          <div class="icon-accepted">
+            <span class="path1"></span>
+            <span class="path2"></span>
+            <span class="path3"></span>
+            <span class="path4"></span>
+          </div>
+        </div>
+        <div class="caption">
+          <!-- {{ userDetails["proifle"]["display_name"] }} -->
+          <p>میزبان: <span class="name"> آرش خرسند </span></p>
+
+          <app-buttons [btnTitle]="ChatTitleBtnName" [btnURL]="ChatURlLink" [customClass]="ChatCustomClass"
+            [icon]="ChatbtnIcon"></app-buttons>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-16 top-md titles">
+    <div class="col-md-12 column-md">
+      <h5>
+        توضیحات کلی تجربه سفر
+      </h5>
+      <P>
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه
+        روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف
+        بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان
+        را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
+        فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به
+        پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد
+        استفاده قرار گیرد.
+      </P>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+  <div class="col-md-16 top-md titles">
+    <div class="col-md-12 column-md">
+      <div style="margin-bottom: 5rem;margin-top: 5rem;">
+        <app-map [costumStyle]="map"></app-map>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+  <div class="col-md-16 top-md titles">
+    <div class="datePrice--title">
+      <h5>تقویم قیمت</h5>
+      <div class="col-md-16">
+        <div class="col-md-8">
+          <div class="col-md-4">
+            <label for="" class="pos" style="color: silver;">
+              قیمت هر شب :
+            </label>
+          </div>
+          <div class="col-md-8"></div>
+          <div class="col-md-4">
+            <label for="" class="posB">
+              <b>
+                65000تومان
+              </b>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="col-md-8">
+            <label for="" class="pos" style="color: silver;">
+              قیمت هر نفر اضافه :
+            </label>
+          </div>
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <label for="" class="posB">
+              <b>
+                25000تومان
+              </b>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-16">
+        <div class="col-md-8">
+          <div class="col-md-4">
+            <label for="" class="pos" style="color: silver;">
+              قیمت هر شب :
+            </label>
+          </div>
+          <div class="col-md-8"></div>
+          <div class="col-md-4">
+            <label for="" class="posB">
+              <b>
+                65000تومان
+              </b>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="col-md-8">
+            <label for="" class="pos" style="color: silver;">
+              قیمت ایام خاص:
+            </label>
+          </div>
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <label for="" class="posB">
+              <b>
+                25000تومان
+              </b>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-16">
+        <div class="col-md-8">
+          <div class="col-md-12">
+            <label for="" class="pos" style="color: silver;">
+              درصد تخفیف رزرو بیش از یک هفته:
+            </label>
+          </div>
+          <div class="col-md-4">
+            <label for="" class="posB">
+              <b>
+                10درصد
+              </b>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="col-md-12">
+            <label for="" class="pos" style="color: silver;">
+              درصد تخفیف رزرو بیش از یک ماه: 1
+            </label>
+          </div>
+          <div class="col-md-4">
+            <label for="" class="posB">
+              <b>
+                25000تومان
+              </b>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-16" style="margin-top: 5rem; margin-bottom: 5rem;">
+        <div class="col-md-3"></div>
+        <div class="col-md-10">
+          <app-date-price></app-date-price>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+      <div class="datePrice_itmes"></div>
+      <div class="date"></div>
+    </div>
+
+    <div class="col-md-4"></div>
+  </div>
+  <div class="col-md-16">
+    <div class="col-md-12">
+      <div class="datePrice">
+        <div class="flex-col column-md between-md middle-md comments">
+          <div class="flex-col between-md middle-md heading" style="    padding-top: 8rem;">
+            <div class="title">
+              <h5>نظرات</h5>
+            </div>
+            <div class="description">
+              <p>برای ثبت نظر باید قبلا این اقامتگاه را رزرو کرده باشید</p>
+            </div>
+            <app-buttons (click)="openComments()" [btnURL]="''" [btnTitle]="BtnTitle" [customClass]="BtnCustomClass">
+            </app-buttons>
+          </div>
+        </div>
+        <ng-container *ngIf="comments">
+          <div class="flex-col center-md middle-md comment">
+            <app-comment-submit></app-comment-submit>
+          </div>
+        </ng-container>
+        <app-comments></app-comments>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>

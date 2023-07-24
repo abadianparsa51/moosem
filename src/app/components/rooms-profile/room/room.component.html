@@ -1,0 +1,33 @@
+<app-room-slider></app-room-slider>
+
+<!-- <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery> -->
+<!-- <button (click)="openPreview()">open</button> -->
+
+
+<div class="row flex-col center-xs middle-xs center-sm middle-sm">
+  <div class="col-md-16 between-md column-sm column-xs roomInfoContainer">
+    <div class="col-md-10 col-xs-16">
+      <app-room-info [roomDetails]="roomInfo" [userDetails]="userInfo"></app-room-info>
+    </div>
+    <div class="col-md-5 column-md ">
+      <app-reserve-card></app-reserve-card>
+      <div class="card-infoCont" style="padding-top: 2rem;">
+        <app-card-info [title]="info[0].infoTitle" [content]="info[0].infoContent" class="col-md-16" *ngIf="info">
+        </app-card-info>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-16 flex-col column-md relatedPlaces">
+    <div class="relatedPlaces--title">
+      <h5>اقامتگاه‌های مشابه</h5>
+    </div>
+    <app-related-items [slideData]="rentSlideData"></app-related-items>
+  </div>
+</div>
+
+
+
+

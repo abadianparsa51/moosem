@@ -1,0 +1,78 @@
+<div class="flex-col column-md editprofileContainer">
+  <div class="flex-col middle-md editprofileHeader">
+    <div class="col-md-16">
+      <div class="flex-col column-md">
+        <h6>
+          (میزبان) اقامتگاه‌های پرداخت و رزرو شده
+
+        </h6>
+        <p>
+          اینجا می‌توانید گزارش خریدهایتان را با تاریخ و ساعت دقیق ببینید و نتیجه خرید را بررسی نمایید
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="flex-col middle-md editprofileHeader ">
+    <div class="col-md-16" style="border-top: solid 1px silver; margin-top: 3rem;">
+      <p style="margin-top:2rem ;">
+        مبالغ آماده
+      </p>
+    </div>
+  </div>
+  <div class="flex-col middle-md editprofileHeader ">
+    <div class="col-md-16 " style="border-bottom: solid 1px silver; margin-top:1.5rem;">
+      <div class="flex-col between-md " style="margin-top: 2rem; margin-bottom: 2rem;">
+        <div class="col-md-3 ">
+          <app-buttons [btnTitle]="price1Title" [btnURL]="price1URLLink" [icon]="increaseCreditIcon"
+            [customClass]="price1CustomClass">
+          </app-buttons>
+        </div>
+        <div class="col-md-3">
+          <app-buttons [btnTitle]="price2Title" [btnURL]="price2URLLink" [icon]="price2Icon"
+            [customClass]="price2CustomClass">
+          </app-buttons>
+        </div>
+        <div class="col-md-3">
+          <app-buttons [btnTitle]="price3Title" [btnURL]="price3URLLink" [icon]="price3Icon"
+            [customClass]="price3CustomClass">
+          </app-buttons>
+        </div>
+        <div class="col-md-3">
+          <app-buttons [btnTitle]="price4Title" [btnURL]="price4URLLink" [icon]="price4Icon"
+            [customClass]="price4CustomClass">
+          </app-buttons>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex-col middle-md editprofileHeader ">
+    <div class="col-md-16">
+      <div class="col-md-8">
+        <p style="margin-top:2rem ;">
+          مبلغ (تومان)
+        </p>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+  <div class="flex-col middle-md editprofileHeader ">
+
+    <div class="col-md-16 ">
+      <!-- <div class="col-md-2"></div> -->
+      <div class="col-md-8">
+        <app-inputs></app-inputs>
+      </div>
+      <div class="col-md-4"></div>
+
+    </div>
+  </div>
+  <div class="flex-col middle-md editprofileHeader " style="margin-top: 2.5rem;">
+
+    <div class="col-md-16 center-md ">
+      <app-buttons [btnTitle]="saveTitle" [btnURL]="saveURLLink" [icon]="saveIcon" [customClass]="saveCustomClass">
+      </app-buttons>
+
+    </div>
+  </div>
+
+</div>

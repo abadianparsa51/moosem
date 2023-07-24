@@ -1,0 +1,26 @@
+@import './../../../assets/scss/abstract/headquarters';
+.aboutContainer {
+  padding: 4rem 2rem 2rem;
+  margin: 2rem 0;
+  border: 0.1rem solid $gray_border;
+  border-radius: $border_radius;
+  position: relative;
+  .aboutTitle {
+    position: absolute;
+    left: 50%;
+    top: -1.5rem;
+    width: 20rem;
+    height: 3rem;
+    border: 0.1rem solid $gray_border;
+    border-radius: $border_radius;
+    background-color: $white;
+    transform: translateX(-50%);
+  }
+  .aboutContent {
+    text-align: justify;
+    p {
+      font-size: 1.6rem;
+      line-height: 3rem;
+    }
+  }
+}

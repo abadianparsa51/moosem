@@ -1,0 +1,26 @@
+:host {
+  width: 100%;
+}
+
+.rates {
+  .items {
+    width: 100%;
+    flex-wrap: wrap;
+
+    .ratingitems {
+      width: 50%;
+
+      .rate {
+        width: calc(100% - 5%);
+
+        &:nth-child(2n) {
+          margin-right: 5%;
+        }
+      }
+    }
+
+    .item {
+      width: 50%;
+    }
+  }
+}

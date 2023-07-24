@@ -1,0 +1,397 @@
+@import './../../../../assets/scss/abstract/headquarters';
+
+.mobileHeader {
+  display: none;
+}
+
+::ng-deep app-buttons.btn_blue {
+  margin-left: 1rem;
+}
+
+.header {
+  height: 10rem;
+  color: $black;
+
+
+  @include responsive(sm) {
+    display: none;
+  }
+
+
+  &.absoluteHeader {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), #343434);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: $white;
+
+    a {
+      color: $white !important;
+    }
+
+    .menu {
+      .menuItems {
+        .menuItem {
+          a {
+            &::after {
+              background-color: $white !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .logo {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .menu {
+    flex-grow: 1;
+
+    .menuItems {
+      flex-grow: 1;
+
+      .menuItem {
+        margin: 0 2rem;
+
+        a {
+          position: relative;
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            width: 0%;
+            height: 0.1rem;
+            background-color: $black;
+            transition: 0.2s;
+          }
+
+          &:hover {
+            &::after {
+              width: 100%;
+            }
+          }
+
+          span {
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .loginAndSignup {
+    flex-grow: 1;
+
+    app-buttons {
+      margin: 1rem;
+    }
+  }
+
+  .search {
+    width: 100%;
+    position: relative;
+
+    input {
+      background-color: $search_bg_color;
+      width: 100%;
+      padding: 1rem;
+      border-radius: $border_radius * 4;
+    }
+
+    span {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.menuContainer {
+  display: none;
+}
+
+@include responsive(sm) {
+  .mobileHeader {
+    padding: 1rem 0.5rem;
+    display: flex;
+    position: relative;
+    z-index: 30;
+
+    &.absoluteHeader {
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, #343434);
+      position: absolute;
+      z-index: 30;
+      top: 0;
+      width: 100%;
+      color: $white;
+
+    }
+
+    .burgermenu {
+      width: 100%;
+      @include flex('', center, center, '', '');
+      padding: 1rem;
+
+      img {
+        width: 100%;
+
+        &.dark {
+          filter: invert(45%) sepia(35%) saturate(7243%) hue-rotate(192deg) brightness(102%) contrast(102%);
+        }
+      }
+    }
+
+    .overlay {
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      top: 0;
+      z-index: 1001;
+      left: 100%;
+      background-color: rgba($color: $blue, $alpha: 0.7);
+      // display: none;
+      transform: translate(100%, 0);
+      transition: 0.3s;
+
+      &.active {
+        @include flex('', flex-start, flex-start, '', '');
+        transform: translate(0, 0);
+
+        .menuContainer {
+          width: 90%;
+          height: 100vh;
+          background-color: $white;
+          border-top-left-radius: 2.5vw;
+          border-bottom-left-radius: 2.5vw;
+          padding: 10vh 5vw 2vw 5vw;
+          box-shadow: -0.2px -0.5px 1rem rgba($color: #000000, $alpha: 0.2);
+          @include flex(column, flex-start, flex-start, '', '');
+
+          a {
+            color: $black;
+            width: 100%;
+            @include flex('', flex-start, flex-start, '', '');
+            font-size: 4vw;
+
+            &:not(:last-child) {
+              border-bottom: 1px solid $blue;
+              margin-bottom: 1rem;
+            }
+
+            @include responsive(xs) {
+              font-size: 3rem;
+            }
+          }
+        }
+      }
+
+      a {
+        color: $white !important;
+      }
+
+      .menu {
+        .menuItems {
+          .menuItem {
+            a {
+              &::after {
+                background-color: $white !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .logo {
+      img {
+        width: 100%;
+      }
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .loginAndSignup {
+      flex-grow: 1;
+    }
+  }
+
+  .menuContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 1000;
+    transition: 0.3s;
+
+    &.open {
+      right: 0;
+    }
+
+    .overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.9;
+      background-color: rgba($color: $black, $alpha: 0.25);
+    }
+
+    .menu {
+      width: 30rem;
+      height: 95%;
+      background-color: $white;
+      position: absolute;
+      right: -100%;
+      top: 50%;
+      transform: translateY(-50%);
+      border-top-left-radius: $border_radius*3;
+      border-bottom-left-radius: $border_radius*3;
+      overflow: hidden;
+      color: $white;
+      transition: 0.4s;
+
+      &.open {
+        right: 0;
+      }
+
+      .menuHeader {
+        width: 90%;
+        padding: 1rem;
+        border-bottom: 1px solid $gray_border;
+
+        @include flex('', center, center, '', '');
+
+        img {
+          width: 70%;
+        }
+
+        .menuIcon {
+          color: $white;
+          padding: 1rem 0;
+
+          >span {
+            font-size: 2rem;
+          }
+        }
+
+        .menuUserDetails {
+          .userAvatar {
+            width: 5rem;
+            height: 5rem;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 1rem;
+          }
+
+          .userName {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
+      .menuList {
+        overflow-y: auto;
+        flex-grow: 1;
+        padding-top: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+
+        >ul {
+          width: 100%;
+
+          >li {
+            transition: all 0.7s;
+
+            .hidden {
+              display: none;
+            }
+
+            .link {
+              padding: 1rem 0;
+              font-size: 2rem;
+              border-bottom: 0.1rem solid transparent;
+
+              &.active {
+                color: $blue;
+                border-bottom: 0.1rem solid $blue;
+              }
+
+              p {
+                color: $title_font_color;
+                transform: translateZ(0);
+                font-size: 1.5rem;
+              }
+
+              span {
+                font-size: 2rem;
+                color: $title_font_color;
+                margin-left: 1rem;
+
+                &.dropDownIcon {
+                  width: 1rem;
+                  height: 1rem;
+                  border-left: 1px solid $title_font_color;
+                  border-bottom: 1px solid $title_font_color;
+                  transform: rotate(-45deg);
+                  position: absolute;
+                  left: 3rem;
+                  z-index: 16;
+                }
+              }
+            }
+
+            .sublink {
+              width: 100%;
+
+              a,
+              p,
+              span {
+                color: $font_gray_desc;
+              }
+
+              a {
+                width: 100%;
+                padding: 1rem 0;
+                margin: 0.5rem 0;
+                padding-right: 3rem;
+                background-image: linear-gradient(90deg, $light_blue 0%, $light_blue 50%, $white 50%);
+                background-size: 300%;
+                transition: 0.5s;
+                background-position: 0;
+                background-position: 100%;
+
+
+
+                border-top-right-radius: 35rem;
+                border-bottom-right-radius: 35rem;
+              }
+
+              a:hover {
+                background-position: 0%;
+
+              }
+            }
+          }
+        }
+      }
+
+      .menuLogo {
+        padding: 1rem;
+      }
+    }
+  }
+}
